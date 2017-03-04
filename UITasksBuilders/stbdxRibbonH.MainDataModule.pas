@@ -790,9 +790,15 @@ begin
     tab.Context := Cntx ;
 
     for j := 0 to rb.Tabs[i].Groups.Count - 1 do
+      if rb.Tabs[i].Groups[j].ToolBar.Visible then
+      begin
+        group         := tab.Groups.Add ;
+        group.ToolBar := rb.Tabs[i].Groups[j].ToolBar ;
+      end;
+    if tab.Groups.Count = 0 then
     begin
-      group         := tab.Groups.Add ;
-      group.ToolBar := rb.Tabs[i].Groups[j].ToolBar ;
+      FRibbon.Tabs.Delete(tab.Index);
+      tab.Free ;
     end;
   end;
 
@@ -825,7 +831,7 @@ begin
 
   // Создаем закладки для контекста
   for i := 0 to bm.Bars.Count - 1 do
-    if bm.Bars[i].DockControl = nil then
+    if (bm.Bars[i].DockControl = nil) and bm.Bars[i].Visible then
     begin
       bar := bm.Bars[i] ;
       j   := Pos(':', bar.Caption) ;
@@ -858,7 +864,7 @@ begin
   else tab  := Cntx.Tabs[0] ;}
 
   for i := 0 to bm.Bars.Count - 1 do
-    if bm.Bars[i].DockControl = nil then
+    if (bm.Bars[i].DockControl = nil) and bm.Bars[i].Visible then
     begin
       Cntx.Visible    := True ;
       BarCaption      := bm.Bars[i].Caption ;
