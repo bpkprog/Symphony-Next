@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="sbDBCommand" platform="Win32">
+  <const name="ftString" type="TSDSFieldType">
+    <value>
+      ftString
+    </value>
+  </const>
+  <const name="ftNumber" type="TSDSFieldType">
+    <value>
+      ftNumber
+    </value>
+  </const>
+  <const name="ftDate" type="TSDSFieldType">
+    <value>
+      ftDate
+    </value>
+  </const>
+  <const name="ftBlob" type="TSDSFieldType">
+    <value>
+      ftBlob
+    </value>
+  </const>
+  <const name="dsoNone" type="TSDSOperation">
+    <value>
+      dsoNone
+    </value>
+  </const>
+  <const name="dsoConnect" type="TSDSOperation">
+    <value>
+      dsoConnect
+    </value>
+  </const>
+  <const name="dsoOpen" type="TSDSOperation">
+    <value>
+      dsoOpen
+    </value>
+  </const>
+  <const name="dsoClose" type="TSDSOperation">
+    <value>
+      dsoClose
+    </value>
+  </const>
+  <const name="dsoRefresh" type="TSDSOperation">
+    <value>
+      dsoRefresh
+    </value>
+  </const>
+  <const name="dsoFirst" type="TSDSOperation">
+    <value>
+      dsoFirst
+    </value>
+  </const>
+  <const name="dsoPrior" type="TSDSOperation">
+    <value>
+      dsoPrior
+    </value>
+  </const>
+  <const name="dsoNext" type="TSDSOperation">
+    <value>
+      dsoNext
+    </value>
+  </const>
+  <const name="dsoLast" type="TSDSOperation">
+    <value>
+      dsoLast
+    </value>
+  </const>
+  <const name="dsoBof" type="TSDSOperation">
+    <value>
+      dsoBof
+    </value>
+  </const>
+  <const name="dsoEof" type="TSDSOperation">
+    <value>
+      dsoEof
+    </value>
+  </const>
+  <const name="dsoInsert" type="TSDSOperation">
+    <value>
+      dsoInsert
+    </value>
+  </const>
+  <const name="dsoEdit" type="TSDSOperation">
+    <value>
+      dsoEdit
+    </value>
+  </const>
+  <const name="dsoDelete" type="TSDSOperation">
+    <value>
+      dsoDelete
+    </value>
+  </const>
+  <const name="dsoPost" type="TSDSOperation">
+    <value>
+      dsoPost
+    </value>
+  </const>
+  <const name="dsoCancel" type="TSDSOperation">
+    <value>
+      dsoCancel
+    </value>
+  </const>
+  <const name="dsoLocate" type="TSDSOperation">
+    <value>
+      dsoLocate
+    </value>
+  </const>
+  <const name="dsoLookup" type="TSDSOperation">
+    <value>
+      dsoLookup
+    </value>
+  </const>
+  <const name="dsoGetValues" type="TSDSOperation">
+    <value>
+      dsoGetValues
+    </value>
+  </const>
+  <const name="dsoSetValues" type="TSDSOperation">
+    <value>
+      dsoSetValues
+    </value>
+  </const>
+  <const name="dsoSelect" type="TSDSOperation">
+    <value>
+      dsoSelect
+    </value>
+  </const>
+  <const name="dseNone" type="TSDSEvent">
+    <value>
+      dseNone
+    </value>
+  </const>
+  <const name="dseBeforeCancel" type="TSDSEvent">
+    <value>
+      dseBeforeCancel
+    </value>
+  </const>
+  <const name="dseAfterCancel" type="TSDSEvent">
+    <value>
+      dseAfterCancel
+    </value>
+  </const>
+  <const name="dseBeforeClose" type="TSDSEvent">
+    <value>
+      dseBeforeClose
+    </value>
+  </const>
+  <const name="dseAfterClose" type="TSDSEvent">
+    <value>
+      dseAfterClose
+    </value>
+  </const>
+  <const name="dseBeforeDelete" type="TSDSEvent">
+    <value>
+      dseBeforeDelete
+    </value>
+  </const>
+  <const name="dseAfterDelete" type="TSDSEvent">
+    <value>
+      dseAfterDelete
+    </value>
+  </const>
+  <const name="dseBeforeEdit" type="TSDSEvent">
+    <value>
+      dseBeforeEdit
+    </value>
+  </const>
+  <const name="dseAfterEdit" type="TSDSEvent">
+    <value>
+      dseAfterEdit
+    </value>
+  </const>
+  <const name="dseBeforeInsert" type="TSDSEvent">
+    <value>
+      dseBeforeInsert
+    </value>
+  </const>
+  <const name="dseAfterInsert" type="TSDSEvent">
+    <value>
+      dseAfterInsert
+    </value>
+  </const>
+  <const name="dseBeforeOpen" type="TSDSEvent">
+    <value>
+      dseBeforeOpen
+    </value>
+  </const>
+  <const name="dseAfterOpen" type="TSDSEvent">
+    <value>
+      dseAfterOpen
+    </value>
+  </const>
+  <const name="dseBeforePost" type="TSDSEvent">
+    <value>
+      dseBeforePost
+    </value>
+  </const>
+  <const name="dseAfterPost" type="TSDSEvent">
+    <value>
+      dseAfterPost
+    </value>
+  </const>
+  <const name="dseBeforeRefresh" type="TSDSEvent">
+    <value>
+      dseBeforeRefresh
+    </value>
+  </const>
+  <const name="dseAfterRefresh" type="TSDSEvent">
+    <value>
+      dseAfterRefresh
+    </value>
+  </const>
+  <const name="dseBeforeScroll" type="TSDSEvent">
+    <value>
+      dseBeforeScroll
+    </value>
+  </const>
+  <const name="dseAfterScroll" type="TSDSEvent">
+    <value>
+      dseAfterScroll
+    </value>
+  </const>
+  <const name="dseCalcFields" type="TSDSEvent">
+    <value>
+      dseCalcFields
+    </value>
+  </const>
+  <const name="dseNewRecord" type="TSDSEvent">
+    <value>
+      dseNewRecord
+    </value>
+  </const>
+  <const name="dseDeleteError" type="TSDSEvent">
+    <value>
+      dseDeleteError
+    </value>
+  </const>
+  <const name="dseEditError" type="TSDSEvent">
+    <value>
+      dseEditError
+    </value>
+  </const>
+  <const name="dsePostError" type="TSDSEvent">
+    <value>
+      dsePostError
+    </value>
+  </const>
+  <const name="dseBeforeUpdateExecute" type="TSDSEvent">
+    <value>
+      dseBeforeUpdateExecute
+    </value>
+  </const>
+  <const name="dseAfterUpdateExecute" type="TSDSEvent">
+    <value>
+      dseAfterUpdateExecute
+    </value>
+  </const>
+  <const name="dseBeforeExecute" type="TSDSEvent">
+    <value>
+      dseBeforeExecute
+    </value>
+  </const>
+  <const name="dseAfterExecute" type="TSDSEvent">
+    <value>
+      dseAfterExecute
+    </value>
+  </const>
+  <const name="dseBeforeFetch" type="TSDSEvent">
+    <value>
+      dseBeforeFetch
+    </value>
+  </const>
+  <const name="dseAfterFetch" type="TSDSEvent">
+    <value>
+      dseAfterFetch
+    </value>
+  </const>
+  <const name="dseFilterRecord" type="TSDSEvent">
+    <value>
+      dseFilterRecord
+    </value>
+  </const>
+  <const name="dseUpdateError" type="TSDSEvent">
+    <value>
+      dseUpdateError
+    </value>
+  </const>
+  <const name="dseUpdateRecord" type="TSDSEvent">
+    <value>
+      dseUpdateRecord
+    </value>
+  </const>
+  <enum name="TSDSFieldType">
+    <element value="0" name="ftString" />
+    <element value="1" name="ftNumber" />
+    <element value="2" name="ftDate" />
+    <element value="3" name="ftBlob" />
+  </enum>
+  <class name="TSDSField">
+    <ancestor name="TBaseCommandObject" namespace="sbCommand">
+      <methodref name="GetXML" visibility="private" />
+      <methodref name="SetXML" visibility="private" />
+      <methodref name="GetSize" visibility="private" />
+      <methodref name="GetExpectedSize" visibility="protected" procflags="virtual" />
+      <methodref name="RootNodeName" visibility="protected" procflags="abstract virtual" />
+      <methodref name="LoadFromXMLNode" visibility="protected" procflags="abstract virtual" />
+      <methodref name="SaveToXMLNode" visibility="protected" procflags="abstract virtual" />
+      <methodref name="Assign" visibility="public" procflags="abstract virtual" />
+      <methodref name="Clone" visibility="public" procflags="abstract virtual" />
+      <methodref name="ToString" visibility="public" procflags="override" />
+      <methodref name="LoadFromXML" visibility="public" />
+      <methodref name="SaveToXML" visibility="public" />
+      <propertyref name="XML" visibility="public" />
+      <propertyref name="Size" visibility="public" />
+      <propertyref name="ExpectedSize" visibility="public" />
+      <ancestor name="TPersistent" namespace="System.Classes">
+        <methodref name="AssignError" visibility="private">
+        </methodref>
+        <methodref name="AssignTo" visibility="protected" procflags="virtual">
+        </methodref>
+        <methodref name="DefineProperties" visibility="protected" procflags="virtual">
+        </methodref>
+        <methodref name="GetOwner" visibility="protected" procflags="dynamic">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor override">
+        </methodref>
+        <methodref name="Assign" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetNamePath" visibility="public" procflags="dynamic">
+        </methodref>
+        <ancestor name="TObject" namespace="System">
+          <methodref name="Create" visibility="public" procflags="constructor">
+          </methodref>
+          <methodref name="Free" visibility="public">
+          </methodref>
+          <methodref name="DisposeOf" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="InitInstance" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="CleanupInstance" visibility="public">
+          </methodref>
+          <methodref name="ClassType" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="ClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassNameIs" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassParent" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassInfo" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InstanceSize" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InheritsFrom" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="QualifiedClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="GetInterface" visibility="public">
+          </methodref>
+          <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitScope" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="Equals" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="GetHashCode" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="ToString" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="SafeCallException" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Dispatch" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="NewInstance" visibility="public" procflags="class virtual">
+          </methodref>
+          <methodref name="FreeInstance" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+          </methodref>
+          <methodref name="GetDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <propertyref name="Disposed" visibility="protected">
+          </propertyref>
+        </ancestor>
+      </ancestor>
+    </ancestor>
+    <members>
+      <field name="FFieldName" type="string" visibility="private" size="4" offset="4" />
+      <field name="FValue" type="Variant" visibility="private" size="16" offset="8" />
+      <field name="FFieldType" type="TSDSFieldType" visibility="private" size="1" offset="24" />
+      <field name="FFieldSize" type="Integer" visibility="private" size="4" offset="28" />
+      <field name="FDisplayMask" type="string" visibility="private" size="4" offset="32" />
+      <field name="FDisplayLabel" type="string" visibility="private" size="4" offset="36" />
+      <field name="FEditing" type="Boolean" visibility="private" size="1" offset="40" />
+      <field name="FVisible" type="Boolean" visibility="private" size="1" offset="41" />
+      <field name="FAlignment" type="TAlignment" visibility="private" size="1" offset="42" />
+      <field name="FDisplaySize" type="Integer" visibility="private" size="4" offset="44" />
+      <procedure name="SetFieldName" visibility="private">
+        <parameters>
+          <parameter name="AValue" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetValue" visibility="private">
+        <parameters>
+          <parameter name="AValue" type="Variant" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetFieldSize" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Integer" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetFieldType" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSDSFieldType" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAlignment" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TAlignment" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetDisplayLabel" visibility="private">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetDisplayMask" visibility="private">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetDisplaySize" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Integer" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetEditing" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Boolean" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetVisible" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Boolean" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="GetExpectedSize" visibility="protected" procflags="override">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="RootNodeName" visibility="protected" procflags="override">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="LoadFromXMLNode" visibility="protected" procflags="override">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+        </parameters>
+      </procedure>
+      <procedure name="SaveToXMLNode" visibility="protected" procflags="override">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+        </parameters>
+      </procedure>
+      <procedure name="Assign" visibility="public" procflags="override">
+        <parameters>
+          <parameter name="AObject" type="TBaseCommandObject" />
+        </parameters>
+      </procedure>
+      <function name="Clone" visibility="public" procflags="override">
+        <parameters>
+          <retval type="TBaseCommandObject" />
+        </parameters>
+      </function>
+      <property name="Alignment" visibility="public" read="FAlignment" write="SetAlignment" type="TAlignment" default="0" />
+      <property name="DisplayLabel" visibility="public" read="FDisplayLabel" write="SetDisplayLabel" type="string" default="0" />
+      <property name="DisplayMask" visibility="public" read="FDisplayMask" write="SetDisplayMask" type="string" default="0" />
+      <property name="DisplaySize" visibility="public" read="FDisplaySize" write="SetDisplaySize" type="Integer" />
+      <property name="Editing" visibility="public" read="FEditing" write="SetEditing" type="Boolean" default="1" />
+      <property name="FieldName" visibility="public" read="FFieldName" write="SetFieldName" type="string" default="0" />
+      <property name="FieldType" visibility="public" read="FFieldType" write="SetFieldType" type="TSDSFieldType" />
+      <property name="FieldSize" visibility="public" read="FFieldSize" write="SetFieldSize" type="Integer" />
+      <property name="Value" visibility="public" read="FValue" write="SetValue" type="Variant" default="0" />
+      <property name="Visible" visibility="public" read="FVisible" write="SetVisible" type="Boolean" default="1" />
+    </members>
+  </class>
+  <class name="TSDSRecord">
+    <ancestor name="TBaseCommandObject" namespace="sbCommand">
+      <methodref name="GetXML" visibility="private" />
+      <methodref name="SetXML" visibility="private" />
+      <methodref name="GetSize" visibility="private" />
+      <methodref name="GetExpectedSize" visibility="protected" procflags="virtual" />
+      <methodref name="RootNodeName" visibility="protected" procflags="abstract virtual" />
+      <methodref name="LoadFromXMLNode" visibility="protected" procflags="abstract virtual" />
+      <methodref name="SaveToXMLNode" visibility="protected" procflags="abstract virtual" />
+      <methodref name="Assign" visibility="public" procflags="abstract virtual" />
+      <methodref name="Clone" visibility="public" procflags="abstract virtual" />
+      <methodref name="ToString" visibility="public" procflags="override" />
+      <methodref name="LoadFromXML" visibility="public" />
+      <methodref name="SaveToXML" visibility="public" />
+      <propertyref name="XML" visibility="public" />
+      <propertyref name="Size" visibility="public" />
+      <propertyref name="ExpectedSize" visibility="public" />
+      <ancestor name="TPersistent" namespace="System.Classes">
+        <methodref name="AssignError" visibility="private">
+        </methodref>
+        <methodref name="AssignTo" visibility="protected" procflags="virtual">
+        </methodref>
+        <methodref name="DefineProperties" visibility="protected" procflags="virtual">
+        </methodref>
+        <methodref name="GetOwner" visibility="protected" procflags="dynamic">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor override">
+        </methodref>
+        <methodref name="Assign" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetNamePath" visibility="public" procflags="dynamic">
+        </methodref>
+        <ancestor name="TObject" namespace="System">
+          <methodref name="Create" visibility="public" procflags="constructor">
+          </methodref>
+          <methodref name="Free" visibility="public">
+          </methodref>
+          <methodref name="DisposeOf" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="InitInstance" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="CleanupInstance" visibility="public">
+          </methodref>
+          <methodref name="ClassType" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="ClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassNameIs" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassParent" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassInfo" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InstanceSize" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InheritsFrom" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="QualifiedClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="GetInterface" visibility="public">
+          </methodref>
+          <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitScope" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="Equals" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="GetHashCode" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="ToString" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="SafeCallException" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Dispatch" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="NewInstance" visibility="public" procflags="class virtual">
+          </methodref>
+          <methodref name="FreeInstance" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+          </methodref>
+          <methodref name="GetDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <propertyref name="Disposed" visibility="protected">
+          </propertyref>
+        </ancestor>
+      </ancestor>
+    </ancestor>
+    <members>
+      <field name="FFields" type="TObjectList" visibility="private" size="4" offset="4" />
+      <function name="GetFieldCount" visibility="private">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetFields" visibility="private">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <retval type="TSDSField" />
+        </parameters>
+      </function>
+      <procedure name="ClearFields" visibility="private">
+      </procedure>
+      <function name="GetFieldValue" visibility="private">
+        <parameters>
+          <parameter name="IndexOrName" type="Variant" />
+          <retval type="Variant" />
+        </parameters>
+      </function>
+      <procedure name="SetFieldValue" visibility="private">
+        <parameters>
+          <parameter name="IndexOrName" type="Variant" />
+          <parameter name="Value" type="Variant" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="GetExpectedSize" visibility="protected" procflags="override">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="RootNodeName" visibility="protected" procflags="override">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="LoadFromXMLNode" visibility="protected" procflags="override">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+        </parameters>
+      </procedure>
+      <procedure name="SaveToXMLNode" visibility="protected" procflags="override">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+        </parameters>
+      </procedure>
+      <constructor name="Create" visibility="public">
+        <parameters>
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public">
+        <parameters>
+        </parameters>
+      </destructor>
+      <procedure name="Assign" visibility="public" procflags="override">
+        <parameters>
+          <parameter name="AObject" type="TBaseCommandObject" />
+        </parameters>
+      </procedure>
+      <function name="Clone" visibility="public" procflags="override">
+        <parameters>
+          <retval type="TBaseCommandObject" />
+        </parameters>
+      </function>
+      <function name="AddField" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="AFieldName" type="string" />
+          <retval type="TSDSField" />
+        </parameters>
+      </function>
+      <function name="AddField" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="AFieldName" type="string" />
+          <parameter name="AFieldType" type="TSDSFieldType" />
+          <parameter name="AFieldSize" type="Integer" />
+          <retval type="TSDSField" />
+        </parameters>
+      </function>
+      <function name="AddField" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="AFieldName" type="string" />
+          <parameter name="AValue" type="Variant" />
+          <retval type="TSDSField" />
+        </parameters>
+      </function>
+      <function name="AddField" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="AFieldName" type="string" />
+          <parameter name="AFieldType" type="TSDSFieldType" />
+          <parameter name="AFieldSize" type="Integer" />
+          <parameter name="AValue" type="Variant" />
+          <retval type="TSDSField" />
+        </parameters>
+      </function>
+      <procedure name="Clear" visibility="public">
+      </procedure>
+      <function name="IndexOf" visibility="public">
+        <parameters>
+          <parameter name="AFieldName" type="string" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="FieldByName" visibility="public">
+        <parameters>
+          <parameter name="AFieldName" type="string" />
+          <retval type="TSDSField" />
+        </parameters>
+      </function>
+      <property name="FieldCount" visibility="public" read="GetFieldCount" type="Integer" />
+      <property name="Fields[Index]" visibility="public" read="GetFields" type="TSDSField" />
+      <property name="FieldValue[IndexOrName]" visibility="public" read="GetFieldValue" write="SetFieldValue" type="Variant" />
+    </members>
+  </class>
+  <enum name="TSDSOperation">
+    <element value="0" name="dsoNone" />
+    <element value="1" name="dsoConnect" />
+    <element value="2" name="dsoOpen" />
+    <element value="3" name="dsoClose" />
+    <element value="4" name="dsoRefresh" />
+    <element value="5" name="dsoFirst" />
+    <element value="6" name="dsoPrior" />
+    <element value="7" name="dsoNext" />
+    <element value="8" name="dsoLast" />
+    <element value="9" name="dsoBof" />
+    <element value="10" name="dsoEof" />
+    <element value="11" name="dsoInsert" />
+    <element value="12" name="dsoEdit" />
+    <element value="13" name="dsoDelete" />
+    <element value="14" name="dsoPost" />
+    <element value="15" name="dsoCancel" />
+    <element value="16" name="dsoLocate" />
+    <element value="17" name="dsoLookup" />
+    <element value="18" name="dsoGetValues" />
+    <element value="19" name="dsoSetValues" />
+    <element value="20" name="dsoSelect" />
+  </enum>
+  <enum name="TSDSEvent">
+    <element value="0" name="dseNone" />
+    <element value="1" name="dseBeforeCancel" />
+    <element value="2" name="dseAfterCancel" />
+    <element value="3" name="dseBeforeClose" />
+    <element value="4" name="dseAfterClose" />
+    <element value="5" name="dseBeforeDelete" />
+    <element value="6" name="dseAfterDelete" />
+    <element value="7" name="dseBeforeEdit" />
+    <element value="8" name="dseAfterEdit" />
+    <element value="9" name="dseBeforeInsert" />
+    <element value="10" name="dseAfterInsert" />
+    <element value="11" name="dseBeforeOpen" />
+    <element value="12" name="dseAfterOpen" />
+    <element value="13" name="dseBeforePost" />
+    <element value="14" name="dseAfterPost" />
+    <element value="15" name="dseBeforeRefresh" />
+    <element value="16" name="dseAfterRefresh" />
+    <element value="17" name="dseBeforeScroll" />
+    <element value="18" name="dseAfterScroll" />
+    <element value="19" name="dseCalcFields" />
+    <element value="20" name="dseNewRecord" />
+    <element value="21" name="dseDeleteError" />
+    <element value="22" name="dseEditError" />
+    <element value="23" name="dsePostError" />
+    <element value="24" name="dseBeforeUpdateExecute" />
+    <element value="25" name="dseAfterUpdateExecute" />
+    <element value="26" name="dseBeforeExecute" />
+    <element value="27" name="dseAfterExecute" />
+    <element value="28" name="dseBeforeFetch" />
+    <element value="29" name="dseAfterFetch" />
+    <element value="30" name="dseFilterRecord" />
+    <element value="31" name="dseUpdateError" />
+    <element value="32" name="dseUpdateRecord" />
+  </enum>
+  <class name="TSymphonyDataSet">
+    <ancestor name="TCommandObject" namespace="sbCommand">
+      <methodref name="CompareCommandObject" visibility="protected" procflags="abstract virtual" />
+      <methodref name="ObjectTypeName" visibility="protected" procflags="abstract virtual" />
+      <methodref name="RootNodeName" visibility="protected" procflags="override" />
+      <methodref name="LoadFromXMLNode" visibility="protected" procflags="override" />
+      <methodref name="SaveToXMLNode" visibility="protected" procflags="override" />
+      <methodref name="Equals" visibility="public" procflags="override" />
+      <ancestor name="TBaseCommandObject" namespace="sbCommand">
+        <methodref name="GetXML" visibility="private" />
+        <methodref name="SetXML" visibility="private" />
+        <methodref name="GetSize" visibility="private" />
+        <methodref name="GetExpectedSize" visibility="protected" procflags="virtual" />
+        <methodref name="RootNodeName" visibility="protected" procflags="abstract virtual" />
+        <methodref name="LoadFromXMLNode" visibility="protected" procflags="abstract virtual" />
+        <methodref name="SaveToXMLNode" visibility="protected" procflags="abstract virtual" />
+        <methodref name="Assign" visibility="public" procflags="abstract virtual" />
+        <methodref name="Clone" visibility="public" procflags="abstract virtual" />
+        <methodref name="ToString" visibility="public" procflags="override" />
+        <methodref name="LoadFromXML" visibility="public" />
+        <methodref name="SaveToXML" visibility="public" />
+        <propertyref name="XML" visibility="public" />
+        <propertyref name="Size" visibility="public" />
+        <propertyref name="ExpectedSize" visibility="public" />
+        <ancestor name="TPersistent" namespace="System.Classes">
+          <methodref name="AssignError" visibility="private">
+          </methodref>
+          <methodref name="AssignTo" visibility="protected" procflags="virtual">
+          </methodref>
+          <methodref name="DefineProperties" visibility="protected" procflags="virtual">
+          </methodref>
+          <methodref name="GetOwner" visibility="protected" procflags="dynamic">
+          </methodref>
+          <methodref name="Destroy" visibility="public" procflags="destructor override">
+          </methodref>
+          <methodref name="Assign" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="GetNamePath" visibility="public" procflags="dynamic">
+          </methodref>
+          <ancestor name="TObject" namespace="System">
+            <methodref name="Create" visibility="public" procflags="constructor">
+            </methodref>
+            <methodref name="Free" visibility="public">
+            </methodref>
+            <methodref name="DisposeOf" visibility="public" procflags="inline">
+            </methodref>
+            <methodref name="InitInstance" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="CleanupInstance" visibility="public">
+            </methodref>
+            <methodref name="ClassType" visibility="public" procflags="inline">
+            </methodref>
+            <methodref name="ClassName" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="ClassNameIs" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="ClassParent" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="ClassInfo" visibility="public" procflags="class inline">
+            </methodref>
+            <methodref name="InstanceSize" visibility="public" procflags="class inline">
+            </methodref>
+            <methodref name="InheritsFrom" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="MethodAddress" visibility="public" procflags="class overload">
+            </methodref>
+            <methodref name="MethodAddress" visibility="public" procflags="class overload">
+            </methodref>
+            <methodref name="MethodName" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="QualifiedClassName" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="FieldAddress" visibility="public" procflags="overload">
+            </methodref>
+            <methodref name="FieldAddress" visibility="public" procflags="overload">
+            </methodref>
+            <methodref name="GetInterface" visibility="public">
+            </methodref>
+            <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="UnitName" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="UnitScope" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="Equals" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="GetHashCode" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="ToString" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="SafeCallException" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="Dispatch" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="NewInstance" visibility="public" procflags="class virtual">
+            </methodref>
+            <methodref name="FreeInstance" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+            </methodref>
+            <methodref name="GetDisposed" visibility="protected" procflags="inline">
+            </methodref>
+            <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+            </methodref>
+            <propertyref name="Disposed" visibility="protected">
+            </propertyref>
+          </ancestor>
+        </ancestor>
+      </ancestor>
+    </ancestor>
+    <members>
+      <field name="FName" type="string" visibility="private" size="4" offset="4" />
+      <field name="FFields" type="TSDSRecord" visibility="private" size="4" offset="8" />
+      <field name="FID" type="Integer" visibility="private" size="4" offset="12" />
+      <field name="FOperation" type="TSDSOperation" visibility="private" size="1" offset="16" />
+      <field name="FHandle" type="HWND" visibility="private" size="4" offset="20" />
+      <field name="FEvent" type="TSDSEvent" visibility="private" size="1" offset="24" />
+      <field name="FASyncEvent" type="Boolean" visibility="private" size="1" offset="25" />
+      <procedure name="SetFields" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSDSRecord" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetID" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Integer" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetName" visibility="private">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetOperation" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSDSOperation" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetHandle" visibility="private">
+        <parameters>
+          <parameter name="Value" type="HWND" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetEvent" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSDSEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetASyncEvent" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Boolean" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="GetExpectedSize" visibility="protected" procflags="override">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="CompareCommandObject" visibility="protected" procflags="override">
+        <parameters>
+          <parameter name="Obj" type="TCommandObject" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="ObjectTypeName" visibility="protected" procflags="override">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="LoadFromXMLNode" visibility="protected" procflags="override">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+        </parameters>
+      </procedure>
+      <procedure name="SaveToXMLNode" visibility="protected" procflags="override">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+        </parameters>
+      </procedure>
+      <constructor name="Create" visibility="public">
+        <parameters>
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public">
+        <parameters>
+        </parameters>
+      </destructor>
+      <procedure name="Assign" visibility="public" procflags="override">
+        <parameters>
+          <parameter name="AObject" type="TBaseCommandObject" />
+        </parameters>
+      </procedure>
+      <function name="Clone" visibility="public" procflags="override">
+        <parameters>
+          <retval type="TBaseCommandObject" />
+        </parameters>
+      </function>
+      <function name="OperName" visibility="public">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <property name="Handle" visibility="public" read="FHandle" write="SetHandle" type="HWND" />
+      <property name="Operation" visibility="public" read="FOperation" write="SetOperation" type="TSDSOperation" />
+      <property name="Event" visibility="public" read="FEvent" write="SetEvent" type="TSDSEvent" />
+      <property name="ASyncEvent" visibility="public" read="FASyncEvent" write="SetASyncEvent" type="Boolean" />
+      <property name="Fields" visibility="public" read="FFields" write="SetFields" type="TSDSRecord" />
+      <property name="ID" visibility="published" read="FID" write="SetID" type="Integer" />
+      <property name="Name" visibility="published" read="FName" write="SetName" type="string" default="0" />
+    </members>
+  </class>
+  <function name="SDSOperationToStr" visibility="public">
+    <parameters>
+      <parameter name="AOper" type="TSDSOperation" />
+      <retval type="string" />
+    </parameters>
+  </function>
+</namespace>

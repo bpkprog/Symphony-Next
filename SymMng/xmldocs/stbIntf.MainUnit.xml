@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="stbIntf.MainUnit" platform="Win32">
+  <struct name="TEventList" size="40">
+    <field name="OnExecute" type="TNotifyEvent" visibility="public" size="8" offset="0">
+    </field>
+    <field name="OnClosePlugIn" type="TNotifyEvent" visibility="public" size="8" offset="8">
+    </field>
+    <field name="OnEditTuner" type="TNotifyEvent" visibility="public" size="8" offset="16">
+    </field>
+    <field name="OnPrint" type="TNotifyEvent" visibility="public" size="8" offset="24">
+    </field>
+    <field name="OnExportExcel" type="TNotifyEvent" visibility="public" size="8" offset="32">
+    </field>
+  </struct>
+  <interface name="ISymphonyUIManager" GUID="{F05A9AE3-72BB-4253-ADE7-615BEDF3EA66}" ancestor="IInterface">
+    <function name="BuildTasks" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Parent" type="TComponent" />
+        <parameter name="Tasks" type="IXMLNode" />
+        <parameter name="Events" type="TEventList" />
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <function name="TaskForControl" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AControl" type="TObject" />
+        <retval type="IXMLNode" />
+      </parameters>
+    </function>
+    <function name="ControlForTask" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ATask" type="IXMLNode" />
+        <retval type="TObject" />
+      </parameters>
+    </function>
+    <function name="BuildActions" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Parent" type="TComponent" />
+        <parameter name="Actions" type="ISymphonyPlugInActionList" />
+        <parameter name="Events" type="TEventList" />
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <procedure name="DestroyActions" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Actions" type="ISymphonyPlugInActionList" />
+      </parameters>
+    </procedure>
+    <function name="ActionForControl" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AControl" type="TObject" />
+        <retval type="ISymphonyPlugInAction" />
+      </parameters>
+    </function>
+    <function name="ControlForAction" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AAction" type="ISymphonyPlugInAction" />
+        <retval type="TObject" />
+      </parameters>
+    </function>
+    <procedure name="MergeUI" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AForm" type="TForm" />
+      </parameters>
+    </procedure>
+    <procedure name="UnMergeUI" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AForm" type="TForm" />
+      </parameters>
+    </procedure>
+    <function name="SetContextVisible" visibility="public" procflags="abstract overload virtual">
+      <parameters>
+        <parameter name="AForm" type="TForm" />
+        <parameter name="AVisible" type="Boolean" />
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <function name="SetContextVisible" visibility="public" procflags="abstract overload virtual">
+      <parameters>
+        <parameter name="AAction" type="ISymphonyPlugInAction" />
+        <parameter name="AVisible" type="Boolean" />
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <function name="SetContextVisible" visibility="public" procflags="abstract overload virtual">
+      <parameters>
+        <parameter name="AContextName" type="string" />
+        <parameter name="AVisible" type="Boolean" />
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+  </interface>
+</namespace>

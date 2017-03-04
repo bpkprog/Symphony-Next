@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name=".SymphonyBinder" platform="Win32">
+  <contains name="sbDBCommandSelectDlg" />
+  <contains name="sbSymDBContr" />
+  <contains name="sbCommandFactory" />
+  <contains name="sbDBCommand" />
+  <contains name="sbCommand" />
+  <contains name="SymphonyBinder" />
+  <contains name="sbReg" />
+  <contains name="sbConst" />
+  <contains name="SysInit" />
+</namespace>

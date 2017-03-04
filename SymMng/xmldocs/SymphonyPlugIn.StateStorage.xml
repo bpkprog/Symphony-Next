@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymphonyPlugIn.StateStorage" platform="Win32">
+  <const name="scpLeft" type="TSaveControlPart" file="SymphonyPlugIn.StateStorage.pas" line="9">
+    <value>
+      scpLeft
+    </value>
+  </const>
+  <const name="scpTop" type="TSaveControlPart" file="SymphonyPlugIn.StateStorage.pas" line="9">
+    <value>
+      scpTop
+    </value>
+  </const>
+  <const name="scpWidth" type="TSaveControlPart" file="SymphonyPlugIn.StateStorage.pas" line="9">
+    <value>
+      scpWidth
+    </value>
+  </const>
+  <const name="scpHeight" type="TSaveControlPart" file="SymphonyPlugIn.StateStorage.pas" line="9">
+    <value>
+      scpHeight
+    </value>
+  </const>
+  <const name="scpVisible" type="TSaveControlPart" file="SymphonyPlugIn.StateStorage.pas" line="9">
+    <value>
+      scpVisible
+    </value>
+  </const>
+  <enum name="TSaveControlPart" file="SymphonyPlugIn.StateStorage.pas" line="9">
+    <element value="0" name="scpLeft" file="SymphonyPlugIn.StateStorage.pas" line="9" />
+    <element value="1" name="scpTop" file="SymphonyPlugIn.StateStorage.pas" line="9" />
+    <element value="2" name="scpWidth" file="SymphonyPlugIn.StateStorage.pas" line="9" />
+    <element value="3" name="scpHeight" file="SymphonyPlugIn.StateStorage.pas" line="9" />
+    <element value="4" name="scpVisible" file="SymphonyPlugIn.StateStorage.pas" line="9" />
+  </enum>
+  <set name="TSaveControlParts" type="TSaveControlPart">
+    <element name="scpLeft" />
+    <element name="scpTop" />
+    <element name="scpWidth" />
+    <element name="scpHeight" />
+    <element name="scpVisible" />
+  </set>
+  <class name="TSaveControlInfo" file="SymphonyPlugIn.StateStorage.pas" line="12">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="DisposeOf" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="QualifiedClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitScope" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+      <methodref name="GetDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <propertyref name="Disposed" visibility="protected">
+      </propertyref>
+    </ancestor>
+    <members>
+      <field name="FControl" type="TControl" visibility="private" size="4" offset="4" file="SymphonyPlugIn.StateStorage.pas" line="14" />
+      <field name="FSaveParts" type="TSaveControlParts" visibility="private" size="1" offset="8" file="SymphonyPlugIn.StateStorage.pas" line="15" />
+      <procedure name="SetControl" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="16">
+        <parameters>
+          <parameter name="Value" type="TControl" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetSaveParts" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="17">
+        <parameters>
+          <parameter name="Value" type="TSaveControlParts" paramflags="const" />
+        </parameters>
+      </procedure>
+      <constructor name="Create" visibility="published" file="SymphonyPlugIn.StateStorage.pas" line="19">
+        <parameters>
+          <parameter name="AControl" type="TControl" />
+          <parameter name="ASaveParts" type="TSaveControlParts" />
+        </parameters>
+      </constructor>
+      <property name="Control" visibility="published" read="FControl" write="SetControl" type="TControl" file="SymphonyPlugIn.StateStorage.pas" line="20" />
+      <property name="SaveParts" visibility="published" read="FSaveParts" write="SetSaveParts" type="TSaveControlParts" file="SymphonyPlugIn.StateStorage.pas" line="21" />
+    </members>
+  </class>
+  <class name="TStateStorage" file="SymphonyPlugIn.StateStorage.pas" line="26">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="DisposeOf" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="QualifiedClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitScope" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+      <methodref name="GetDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <propertyref name="Disposed" visibility="protected">
+      </propertyref>
+    </ancestor>
+    <members>
+      <field name="FFrame" type="TFrame" visibility="private" size="4" offset="4" file="SymphonyPlugIn.StateStorage.pas" line="28" />
+      <field name="FParams" type="TObjectList&lt;SymphonyPlugIn.ParamImpl.TSymphonyPlugInParam&gt;" visibility="private" size="4" offset="8" file="SymphonyPlugIn.StateStorage.pas" line="29" />
+      <field name="FComps" type="TControlsList" visibility="private" size="4" offset="12" file="SymphonyPlugIn.StateStorage.pas" line="30" />
+      <function name="GetParamCount" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="31">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetParams" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="32">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <retval type="TSymphonyPlugInParam" />
+        </parameters>
+      </function>
+      <function name="GetParamValue" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="33">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Variant" />
+        </parameters>
+      </function>
+      <function name="FindControlByName" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="34">
+        <parameters>
+          <parameter name="AName" type="string" />
+          <retval type="TSaveControlInfo" />
+        </parameters>
+      </function>
+      <procedure name="SaveControlInfo" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="35">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+          <parameter name="AControlInfo" type="TSaveControlInfo" />
+        </parameters>
+      </procedure>
+      <procedure name="LoadControlInfo" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="36">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+          <parameter name="AComponentInfo" type="TSaveControlInfo" />
+        </parameters>
+      </procedure>
+      <procedure name="LoadParams" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="37">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+        </parameters>
+      </procedure>
+      <procedure name="SaveParams" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="38">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+        </parameters>
+      </procedure>
+      <procedure name="LoadControls" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="39">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+        </parameters>
+      </procedure>
+      <procedure name="SaveControls" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="40">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+        </parameters>
+      </procedure>
+      <procedure name="SaveParam" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="41">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+          <parameter name="AParam" type="TSymphonyPlugInParam" />
+        </parameters>
+      </procedure>
+      <procedure name="LoadParam" visibility="private" file="SymphonyPlugIn.StateStorage.pas" line="42">
+        <parameters>
+          <parameter name="ANode" type="IXMLNode" />
+          <parameter name="AParam" type="TSymphonyPlugInParam" />
+        </parameters>
+      </procedure>
+      <constructor name="Create" visibility="public" file="SymphonyPlugIn.StateStorage.pas" line="44">
+        <parameters>
+          <parameter name="AFrame" type="TFrame" />
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public" file="SymphonyPlugIn.StateStorage.pas" line="45">
+        <parameters>
+        </parameters>
+      </destructor>
+      <function name="AddParam" visibility="public" procflags="overload" file="SymphonyPlugIn.StateStorage.pas" line="47">
+        <parameters>
+          <retval type="TSymphonyPlugInParam" />
+        </parameters>
+      </function>
+      <function name="AddParam" visibility="public" procflags="overload" file="SymphonyPlugIn.StateStorage.pas" line="48">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="TSymphonyPlugInParam" />
+        </parameters>
+      </function>
+      <function name="AddParam" visibility="public" procflags="overload" file="SymphonyPlugIn.StateStorage.pas" line="49">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="ParamValue" type="Variant" />
+          <retval type="TSymphonyPlugInParam" />
+        </parameters>
+      </function>
+      <function name="IndexOfParam" visibility="public" file="SymphonyPlugIn.StateStorage.pas" line="50">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="AddControl" visibility="public" file="SymphonyPlugIn.StateStorage.pas" line="52">
+        <parameters>
+          <parameter name="AControl" type="TControl" />
+          <parameter name="ASaveParts" type="TSaveControlParts" />
+        </parameters>
+      </procedure>
+      <function name="FileName" visibility="public" file="SymphonyPlugIn.StateStorage.pas" line="54">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="Load" visibility="public" file="SymphonyPlugIn.StateStorage.pas" line="55">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Save" visibility="public" file="SymphonyPlugIn.StateStorage.pas" line="56">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <property name="ParamCount" visibility="public" read="GetParamCount" type="Integer" file="SymphonyPlugIn.StateStorage.pas" line="58" />
+      <property name="Params[Index]" visibility="public" read="GetParams" type="TSymphonyPlugInParam" file="SymphonyPlugIn.StateStorage.pas" line="59" />
+      <property name="ParamValue[ParamName]" visibility="public" read="GetParamValue" type="Variant" file="SymphonyPlugIn.StateStorage.pas" line="60" />
+    </members>
+  </class>
+</namespace>

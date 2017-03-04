@@ -1,0 +1,8 @@
+<style>
+body {
+	color: red
+	}
+hr {
+	color: blue ;
+	}
+</style>

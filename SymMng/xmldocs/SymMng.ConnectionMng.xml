@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymMng.ConnectionMng" platform="Win32">
+  <class name="TConnection" file="SymMng.ConnectionMng.pas" line="19">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="DisposeOf" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="QualifiedClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitScope" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+      <methodref name="GetDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <propertyref name="Disposed" visibility="protected">
+      </propertyref>
+    </ancestor>
+    <members>
+      <field name="FDBType" type="string" visibility="private" size="4" offset="4" file="SymMng.ConnectionMng.pas" line="21" />
+      <field name="FServer" type="string" visibility="private" size="4" offset="8" file="SymMng.ConnectionMng.pas" line="22" />
+      <field name="FDataBase" type="string" visibility="private" size="4" offset="12" file="SymMng.ConnectionMng.pas" line="23" />
+      <field name="FUserName" type="string" visibility="private" size="4" offset="16" file="SymMng.ConnectionMng.pas" line="24" />
+      <field name="FPassword" type="string" visibility="private" size="4" offset="20" file="SymMng.ConnectionMng.pas" line="25" />
+      <field name="FSession" type="TObject" visibility="private" size="4" offset="24" file="SymMng.ConnectionMng.pas" line="26" />
+      <field name="FHandle" type="NativeUInt" visibility="private" size="4" offset="28" file="SymMng.ConnectionMng.pas" line="27" />
+      <field name="FPlugins" type="TStrings" visibility="private" size="4" offset="32" file="SymMng.ConnectionMng.pas" line="28" />
+      <procedure name="CloseSession" visibility="private" procflags="overload" file="SymMng.ConnectionMng.pas" line="29">
+      </procedure>
+      <constructor name="Create" visibility="public" file="SymMng.ConnectionMng.pas" line="31">
+        <parameters>
+          <parameter name="ADBType" type="string" />
+          <parameter name="AServer" type="string" />
+          <parameter name="ADatabase" type="string" />
+          <parameter name="AUserName" type="string" />
+          <parameter name="APassword" type="string" />
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public" file="SymMng.ConnectionMng.pas" line="32">
+        <parameters>
+        </parameters>
+      </destructor>
+      <function name="Connect" visibility="public" file="SymMng.ConnectionMng.pas" line="34">
+        <parameters>
+          <parameter name="PlugIn" type="string" />
+          <retval type="TObject" />
+        </parameters>
+      </function>
+      <function name="ReConnect" visibility="public" file="SymMng.ConnectionMng.pas" line="35">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="CloseSession" visibility="public" procflags="overload" file="SymMng.ConnectionMng.pas" line="36">
+        <parameters>
+          <parameter name="PlugIn" type="string" />
+        </parameters>
+      </procedure>
+      <function name="Equal" visibility="public" procflags="overload" file="SymMng.ConnectionMng.pas" line="38">
+        <parameters>
+          <parameter name="ADBType" type="string" />
+          <parameter name="AServer" type="string" />
+          <parameter name="ADatabase" type="string" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Equal" visibility="public" procflags="overload" file="SymMng.ConnectionMng.pas" line="39">
+        <parameters>
+          <parameter name="ADBType" type="string" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Equal" visibility="public" procflags="overload" file="SymMng.ConnectionMng.pas" line="40">
+        <parameters>
+          <parameter name="AConnection" type="TConnection" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <property name="DBType" visibility="public" read="FDBType" type="string" default="0" file="SymMng.ConnectionMng.pas" line="42" />
+      <property name="Server" visibility="public" read="FServer" type="string" default="0" file="SymMng.ConnectionMng.pas" line="43" />
+      <property name="DataBase" visibility="public" read="FDataBase" type="string" default="0" file="SymMng.ConnectionMng.pas" line="44" />
+      <property name="UserName" visibility="public" read="FUserName" type="string" default="0" file="SymMng.ConnectionMng.pas" line="45" />
+      <property name="Session" visibility="public" read="FSession" type="TObject" file="SymMng.ConnectionMng.pas" line="47" />
+      <property name="Handle" visibility="public" read="FHandle" type="NativeUInt" file="SymMng.ConnectionMng.pas" line="48" />
+      <property name="Plugins" visibility="public" read="FPlugins" type="TStrings" file="SymMng.ConnectionMng.pas" line="49" />
+    </members>
+  </class>
+  <class name="TConnectionMng" file="SymMng.ConnectionMng.pas" line="52">
+    <ancestor name="{System.Generics.Collections}TObjectList&lt;SymMng.ConnectionMng.TConnection&gt;" namespace="SymMng.ConnectionMng">
+      <methodref name="Notify" visibility="protected" procflags="override">
+      </methodref>
+      <methodref name="Create" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="Create" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="Create" visibility="public" procflags="constructor overload">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor override">
+      </methodref>
+      <propertyref name="OwnsObjects" visibility="public">
+      </propertyref>
+      <ancestor name="{System.Generics.Collections}TList&lt;SymMng.ConnectionMng.TConnection&gt;" namespace="SymMng.ConnectionMng">
+        <methodref name="GetCapacity" visibility="private" procflags="inline">
+        </methodref>
+        <methodref name="SetCapacity" visibility="private" procflags="overload inline">
+        </methodref>
+        <methodref name="SetCount" visibility="private" procflags="inline">
+        </methodref>
+        <methodref name="GetItem" visibility="private" procflags="inline">
+        </methodref>
+        <methodref name="SetItem" visibility="private" procflags="inline">
+        </methodref>
+        <methodref name="GrowCheck" visibility="private" procflags="inline">
+        </methodref>
+        <methodref name="DoDelete" visibility="private" procflags="inline">
+        </methodref>
+        <methodref name="InternalNotify" visibility="private">
+        </methodref>
+        <methodref name="InternalCompare" visibility="private">
+        </methodref>
+        <propertyref name="FCount" visibility="private">
+        </propertyref>
+        <methodref name="ItemValue" visibility="protected">
+        </methodref>
+        <methodref name="DoGetEnumerator" visibility="protected" procflags="override">
+        </methodref>
+        <methodref name="Notify" visibility="protected" procflags="virtual">
+        </methodref>
+        <methodref name="Create" visibility="public" procflags="constructor overload">
+        </methodref>
+        <methodref name="Create" visibility="public" procflags="constructor overload">
+        </methodref>
+        <methodref name="Create" visibility="public" procflags="constructor overload">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor override">
+        </methodref>
+        <methodref name="Error" visibility="public" procflags="class overload virtual">
+        </methodref>
+        <methodref name="Error" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="Add" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="AddRange" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="AddRange" visibility="public" procflags="overload inline">
+        </methodref>
+        <methodref name="AddRange" visibility="public" procflags="overload inline">
+        </methodref>
+        <methodref name="Insert" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="InsertRange" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="InsertRange" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="InsertRange" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="Pack" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="Pack" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="Remove" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="RemoveItem" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="Delete" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="DeleteRange" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="ExtractItem" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="Extract" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="Exchange" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="Move" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="First" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="Last" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="Clear" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="Expand" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="Contains" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="IndexOf" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="IndexOfItem" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="LastIndexOf" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="Reverse" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="Sort" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="Sort" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="BinarySearch" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="BinarySearch" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="TrimExcess" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="ToArray" visibility="public" procflags="final override">
+        </methodref>
+        <propertyref name="Capacity" visibility="public">
+        </propertyref>
+        <propertyref name="Count" visibility="public">
+        </propertyref>
+        <propertyref name="Items" visibility="public">
+        </propertyref>
+        <propertyref name="List" visibility="public">
+        </propertyref>
+        <eventref name="OnNotify" visibility="public">
+        </eventref>
+        <methodref name="GetEnumerator" visibility="public" procflags="inline">
+        </methodref>
+        <ancestor name="{System.Generics.Collections}TEnumerable&lt;SymMng.ConnectionMng.TConnection&gt;" namespace="SymMng.ConnectionMng">
+          <methodref name="ToArrayImpl" visibility="private">
+          </methodref>
+          <methodref name="DoGetEnumerator" visibility="protected" procflags="abstract virtual">
+          </methodref>
+          <methodref name="Destroy" visibility="public" procflags="destructor override">
+          </methodref>
+          <methodref name="GetEnumerator" visibility="public">
+          </methodref>
+          <methodref name="ToArray" visibility="public" procflags="virtual">
+          </methodref>
+          <ancestor name="TObject" namespace="System">
+            <methodref name="Create" visibility="public" procflags="constructor">
+            </methodref>
+            <methodref name="Free" visibility="public">
+            </methodref>
+            <methodref name="DisposeOf" visibility="public" procflags="inline">
+            </methodref>
+            <methodref name="InitInstance" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="CleanupInstance" visibility="public">
+            </methodref>
+            <methodref name="ClassType" visibility="public" procflags="inline">
+            </methodref>
+            <methodref name="ClassName" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="ClassNameIs" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="ClassParent" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="ClassInfo" visibility="public" procflags="class inline">
+            </methodref>
+            <methodref name="InstanceSize" visibility="public" procflags="class inline">
+            </methodref>
+            <methodref name="InheritsFrom" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="MethodAddress" visibility="public" procflags="class overload">
+            </methodref>
+            <methodref name="MethodAddress" visibility="public" procflags="class overload">
+            </methodref>
+            <methodref name="MethodName" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="QualifiedClassName" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="FieldAddress" visibility="public" procflags="overload">
+            </methodref>
+            <methodref name="FieldAddress" visibility="public" procflags="overload">
+            </methodref>
+            <methodref name="GetInterface" visibility="public">
+            </methodref>
+            <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="UnitName" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="UnitScope" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="Equals" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="GetHashCode" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="ToString" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="SafeCallException" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="Dispatch" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="NewInstance" visibility="public" procflags="class virtual">
+            </methodref>
+            <methodref name="FreeInstance" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+            </methodref>
+            <methodref name="GetDisposed" visibility="protected" procflags="inline">
+            </methodref>
+            <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+            </methodref>
+            <propertyref name="Disposed" visibility="protected">
+            </propertyref>
+          </ancestor>
+        </ancestor>
+      </ancestor>
+    </ancestor>
+    <members>
+      <function name="GetBaseConnection" visibility="private" file="SymMng.ConnectionMng.pas" line="54">
+        <parameters>
+          <retval type="TConnection" />
+        </parameters>
+      </function>
+      <function name="GetEqualConnection" visibility="private" file="SymMng.ConnectionMng.pas" line="55">
+        <parameters>
+          <parameter name="ADBType" type="string" />
+          <parameter name="AServer" type="string" />
+          <parameter name="ADatabase" type="string" />
+          <retval type="TConnection" />
+        </parameters>
+      </function>
+      <function name="GetDBTypeConnection" visibility="private" file="SymMng.ConnectionMng.pas" line="56">
+        <parameters>
+          <parameter name="ADBType" type="string" />
+          <parameter name="AServer" type="string" />
+          <parameter name="ADatabase" type="string" />
+          <parameter name="AUserName" type="string" />
+          <parameter name="APassword" type="string" />
+          <retval type="TConnection" />
+        </parameters>
+      </function>
+      <function name="CreateNewConnection" visibility="private" file="SymMng.ConnectionMng.pas" line="57">
+        <parameters>
+          <parameter name="ADBType" type="string" />
+          <parameter name="AServer" type="string" />
+          <parameter name="ADatabase" type="string" />
+          <parameter name="AUserName" type="string" />
+          <parameter name="APassword" type="string" />
+          <retval type="TConnection" />
+        </parameters>
+      </function>
+      <function name="ConnectionCountByHandle" visibility="private" file="SymMng.ConnectionMng.pas" line="58">
+        <parameters>
+          <parameter name="AHandle" type="NativeUInt" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="UnloadConnectionPackage" visibility="private" file="SymMng.ConnectionMng.pas" line="59">
+        <parameters>
+          <parameter name="AHandle" type="NativeUInt" />
+        </parameters>
+      </procedure>
+      <destructor name="Destroy" visibility="public" file="SymMng.ConnectionMng.pas" line="61">
+        <parameters>
+        </parameters>
+      </destructor>
+      <function name="GetConnection" visibility="public" file="SymMng.ConnectionMng.pas" line="63">
+        <parameters>
+          <parameter name="PlugIn" type="string" />
+          <parameter name="ADBType" type="string" />
+          <parameter name="AServer" type="string" />
+          <parameter name="ADatabase" type="string" />
+          <parameter name="AUserName" type="string" />
+          <parameter name="APassword" type="string" />
+          <retval type="TConnection" />
+        </parameters>
+      </function>
+      <procedure name="CloseSession" visibility="public" file="SymMng.ConnectionMng.pas" line="64">
+        <parameters>
+          <parameter name="PlugIn" type="string" />
+        </parameters>
+      </procedure>
+      <property name="BaseConnection" visibility="public" read="GetBaseConnection" type="TConnection" file="SymMng.ConnectionMng.pas" line="66" />
+    </members>
+  </class>
+</namespace>

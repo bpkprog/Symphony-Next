@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="sbConst" platform="Win32">
+  <const name="sbc_FINDAPPLICATION" type="Integer">
+    <value>
+      $1
+    </value>
+  </const>
+  <const name="sbc_I_SYMPHONYAPP" type="Integer">
+    <value>
+      $2
+    </value>
+  </const>
+  <const name="sbc_I_SYMPHONY_DISP" type="Integer">
+    <value>
+      $3
+    </value>
+  </const>
+  <const name="sbc_EXEC_QUEUECMD" type="Integer">
+    <value>
+      $4
+    </value>
+  </const>
+  <const name="sbc_EXEC_FUNCTION" type="Integer">
+    <value>
+      $5
+    </value>
+  </const>
+  <const name="sbc_EXEC_PROCEDURE" type="Integer">
+    <value>
+      $6
+    </value>
+  </const>
+  <const name="sbc_QUERY_EXEC" type="Integer">
+    <value>
+      $7
+    </value>
+  </const>
+  <const name="sbc_FINDRELATIVES" type="Integer">
+    <value>
+      $8
+    </value>
+  </const>
+  <const name="cdfMetaDataSize" type="Integer">
+    <value>
+      $80
+    </value>
+  </const>
+  <const name="cdc_Query" type="Integer">
+    <value>
+      $A
+    </value>
+  </const>
+  <const name="cdc_Execute" type="Integer">
+    <value>
+      $14
+    </value>
+  </const>
+  <const name="cdc_Result" type="Integer">
+    <value>
+      $1E
+    </value>
+  </const>
+  <function name="WM_SYMPHONYBINDER" visibility="public">
+    <parameters>
+      <retval type="Cardinal" />
+    </parameters>
+  </function>
+</namespace>

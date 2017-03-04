@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymphonyPlugIn.MessageInterface" platform="Win32">
+  <interface name="ISymphonyPlugInMessage" GUID="{278DE7C5-B7CA-4117-8758-1148095F538F}" ancestor="IInterface">
+    <function name="GetDomain" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetEvent" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetParamCount" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Integer" />
+      </parameters>
+    </function>
+    <function name="GetParams" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Index" type="Integer" />
+        <retval type="ISymphonyPlugInParam" />
+      </parameters>
+    </function>
+    <function name="GetParamValue" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <retval type="Variant" />
+      </parameters>
+    </function>
+    <function name="GetResult" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Variant" />
+      </parameters>
+    </function>
+    <procedure name="SetResult" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Value" type="Variant" />
+      </parameters>
+    </procedure>
+    <procedure name="SetDomain" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Value" type="string" />
+      </parameters>
+    </procedure>
+    <procedure name="SetEvent" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Value" type="string" />
+      </parameters>
+    </procedure>
+    <function name="AddParam" visibility="public" procflags="abstract overload virtual">
+      <parameters>
+        <retval type="ISymphonyPlugInParam" />
+      </parameters>
+    </function>
+    <function name="AddParam" visibility="public" procflags="abstract overload virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <retval type="ISymphonyPlugInParam" />
+      </parameters>
+    </function>
+    <function name="AddParam" visibility="public" procflags="abstract overload virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <parameter name="ParamValue" type="Variant" />
+        <retval type="ISymphonyPlugInParam" />
+      </parameters>
+    </function>
+    <property name="Domain" visibility="public" read="GetDomain" write="SetDomain" type="string" default="0" />
+    <property name="Event" visibility="public" read="GetEvent" write="SetEvent" type="string" default="0" />
+    <property name="ParamCount" visibility="public" read="GetParamCount" type="Integer" />
+    <property name="Params[Index]" visibility="public" read="GetParams" type="ISymphonyPlugInParam" />
+    <property name="ParamValue[ParamName]" visibility="public" read="GetParamValue" type="Variant" />
+    <property name="Result" visibility="public" read="GetResult" write="SetResult" type="Variant" default="0" />
+  </interface>
+</namespace>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymphonyPlugIn.UsageTaskStatInterface" platform="Win32">
+  <interface name="IUsageTaskStatistician" ancestor="IInterface">
+    <procedure name="ExecuteTask" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Session" type="TObject" />
+        <parameter name="IDTask" type="Integer" />
+      </parameters>
+    </procedure>
+  </interface>
+</namespace>

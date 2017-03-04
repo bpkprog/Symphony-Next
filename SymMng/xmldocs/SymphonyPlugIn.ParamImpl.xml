@@ -1,0 +1,933 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymphonyPlugIn.ParamImpl" platform="Win32">
+  <class name="TSymphonyPlugInNamedIntf" file="SymphonyPlugIn.ParamImpl.pas" line="8">
+    <ancestor name="TInterfacedObject" namespace="System">
+      <interfaces>
+        <implements name="IInterface" />
+      </interfaces>
+      <methodref name="GetRefCount" visibility="private" procflags="inline">
+      </methodref>
+      <methodref name="__MarkDestroying" visibility="protected" procflags="static inline">
+      </methodref>
+      <methodref name="QueryInterface" visibility="protected">
+      </methodref>
+      <methodref name="_AddRef" visibility="protected">
+      </methodref>
+      <methodref name="_Release" visibility="protected">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class override">
+      </methodref>
+      <propertyref name="RefCount" visibility="public">
+      </propertyref>
+      <ancestor name="TObject" namespace="System">
+        <methodref name="Create" visibility="public" procflags="constructor">
+        </methodref>
+        <methodref name="Free" visibility="public">
+        </methodref>
+        <methodref name="DisposeOf" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="InitInstance" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="CleanupInstance" visibility="public">
+        </methodref>
+        <methodref name="ClassType" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="ClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassNameIs" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassParent" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassInfo" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="InstanceSize" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="InheritsFrom" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="QualifiedClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="GetInterface" visibility="public">
+        </methodref>
+        <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="UnitName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="UnitScope" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="Equals" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetHashCode" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="ToString" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="SafeCallException" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Dispatch" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="NewInstance" visibility="public" procflags="class virtual">
+        </methodref>
+        <methodref name="FreeInstance" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+        </methodref>
+        <methodref name="GetDisposed" visibility="protected" procflags="inline">
+        </methodref>
+        <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+        </methodref>
+        <propertyref name="Disposed" visibility="protected">
+        </propertyref>
+      </ancestor>
+    </ancestor>
+    <interfaces>
+      <implements name="ISymphonyPlugInNamedIntf" />
+    </interfaces>
+    <members>
+      <field name="FCaption" type="string" visibility="private" size="4" offset="12" file="SymphonyPlugIn.ParamImpl.pas" line="10" />
+      <field name="FDescription" type="string" visibility="private" size="4" offset="16" file="SymphonyPlugIn.ParamImpl.pas" line="11" />
+      <field name="FName" type="string" visibility="private" size="4" offset="20" file="SymphonyPlugIn.ParamImpl.pas" line="12" />
+      <function name="GetName" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="14">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetCaption" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="15">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetDescription" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="16">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="SetName" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="18">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetCaption" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="19">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetDescription" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="20">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <property name="Caption" visibility="public" read="GetCaption" write="SetCaption" type="string" default="0" file="SymphonyPlugIn.ParamImpl.pas" line="22" />
+      <property name="Description" visibility="public" read="GetDescription" write="SetDescription" type="string" default="0" file="SymphonyPlugIn.ParamImpl.pas" line="23" />
+      <property name="Name" visibility="public" read="GetName" write="SetName" type="string" default="0" file="SymphonyPlugIn.ParamImpl.pas" line="24" />
+    </members>
+  </class>
+  <class name="TSymphonyPlugInParam" file="SymphonyPlugIn.ParamImpl.pas" line="27">
+    <ancestor name="TSymphonyPlugInNamedIntf" namespace="SymphonyPlugIn.ParamImpl">
+      <interfaces>
+        <implements name="ISymphonyPlugInNamedIntf" />
+      </interfaces>
+      <methodref name="GetName" visibility="public" />
+      <methodref name="GetCaption" visibility="public" />
+      <methodref name="GetDescription" visibility="public" />
+      <methodref name="SetName" visibility="public" />
+      <methodref name="SetCaption" visibility="public" />
+      <methodref name="SetDescription" visibility="public" />
+      <propertyref name="Caption" visibility="public" />
+      <propertyref name="Description" visibility="public" />
+      <propertyref name="Name" visibility="public" />
+      <ancestor name="TInterfacedObject" namespace="System">
+        <interfaces>
+          <implements name="IInterface" />
+        </interfaces>
+        <methodref name="GetRefCount" visibility="private" procflags="inline">
+        </methodref>
+        <methodref name="__MarkDestroying" visibility="protected" procflags="static inline">
+        </methodref>
+        <methodref name="QueryInterface" visibility="protected">
+        </methodref>
+        <methodref name="_AddRef" visibility="protected">
+        </methodref>
+        <methodref name="_Release" visibility="protected">
+        </methodref>
+        <methodref name="AfterConstruction" visibility="public" procflags="override">
+        </methodref>
+        <methodref name="BeforeDestruction" visibility="public" procflags="override">
+        </methodref>
+        <methodref name="NewInstance" visibility="public" procflags="class override">
+        </methodref>
+        <propertyref name="RefCount" visibility="public">
+        </propertyref>
+        <ancestor name="TObject" namespace="System">
+          <methodref name="Create" visibility="public" procflags="constructor">
+          </methodref>
+          <methodref name="Free" visibility="public">
+          </methodref>
+          <methodref name="DisposeOf" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="InitInstance" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="CleanupInstance" visibility="public">
+          </methodref>
+          <methodref name="ClassType" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="ClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassNameIs" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassParent" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassInfo" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InstanceSize" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InheritsFrom" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="QualifiedClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="GetInterface" visibility="public">
+          </methodref>
+          <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitScope" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="Equals" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="GetHashCode" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="ToString" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="SafeCallException" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Dispatch" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="NewInstance" visibility="public" procflags="class virtual">
+          </methodref>
+          <methodref name="FreeInstance" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+          </methodref>
+          <methodref name="GetDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <propertyref name="Disposed" visibility="protected">
+          </propertyref>
+        </ancestor>
+      </ancestor>
+    </ancestor>
+    <interfaces>
+      <implements name="ISymphonyPlugInParam" />
+    </interfaces>
+    <members>
+      <field name="FValue" type="Variant" visibility="private" size="16" offset="32" file="SymphonyPlugIn.ParamImpl.pas" line="29" />
+      <procedure name="Assign" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="31">
+        <parameters>
+          <parameter name="Param" type="ISymphonyPlugInParam" />
+        </parameters>
+      </procedure>
+      <function name="GetValue" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="33">
+        <parameters>
+          <retval type="Variant" />
+        </parameters>
+      </function>
+      <function name="GetAsInteger" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="34">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetAsFloat" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="35">
+        <parameters>
+          <retval type="Double" />
+        </parameters>
+      </function>
+      <function name="GetAsDateTime" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="36">
+        <parameters>
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <function name="GetAsBoolean" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="37">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="GetAsString" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="38">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="SetValue" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="40">
+        <parameters>
+          <parameter name="AValue" type="Variant" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsInteger" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="41">
+        <parameters>
+          <parameter name="AValue" type="Integer" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsFloat" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="42">
+        <parameters>
+          <parameter name="AValue" type="Double" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsDateTime" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="43">
+        <parameters>
+          <parameter name="AValue" type="TDateTime" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsBoolean" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="44">
+        <parameters>
+          <parameter name="AValue" type="Boolean" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsString" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="45">
+        <parameters>
+          <parameter name="AValue" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <property name="AsInteger" visibility="public" read="GetAsInteger" write="SetAsInteger" type="Integer" file="SymphonyPlugIn.ParamImpl.pas" line="47" />
+      <property name="AsFloat" visibility="public" read="GetAsFloat" write="SetAsFloat" type="Double" default="0" file="SymphonyPlugIn.ParamImpl.pas" line="48" />
+      <property name="AsDateTime" visibility="public" read="GetAsDateTime" write="SetAsDateTime" type="TDateTime" default="0" file="SymphonyPlugIn.ParamImpl.pas" line="49" />
+      <property name="AsBoolean" visibility="public" read="GetAsBoolean" write="SetAsBoolean" type="Boolean" file="SymphonyPlugIn.ParamImpl.pas" line="50" />
+      <property name="AsString" visibility="public" read="GetAsString" write="SetAsString" type="string" default="0" file="SymphonyPlugIn.ParamImpl.pas" line="51" />
+      <property name="Value" visibility="public" read="GetValue" write="SetValue" type="Variant" default="0" file="SymphonyPlugIn.ParamImpl.pas" line="52" />
+    </members>
+  </class>
+  <class name="TSymphonyPlugInParamList" file="SymphonyPlugIn.ParamImpl.pas" line="55">
+    <ancestor name="TSymphonyPlugInNamedIntf" namespace="SymphonyPlugIn.ParamImpl">
+      <interfaces>
+        <implements name="ISymphonyPlugInNamedIntf" />
+      </interfaces>
+      <methodref name="GetName" visibility="public" />
+      <methodref name="GetCaption" visibility="public" />
+      <methodref name="GetDescription" visibility="public" />
+      <methodref name="SetName" visibility="public" />
+      <methodref name="SetCaption" visibility="public" />
+      <methodref name="SetDescription" visibility="public" />
+      <propertyref name="Caption" visibility="public" />
+      <propertyref name="Description" visibility="public" />
+      <propertyref name="Name" visibility="public" />
+      <ancestor name="TInterfacedObject" namespace="System">
+        <interfaces>
+          <implements name="IInterface" />
+        </interfaces>
+        <methodref name="GetRefCount" visibility="private" procflags="inline">
+        </methodref>
+        <methodref name="__MarkDestroying" visibility="protected" procflags="static inline">
+        </methodref>
+        <methodref name="QueryInterface" visibility="protected">
+        </methodref>
+        <methodref name="_AddRef" visibility="protected">
+        </methodref>
+        <methodref name="_Release" visibility="protected">
+        </methodref>
+        <methodref name="AfterConstruction" visibility="public" procflags="override">
+        </methodref>
+        <methodref name="BeforeDestruction" visibility="public" procflags="override">
+        </methodref>
+        <methodref name="NewInstance" visibility="public" procflags="class override">
+        </methodref>
+        <propertyref name="RefCount" visibility="public">
+        </propertyref>
+        <ancestor name="TObject" namespace="System">
+          <methodref name="Create" visibility="public" procflags="constructor">
+          </methodref>
+          <methodref name="Free" visibility="public">
+          </methodref>
+          <methodref name="DisposeOf" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="InitInstance" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="CleanupInstance" visibility="public">
+          </methodref>
+          <methodref name="ClassType" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="ClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassNameIs" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassParent" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassInfo" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InstanceSize" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InheritsFrom" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="QualifiedClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="GetInterface" visibility="public">
+          </methodref>
+          <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitScope" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="Equals" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="GetHashCode" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="ToString" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="SafeCallException" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Dispatch" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="NewInstance" visibility="public" procflags="class virtual">
+          </methodref>
+          <methodref name="FreeInstance" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+          </methodref>
+          <methodref name="GetDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <propertyref name="Disposed" visibility="protected">
+          </propertyref>
+        </ancestor>
+      </ancestor>
+    </ancestor>
+    <interfaces>
+      <implements name="ISymphonyPlugInParamList" />
+    </interfaces>
+    <members>
+      <field name="FParams" type="TInterfaceList" visibility="private" size="4" offset="28" file="SymphonyPlugIn.ParamImpl.pas" line="57" />
+      <procedure name="ParseParam" visibility="private" file="SymphonyPlugIn.ParamImpl.pas" line="58">
+        <parameters>
+          <parameter name="ParamLine" type="string" />
+        </parameters>
+      </procedure>
+      <procedure name="AssignParamList" visibility="protected" file="SymphonyPlugIn.ParamImpl.pas" line="60">
+        <parameters>
+          <parameter name="ParamList" type="ISymphonyPlugInParamList" />
+        </parameters>
+      </procedure>
+      <constructor name="Create" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="62">
+        <parameters>
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="63">
+        <parameters>
+        </parameters>
+      </destructor>
+      <procedure name="Assign" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="65">
+        <parameters>
+          <parameter name="ParamList" type="ISymphonyPlugInParamList" />
+        </parameters>
+      </procedure>
+      <procedure name="Merge" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="66">
+        <parameters>
+          <parameter name="ParamList" type="ISymphonyPlugInParamList" />
+        </parameters>
+      </procedure>
+      <procedure name="ParseParams" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="67">
+        <parameters>
+          <parameter name="CmdLine" type="string" />
+        </parameters>
+      </procedure>
+      <function name="IndexOf" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="68">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetParamCount" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="70">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetParams" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="71">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <retval type="ISymphonyPlugInParam" />
+        </parameters>
+      </function>
+      <function name="GetParamValue" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="72">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Variant" />
+        </parameters>
+      </function>
+      <function name="GetAsInteger" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="73">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetAsFloat" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="74">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Double" />
+        </parameters>
+      </function>
+      <function name="GetAsDateTime" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="75">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <function name="GetAsBoolean" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="76">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="GetAsString" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="77">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="SetParamValue" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="79">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="Value" type="Variant" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsInteger" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="80">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="AValue" type="Integer" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsFloat" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="81">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="AValue" type="Double" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsDateTime" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="82">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="AValue" type="TDateTime" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsBoolean" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="83">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="AValue" type="Boolean" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsString" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="84">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="AValue" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="AddParam" visibility="public" procflags="overload" file="SymphonyPlugIn.ParamImpl.pas" line="86">
+        <parameters>
+          <retval type="ISymphonyPlugInParam" />
+        </parameters>
+      </function>
+      <function name="AddParam" visibility="public" procflags="overload" file="SymphonyPlugIn.ParamImpl.pas" line="87">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="ISymphonyPlugInParam" />
+        </parameters>
+      </function>
+      <function name="AddParam" visibility="public" procflags="overload" file="SymphonyPlugIn.ParamImpl.pas" line="88">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="ParamValue" type="Variant" />
+          <retval type="ISymphonyPlugInParam" />
+        </parameters>
+      </function>
+      <property name="ParamCount" visibility="public" read="GetParamCount" type="Integer" file="SymphonyPlugIn.ParamImpl.pas" line="90" />
+      <property name="Params[Index]" visibility="public" read="GetParams" type="ISymphonyPlugInParam" file="SymphonyPlugIn.ParamImpl.pas" line="91" />
+      <property name="ParamValue[ParamName]" visibility="public" read="GetParamValue" write="SetParamValue" type="Variant" file="SymphonyPlugIn.ParamImpl.pas" line="92" />
+      <property name="AsInteger[ParamName]" visibility="public" read="GetAsInteger" write="SetAsInteger" type="Integer" file="SymphonyPlugIn.ParamImpl.pas" line="93" />
+      <property name="AsFloat[ParamName]" visibility="public" read="GetAsFloat" write="SetAsFloat" type="Double" file="SymphonyPlugIn.ParamImpl.pas" line="94" />
+      <property name="AsDateTime[ParamName]" visibility="public" read="GetAsDateTime" write="SetAsDateTime" type="TDateTime" file="SymphonyPlugIn.ParamImpl.pas" line="95" />
+      <property name="AsBoolean[ParamName]" visibility="public" read="GetAsBoolean" write="SetAsBoolean" type="Boolean" file="SymphonyPlugIn.ParamImpl.pas" line="96" />
+      <property name="AsString[ParamName]" visibility="public" read="GetAsString" write="SetAsString" type="string" file="SymphonyPlugIn.ParamImpl.pas" line="97" />
+    </members>
+  </class>
+  <class name="TSymphonyPlugInCommand" file="SymphonyPlugIn.ParamImpl.pas" line="100">
+    <ancestor name="TSymphonyPlugInParamList" namespace="SymphonyPlugIn.ParamImpl">
+      <interfaces>
+        <implements name="ISymphonyPlugInParamList" />
+      </interfaces>
+      <methodref name="ParseParam" visibility="private" />
+      <methodref name="AssignParamList" visibility="protected" />
+      <methodref name="Create" visibility="public" procflags="constructor" />
+      <methodref name="Destroy" visibility="public" procflags="destructor override" />
+      <methodref name="Assign" visibility="public" />
+      <methodref name="Merge" visibility="public" />
+      <methodref name="ParseParams" visibility="public" />
+      <methodref name="IndexOf" visibility="public" />
+      <methodref name="GetParamCount" visibility="public" />
+      <methodref name="GetParams" visibility="public" />
+      <methodref name="GetParamValue" visibility="public" />
+      <methodref name="GetAsInteger" visibility="public" />
+      <methodref name="GetAsFloat" visibility="public" />
+      <methodref name="GetAsDateTime" visibility="public" />
+      <methodref name="GetAsBoolean" visibility="public" />
+      <methodref name="GetAsString" visibility="public" />
+      <methodref name="SetParamValue" visibility="public" />
+      <methodref name="SetAsInteger" visibility="public" />
+      <methodref name="SetAsFloat" visibility="public" />
+      <methodref name="SetAsDateTime" visibility="public" />
+      <methodref name="SetAsBoolean" visibility="public" />
+      <methodref name="SetAsString" visibility="public" />
+      <methodref name="AddParam" visibility="public" procflags="overload" />
+      <methodref name="AddParam" visibility="public" procflags="overload" />
+      <methodref name="AddParam" visibility="public" procflags="overload" />
+      <propertyref name="ParamCount" visibility="public" />
+      <propertyref name="Params" visibility="public" />
+      <propertyref name="ParamValue" visibility="public" />
+      <propertyref name="AsInteger" visibility="public" />
+      <propertyref name="AsFloat" visibility="public" />
+      <propertyref name="AsDateTime" visibility="public" />
+      <propertyref name="AsBoolean" visibility="public" />
+      <propertyref name="AsString" visibility="public" />
+      <ancestor name="TSymphonyPlugInNamedIntf" namespace="SymphonyPlugIn.ParamImpl">
+        <interfaces>
+          <implements name="ISymphonyPlugInNamedIntf" />
+        </interfaces>
+        <methodref name="GetName" visibility="public" />
+        <methodref name="GetCaption" visibility="public" />
+        <methodref name="GetDescription" visibility="public" />
+        <methodref name="SetName" visibility="public" />
+        <methodref name="SetCaption" visibility="public" />
+        <methodref name="SetDescription" visibility="public" />
+        <propertyref name="Caption" visibility="public" />
+        <propertyref name="Description" visibility="public" />
+        <propertyref name="Name" visibility="public" />
+        <ancestor name="TInterfacedObject" namespace="System">
+          <interfaces>
+            <implements name="IInterface" />
+          </interfaces>
+          <methodref name="GetRefCount" visibility="private" procflags="inline">
+          </methodref>
+          <methodref name="__MarkDestroying" visibility="protected" procflags="static inline">
+          </methodref>
+          <methodref name="QueryInterface" visibility="protected">
+          </methodref>
+          <methodref name="_AddRef" visibility="protected">
+          </methodref>
+          <methodref name="_Release" visibility="protected">
+          </methodref>
+          <methodref name="AfterConstruction" visibility="public" procflags="override">
+          </methodref>
+          <methodref name="BeforeDestruction" visibility="public" procflags="override">
+          </methodref>
+          <methodref name="NewInstance" visibility="public" procflags="class override">
+          </methodref>
+          <propertyref name="RefCount" visibility="public">
+          </propertyref>
+          <ancestor name="TObject" namespace="System">
+            <methodref name="Create" visibility="public" procflags="constructor">
+            </methodref>
+            <methodref name="Free" visibility="public">
+            </methodref>
+            <methodref name="DisposeOf" visibility="public" procflags="inline">
+            </methodref>
+            <methodref name="InitInstance" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="CleanupInstance" visibility="public">
+            </methodref>
+            <methodref name="ClassType" visibility="public" procflags="inline">
+            </methodref>
+            <methodref name="ClassName" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="ClassNameIs" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="ClassParent" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="ClassInfo" visibility="public" procflags="class inline">
+            </methodref>
+            <methodref name="InstanceSize" visibility="public" procflags="class inline">
+            </methodref>
+            <methodref name="InheritsFrom" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="MethodAddress" visibility="public" procflags="class overload">
+            </methodref>
+            <methodref name="MethodAddress" visibility="public" procflags="class overload">
+            </methodref>
+            <methodref name="MethodName" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="QualifiedClassName" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="FieldAddress" visibility="public" procflags="overload">
+            </methodref>
+            <methodref name="FieldAddress" visibility="public" procflags="overload">
+            </methodref>
+            <methodref name="GetInterface" visibility="public">
+            </methodref>
+            <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="UnitName" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="UnitScope" visibility="public" procflags="class">
+            </methodref>
+            <methodref name="Equals" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="GetHashCode" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="ToString" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="SafeCallException" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="Dispatch" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="NewInstance" visibility="public" procflags="class virtual">
+            </methodref>
+            <methodref name="FreeInstance" visibility="public" procflags="virtual">
+            </methodref>
+            <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+            </methodref>
+            <methodref name="GetDisposed" visibility="protected" procflags="inline">
+            </methodref>
+            <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+            </methodref>
+            <propertyref name="Disposed" visibility="protected">
+            </propertyref>
+          </ancestor>
+        </ancestor>
+      </ancestor>
+    </ancestor>
+    <interfaces>
+      <implements name="ISymphonyPlugInCommand" />
+    </interfaces>
+    <members>
+      <field name="FCommand" type="string" visibility="private" size="4" offset="36" file="SymphonyPlugIn.ParamImpl.pas" line="102" />
+      <procedure name="Assign" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="104">
+        <parameters>
+          <parameter name="ACommand" type="ISymphonyPlugInCommand" />
+        </parameters>
+      </procedure>
+      <function name="GetCommand" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="106">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="SetCommand" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="107">
+        <parameters>
+          <parameter name="Value" type="string" />
+        </parameters>
+      </procedure>
+      <property name="Command" visibility="public" read="GetCommand" write="SetCommand" type="string" default="0" file="SymphonyPlugIn.ParamImpl.pas" line="109" />
+    </members>
+  </class>
+  <class name="TSymphonyPlugInCFGGroup" file="SymphonyPlugIn.ParamImpl.pas" line="112">
+    <ancestor name="TSymphonyPlugInNamedIntf" namespace="SymphonyPlugIn.ParamImpl">
+      <interfaces>
+        <implements name="ISymphonyPlugInNamedIntf" />
+      </interfaces>
+      <methodref name="GetName" visibility="public" />
+      <methodref name="GetCaption" visibility="public" />
+      <methodref name="GetDescription" visibility="public" />
+      <methodref name="SetName" visibility="public" />
+      <methodref name="SetCaption" visibility="public" />
+      <methodref name="SetDescription" visibility="public" />
+      <propertyref name="Caption" visibility="public" />
+      <propertyref name="Description" visibility="public" />
+      <propertyref name="Name" visibility="public" />
+      <ancestor name="TInterfacedObject" namespace="System">
+        <interfaces>
+          <implements name="IInterface" />
+        </interfaces>
+        <methodref name="GetRefCount" visibility="private" procflags="inline">
+        </methodref>
+        <methodref name="__MarkDestroying" visibility="protected" procflags="static inline">
+        </methodref>
+        <methodref name="QueryInterface" visibility="protected">
+        </methodref>
+        <methodref name="_AddRef" visibility="protected">
+        </methodref>
+        <methodref name="_Release" visibility="protected">
+        </methodref>
+        <methodref name="AfterConstruction" visibility="public" procflags="override">
+        </methodref>
+        <methodref name="BeforeDestruction" visibility="public" procflags="override">
+        </methodref>
+        <methodref name="NewInstance" visibility="public" procflags="class override">
+        </methodref>
+        <propertyref name="RefCount" visibility="public">
+        </propertyref>
+        <ancestor name="TObject" namespace="System">
+          <methodref name="Create" visibility="public" procflags="constructor">
+          </methodref>
+          <methodref name="Free" visibility="public">
+          </methodref>
+          <methodref name="DisposeOf" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="InitInstance" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="CleanupInstance" visibility="public">
+          </methodref>
+          <methodref name="ClassType" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="ClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassNameIs" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassParent" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassInfo" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InstanceSize" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InheritsFrom" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="QualifiedClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="GetInterface" visibility="public">
+          </methodref>
+          <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitScope" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="Equals" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="GetHashCode" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="ToString" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="SafeCallException" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Dispatch" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="NewInstance" visibility="public" procflags="class virtual">
+          </methodref>
+          <methodref name="FreeInstance" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+          </methodref>
+          <methodref name="GetDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <propertyref name="Disposed" visibility="protected">
+          </propertyref>
+        </ancestor>
+      </ancestor>
+    </ancestor>
+    <interfaces>
+      <implements name="ISymphonyPlugInCFGGroup" />
+    </interfaces>
+    <members>
+      <field name="FCommonParams" type="ISymphonyPlugInParamList" visibility="private" size="4" offset="28" file="SymphonyPlugIn.ParamImpl.pas" line="114" />
+      <field name="FPersonalParams" type="ISymphonyPlugInParamList" visibility="private" size="4" offset="32" file="SymphonyPlugIn.ParamImpl.pas" line="115" />
+      <constructor name="Create" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="117">
+        <parameters>
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="118">
+        <parameters>
+        </parameters>
+      </destructor>
+      <procedure name="Assign" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="120">
+        <parameters>
+          <parameter name="CFGGroup" type="ISymphonyPlugInCFGGroup" />
+        </parameters>
+      </procedure>
+      <procedure name="Merge" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="121">
+        <parameters>
+          <parameter name="CFGGroup" type="ISymphonyPlugInCFGGroup" />
+        </parameters>
+      </procedure>
+      <function name="GetCommonParams" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="123">
+        <parameters>
+          <retval type="ISymphonyPlugInParamList" />
+        </parameters>
+      </function>
+      <function name="GetPersonalParams" visibility="public" file="SymphonyPlugIn.ParamImpl.pas" line="124">
+        <parameters>
+          <retval type="ISymphonyPlugInParamList" />
+        </parameters>
+      </function>
+      <property name="CommonParams" visibility="public" read="GetCommonParams" type="ISymphonyPlugInParamList" file="SymphonyPlugIn.ParamImpl.pas" line="126" />
+      <property name="PersonalParams" visibility="public" read="GetPersonalParams" type="ISymphonyPlugInParamList" file="SymphonyPlugIn.ParamImpl.pas" line="127" />
+    </members>
+  </class>
+</namespace>

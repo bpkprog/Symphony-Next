@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymMng" platform="Win32">
+  <contains name="SymphonyPlugIn.GridStyle" />
+  <contains name="smplCmdParser.MainUnit" />
+  <contains name="SymMng.HelpForm" />
+  <contains name="SymMng.PackageManager" />
+  <contains name="SymMng.MainDataModule" />
+  <contains name="SymMng.TunerEditor" />
+  <contains name="SymMng.TunerFrame" />
+  <contains name="SymMng.Tuner" />
+  <contains name="SymMng.Consts" />
+  <contains name="SymMng.ChildForm" />
+  <contains name="SymMng.UIPackageManager" />
+  <contains name="SymMng.SymphonyTask" />
+  <contains name="SymMng.ConnectionMng" />
+  <contains name="SymMng.Environment" />
+  <contains name="SymMng.MainUnit" />
+  <contains name="SysInit" />
+</namespace>

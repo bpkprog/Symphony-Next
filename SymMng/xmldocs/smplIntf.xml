@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name=".smplIntf" platform="Win32">
+  <contains name="SymphonyPlugIn.UsageTaskStatInterface" />
+  <contains name="SymphonyPlugIn.PackageInterface" />
+  <contains name="SymphonyPlugIn.MessageInterface" />
+  <contains name="SymphonyPlugIn.ParamInterface" />
+  <contains name="SymphonyPlugIn.ActionInterface" />
+  <contains name="SysInit" />
+</namespace>

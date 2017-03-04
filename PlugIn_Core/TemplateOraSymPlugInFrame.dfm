@@ -1,0 +1,2 @@
+inherited frmPlugInTemplate: TfrmPlugInTemplate
+end

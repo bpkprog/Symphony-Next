@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="cioIntf.MainUnit" platform="Win32">
+  <interface name="IConstIO" GUID="{E84A3545-C310-4E22-B01B-BF9DEBD7B6D1}" ancestor="IInterface">
+    <function name="LoadCFGGroup" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="GroupName" type="string" />
+        <retval type="ISymphonyPlugInCFGGroup" />
+      </parameters>
+    </function>
+    <function name="SaveCFGGroup" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Group" type="ISymphonyPlugInCFGGroup" />
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <function name="SaveConst" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Group" type="ISymphonyPlugInCFGGroup" />
+        <parameter name="Param" type="ISymphonyPlugInParam" />
+        <parameter name="IsPersonalParam" type="Boolean" />
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+  </interface>
+</namespace>

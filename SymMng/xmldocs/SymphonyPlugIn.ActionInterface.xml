@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymphonyPlugIn.ActionInterface" platform="Win32">
+  <interface name="ISymphonyPlugInAction" GUID="{B39489C5-978C-4957-8AA0-6AA60FE21308}" ancestor="IInterface">
+    <function name="GetCaption" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetCommand" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="ISymphonyPlugInCommand" />
+      </parameters>
+    </function>
+    <function name="GetFrameClassName" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetPlugInMethodName" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetIconCount" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Integer" />
+      </parameters>
+    </function>
+    <function name="GetIcon" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Index" type="Integer" />
+        <retval type="TBitmap" />
+      </parameters>
+    </function>
+    <function name="GetName" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetBeginGroup" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <function name="GetBar" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetAutoStart" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <function name="GetVisible" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <function name="GetContextName" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetTabCaption" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetTabIndex" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Integer" />
+      </parameters>
+    </function>
+    <function name="GetFormCaption" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetForms" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="TFormList" />
+      </parameters>
+    </function>
+    <procedure name="SetGetHandleFunc" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AFunc" type="TSymphonyPlugInGetHandleFunc" />
+      </parameters>
+    </procedure>
+    <procedure name="SetGetOwnerFormFunc" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AFunc" type="TSymphonyPlugInGetOwnerFormFunc" />
+      </parameters>
+    </procedure>
+    <procedure name="SetGetSessionFunc" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AFunc" type="TSymphonyPlugInGetSessionFunc" />
+      </parameters>
+    </procedure>
+    <procedure name="SetGetParamFunc" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AFunc" type="TSymphonyPlugInGetParamFunc" />
+      </parameters>
+    </procedure>
+    <procedure name="SetTunerParams" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Value" type="ISymphonyPlugInCFGGroup" paramflags="const" />
+      </parameters>
+    </procedure>
+    <function name="GetTunerParams" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="ISymphonyPlugInCFGGroup" />
+      </parameters>
+    </function>
+    <procedure name="ClearIcons" visibility="public" procflags="abstract virtual">
+    </procedure>
+    <function name="Execute" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="CmdLine" type="string">
+          <value>
+            
+          </value>
+        </parameter>
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <procedure name="ShowForms" visibility="public" procflags="abstract virtual">
+    </procedure>
+    <function name="IndexOfForm" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AForm" type="TForm" />
+        <retval type="Integer" />
+      </parameters>
+    </function>
+    <property name="AutoStart" visibility="public" read="GetAutoStart" type="Boolean" />
+    <property name="Bar" visibility="public" read="GetBar" type="string" default="0" />
+    <property name="BeginGroup" visibility="public" read="GetBeginGroup" type="Boolean" />
+    <property name="Caption" visibility="public" read="GetCaption" type="string" default="0" />
+    <property name="ContextName" visibility="public" read="GetContextName" type="string" default="0" />
+    <property name="IconCount" visibility="public" read="GetIconCount" type="Integer" />
+    <property name="Icon[Index]" visibility="public" read="GetIcon" type="TBitmap" />
+    <property name="TabCaption" visibility="public" read="GetTabCaption" type="string" default="0" />
+    <property name="TabIndex" visibility="public" read="GetTabIndex" type="Integer" />
+    <property name="Visible" visibility="public" read="GetVisible" type="Boolean" />
+    <property name="FormCaption" visibility="public" read="GetFormCaption" type="string" default="0" />
+    <property name="Forms" visibility="public" read="GetForms" type="TList&lt;Vcl.Forms.TForm&gt;" hoisted="true" />
+    <property name="FrameClassName" visibility="public" read="GetFrameClassName" type="string" default="0" />
+    <property name="PlugInMethodName" visibility="public" read="GetPlugInMethodName" type="string" default="0" />
+    <property name="Command" visibility="public" read="GetCommand" type="ISymphonyPlugInCommand" />
+    <property name="Name" visibility="public" read="GetName" type="string" default="0" />
+    <property name="TunerParams" visibility="public" read="GetTunerParams" write="SetTunerParams" type="ISymphonyPlugInCFGGroup" />
+  </interface>
+  <interface name="ISymphonyPlugInActionList" GUID="{8FC2541D-58A6-42DC-BF30-242C2AEAAC2B}" ancestor="IInterface">
+    <function name="GetCaption" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetCount" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Integer" />
+      </parameters>
+    </function>
+    <function name="GetBarCount" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Integer" />
+      </parameters>
+    </function>
+    <function name="GetAction" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Index" type="Integer" />
+        <retval type="ISymphonyPlugInAction" />
+      </parameters>
+    </function>
+    <function name="FindAction" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ActionName" type="string" />
+        <retval type="ISymphonyPlugInAction" />
+      </parameters>
+    </function>
+    <function name="GetBar" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Index" type="Integer" />
+        <retval type="string" />
+      </parameters>
+    </function>
+    <procedure name="SetGetHandleFunc" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AFunc" type="TSymphonyPlugInGetHandleFunc" />
+      </parameters>
+    </procedure>
+    <procedure name="SetGetOwnerFormFunc" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AFunc" type="TSymphonyPlugInGetOwnerFormFunc" />
+      </parameters>
+    </procedure>
+    <procedure name="SetGetSessionFunc" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AFunc" type="TSymphonyPlugInGetSessionFunc" />
+      </parameters>
+    </procedure>
+    <procedure name="SetGetParamFunc" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AFunc" type="TSymphonyPlugInGetParamFunc" />
+      </parameters>
+    </procedure>
+    <procedure name="SetTunerParams" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Value" type="ISymphonyPlugInCFGGroup" paramflags="const" />
+      </parameters>
+    </procedure>
+    <function name="GetTunerParams" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="ISymphonyPlugInCFGGroup" />
+      </parameters>
+    </function>
+    <function name="ExecAutoRun" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <function name="Execute" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="CmdLine" type="string" />
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <procedure name="ShowForms" visibility="public" procflags="abstract virtual">
+    </procedure>
+    <property name="Caption" visibility="public" read="GetCaption" type="string" default="0" />
+    <property name="Count" visibility="public" read="GetCount" type="Integer" />
+    <property name="Action[Index]" visibility="public" read="GetAction" type="ISymphonyPlugInAction" />
+    <property name="BarCount" visibility="public" read="GetBarCount" type="Integer" />
+    <property name="Bar[Index]" visibility="public" read="GetBar" type="string" />
+    <property name="TunerParams" visibility="public" read="GetTunerParams" write="SetTunerParams" type="ISymphonyPlugInCFGGroup" />
+  </interface>
+</namespace>

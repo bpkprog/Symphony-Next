@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6BACCC9F-8C2D-454C-B9BD-64E916D7E715}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="SymDBORA.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SymDBMSSQL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SymDBORA">
+        <MSBuild Projects="SymDBORA.dproj"/>
+    </Target>
+    <Target Name="SymDBORA:Clean">
+        <MSBuild Projects="SymDBORA.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SymDBORA:Make">
+        <MSBuild Projects="SymDBORA.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SymDBMSSQL">
+        <MSBuild Projects="SymDBMSSQL.dproj"/>
+    </Target>
+    <Target Name="SymDBMSSQL:Clean">
+        <MSBuild Projects="SymDBMSSQL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SymDBMSSQL:Make">
+        <MSBuild Projects="SymDBMSSQL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SymDBORA;SymDBMSSQL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SymDBORA:Clean;SymDBMSSQL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SymDBORA:Make;SymDBMSSQL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

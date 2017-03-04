@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymphonyPlugIn.MessageImpl" platform="Win32">
+  <class name="TSymphonyPlugInMessage" file="SymphonyPlugIn.MessageImpl.pas" line="9">
+    <ancestor name="TInterfacedObject" namespace="System">
+      <interfaces>
+        <implements name="IInterface" />
+      </interfaces>
+      <methodref name="GetRefCount" visibility="private" procflags="inline">
+      </methodref>
+      <methodref name="__MarkDestroying" visibility="protected" procflags="static inline">
+      </methodref>
+      <methodref name="QueryInterface" visibility="protected">
+      </methodref>
+      <methodref name="_AddRef" visibility="protected">
+      </methodref>
+      <methodref name="_Release" visibility="protected">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class override">
+      </methodref>
+      <propertyref name="RefCount" visibility="public">
+      </propertyref>
+      <ancestor name="TObject" namespace="System">
+        <methodref name="Create" visibility="public" procflags="constructor">
+        </methodref>
+        <methodref name="Free" visibility="public">
+        </methodref>
+        <methodref name="DisposeOf" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="InitInstance" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="CleanupInstance" visibility="public">
+        </methodref>
+        <methodref name="ClassType" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="ClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassNameIs" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassParent" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassInfo" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="InstanceSize" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="InheritsFrom" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="QualifiedClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="GetInterface" visibility="public">
+        </methodref>
+        <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="UnitName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="UnitScope" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="Equals" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetHashCode" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="ToString" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="SafeCallException" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Dispatch" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="NewInstance" visibility="public" procflags="class virtual">
+        </methodref>
+        <methodref name="FreeInstance" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+        </methodref>
+        <methodref name="GetDisposed" visibility="protected" procflags="inline">
+        </methodref>
+        <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+        </methodref>
+        <propertyref name="Disposed" visibility="protected">
+        </propertyref>
+      </ancestor>
+    </ancestor>
+    <interfaces>
+      <implements name="ISymphonyPlugInMessage" />
+    </interfaces>
+    <members>
+      <field name="FParams" type="TInterfaceList" visibility="private" size="4" offset="12" file="SymphonyPlugIn.MessageImpl.pas" line="11" />
+      <field name="FDomain" type="string" visibility="private" size="4" offset="16" file="SymphonyPlugIn.MessageImpl.pas" line="12" />
+      <field name="FEvent" type="string" visibility="private" size="4" offset="20" file="SymphonyPlugIn.MessageImpl.pas" line="13" />
+      <field name="FResult" type="Variant" visibility="private" size="16" offset="24" file="SymphonyPlugIn.MessageImpl.pas" line="14" />
+      <constructor name="Create" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="16">
+        <parameters>
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="17">
+        <parameters>
+        </parameters>
+      </destructor>
+      <function name="AddParam" visibility="public" procflags="overload" file="SymphonyPlugIn.MessageImpl.pas" line="19">
+        <parameters>
+          <retval type="ISymphonyPlugInParam" />
+        </parameters>
+      </function>
+      <function name="AddParam" visibility="public" procflags="overload" file="SymphonyPlugIn.MessageImpl.pas" line="20">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="ISymphonyPlugInParam" />
+        </parameters>
+      </function>
+      <function name="AddParam" visibility="public" procflags="overload" file="SymphonyPlugIn.MessageImpl.pas" line="21">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="ParamValue" type="Variant" />
+          <retval type="ISymphonyPlugInParam" />
+        </parameters>
+      </function>
+      <function name="IndexOf" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="22">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetDomain" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="24">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetEvent" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="25">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetParamCount" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="26">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetParams" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="27">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <retval type="ISymphonyPlugInParam" />
+        </parameters>
+      </function>
+      <function name="GetParamValue" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="28">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Variant" />
+        </parameters>
+      </function>
+      <function name="GetResult" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="29">
+        <parameters>
+          <retval type="Variant" />
+        </parameters>
+      </function>
+      <procedure name="SetResult" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="31">
+        <parameters>
+          <parameter name="Value" type="Variant" />
+        </parameters>
+      </procedure>
+      <procedure name="SetParamValue" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="32">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="Value" type="Variant" />
+        </parameters>
+      </procedure>
+      <procedure name="SetDomain" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="33">
+        <parameters>
+          <parameter name="Value" type="string" />
+        </parameters>
+      </procedure>
+      <procedure name="SetEvent" visibility="public" file="SymphonyPlugIn.MessageImpl.pas" line="34">
+        <parameters>
+          <parameter name="Value" type="string" />
+        </parameters>
+      </procedure>
+      <property name="Domain" visibility="public" read="GetDomain" write="SetDomain" type="string" default="0" file="SymphonyPlugIn.MessageImpl.pas" line="36" />
+      <property name="Event" visibility="public" read="GetEvent" write="SetEvent" type="string" default="0" file="SymphonyPlugIn.MessageImpl.pas" line="37" />
+      <property name="ParamCount" visibility="public" read="GetParamCount" type="Integer" file="SymphonyPlugIn.MessageImpl.pas" line="38" />
+      <property name="Params[Index]" visibility="public" read="GetParams" type="ISymphonyPlugInParam" file="SymphonyPlugIn.MessageImpl.pas" line="39" />
+      <property name="ParamValue[ParamName]" visibility="public" read="GetParamValue" write="SetParamValue" type="Variant" file="SymphonyPlugIn.MessageImpl.pas" line="40" />
+      <property name="Result" visibility="public" read="GetResult" write="SetResult" type="Variant" default="0" file="SymphonyPlugIn.MessageImpl.pas" line="41" />
+    </members>
+  </class>
+</namespace>

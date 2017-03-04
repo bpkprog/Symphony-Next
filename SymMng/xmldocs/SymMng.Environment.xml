@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymMng.Environment" platform="Win32">
+  <class name="TSymMngEnviroment" file="SymMng.Environment.pas" line="19">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="DisposeOf" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="QualifiedClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitScope" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+      <methodref name="GetDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <propertyref name="Disposed" visibility="protected">
+      </propertyref>
+    </ancestor>
+    <members>
+      <field name="FDBType" type="string" visibility="private" size="4" offset="4" file="SymMng.Environment.pas" line="21" />
+      <field name="FServer" type="string" visibility="private" size="4" offset="8" file="SymMng.Environment.pas" line="22" />
+      <field name="FDatabase" type="string" visibility="private" size="4" offset="12" file="SymMng.Environment.pas" line="23" />
+      <field name="FUserName" type="string" visibility="private" size="4" offset="16" file="SymMng.Environment.pas" line="24" />
+      <field name="FPassword" type="string" visibility="private" size="4" offset="20" file="SymMng.Environment.pas" line="25" />
+      <field name="FAutoRunCmd" type="string" visibility="private" size="4" offset="24" file="SymMng.Environment.pas" line="26" />
+      <field name="FTaskUI" type="Boolean" visibility="private" size="1" offset="28" file="SymMng.Environment.pas" line="27" />
+      <field name="FHideMainForm" type="Boolean" visibility="private" size="1" offset="29" file="SymMng.Environment.pas" line="28" />
+      <field name="FAutoClose" type="Boolean" visibility="private" size="1" offset="30" file="SymMng.Environment.pas" line="29" />
+      <field name="FShowHelp" type="Boolean" visibility="private" size="1" offset="31" file="SymMng.Environment.pas" line="30" />
+      <function name="GetValidDBType" visibility="private" file="SymMng.Environment.pas" line="32">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="GetCommandLine" visibility="private" file="SymMng.Environment.pas" line="33">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetHelp" visibility="private" file="SymMng.Environment.pas" line="34">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="Parse" visibility="private" file="SymMng.Environment.pas" line="35">
+      </procedure>
+      <function name="GetParamName" visibility="private" file="SymMng.Environment.pas" line="36">
+        <parameters>
+          <parameter name="CmdLine" type="string" />
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetParamValue" visibility="private" file="SymMng.Environment.pas" line="37">
+        <parameters>
+          <parameter name="CmdLine" type="string" />
+          <retval type="string" />
+        </parameters>
+      </function>
+      <constructor name="Create" visibility="public" file="SymMng.Environment.pas" line="39">
+        <parameters>
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public" file="SymMng.Environment.pas" line="40">
+        <parameters>
+        </parameters>
+      </destructor>
+      <property name="DBType" visibility="public" read="FDBType" type="string" default="0" file="SymMng.Environment.pas" line="42" />
+      <property name="Server" visibility="public" read="FServer" type="string" default="0" file="SymMng.Environment.pas" line="43" />
+      <property name="Database" visibility="public" read="FDatabase" type="string" default="0" file="SymMng.Environment.pas" line="44" />
+      <property name="TaskUI" visibility="public" read="FTaskUI" type="Boolean" file="SymMng.Environment.pas" line="45" />
+      <property name="HideMainForm" visibility="public" read="FHideMainForm" type="Boolean" file="SymMng.Environment.pas" line="46" />
+      <property name="AutoClose" visibility="public" read="FAutoClose" type="Boolean" file="SymMng.Environment.pas" line="47" />
+      <property name="UserName" visibility="public" read="FUserName" type="string" default="0" file="SymMng.Environment.pas" line="48" />
+      <property name="Password" visibility="public" read="FPassword" type="string" default="0" file="SymMng.Environment.pas" line="49" />
+      <property name="ShowHelp" visibility="public" read="FShowHelp" type="Boolean" file="SymMng.Environment.pas" line="50" />
+      <property name="AutoRunCmd" visibility="public" read="FAutoRunCmd" type="string" default="0" file="SymMng.Environment.pas" line="51" />
+      <property name="ValidDBType" visibility="public" read="GetValidDBType" type="Boolean" file="SymMng.Environment.pas" line="52" />
+      <property name="CommandLine" visibility="public" read="GetCommandLine" type="string" default="0" file="SymMng.Environment.pas" line="53" />
+      <property name="Help" visibility="public" read="GetHelp" type="string" default="0" file="SymMng.Environment.pas" line="54" />
+    </members>
+  </class>
+  <variable name="SymMngEnviroment" type="TSymMngEnviroment" file="SymMng.Environment.pas" line="58" />
+</namespace>

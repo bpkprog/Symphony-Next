@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymMng.Consts" platform="Win32">
+  <const name="WM_MERGEUI" type="Integer" file="SymMng.Consts.pas" line="13">
+    <value>
+      $401
+    </value>
+  </const>
+  <const name="WM_CHANGECHILD" type="Integer" file="SymMng.Consts.pas" line="14">
+    <value>
+      $402
+    </value>
+  </const>
+  <const name="WM_EXEC_AUTORUN" type="Integer" file="SymMng.Consts.pas" line="15">
+    <value>
+      $403
+    </value>
+  </const>
+  <const name="WM_EXEC_QUEUEITEM" type="Integer" file="SymMng.Consts.pas" line="16">
+    <value>
+      $404
+    </value>
+  </const>
+  <const name="WM_GET_CHILDID" type="Integer" file="SymMng.Consts.pas" line="17">
+    <value>
+      $405
+    </value>
+  </const>
+  <const name="WM_EXEC_PLUGIN" type="Integer" file="SymMng.Consts.pas" line="18">
+    <value>
+      $432
+    </value>
+  </const>
+</namespace>

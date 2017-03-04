@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0AF7CBB0-B453-436B-B433-43630872326D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="SymTaskOra.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SymTaskMSSQL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SymTaskOra">
+        <MSBuild Projects="SymTaskOra.dproj"/>
+    </Target>
+    <Target Name="SymTaskOra:Clean">
+        <MSBuild Projects="SymTaskOra.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SymTaskOra:Make">
+        <MSBuild Projects="SymTaskOra.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SymTaskMSSQL">
+        <MSBuild Projects="SymTaskMSSQL.dproj"/>
+    </Target>
+    <Target Name="SymTaskMSSQL:Clean">
+        <MSBuild Projects="SymTaskMSSQL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SymTaskMSSQL:Make">
+        <MSBuild Projects="SymTaskMSSQL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SymTaskOra;SymTaskMSSQL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SymTaskOra:Clean;SymTaskMSSQL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SymTaskOra:Make;SymTaskMSSQL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

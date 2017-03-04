@@ -1,0 +1,168 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E8898857-12B3-47F2-A69B-EF8AB2705248}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\PlugIn_Core\smplCmdParser.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\ConstIO\cioIntf.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\ConstIO\cioORA.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\ConstIO\cioXML.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\SymDBOra\SymDBORA.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\SymTaskOra\SymTaskOra.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\UITasksBuilders\stbIntf.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\UITasksBuilders\stbMngs.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\UITasksBuilders\stbdxRibbonV.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\UITasksBuilders\stbdxRibbonH.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Symphony.Next\Symphony.Next.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SymMng.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="smplCmdParser">
+        <MSBuild Projects="..\PlugIn_Core\smplCmdParser.dproj"/>
+    </Target>
+    <Target Name="smplCmdParser:Clean">
+        <MSBuild Projects="..\PlugIn_Core\smplCmdParser.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplCmdParser:Make">
+        <MSBuild Projects="..\PlugIn_Core\smplCmdParser.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="cioIntf">
+        <MSBuild Projects="..\ConstIO\cioIntf.dproj"/>
+    </Target>
+    <Target Name="cioIntf:Clean">
+        <MSBuild Projects="..\ConstIO\cioIntf.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="cioIntf:Make">
+        <MSBuild Projects="..\ConstIO\cioIntf.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="cioORA">
+        <MSBuild Projects="..\ConstIO\cioORA.dproj"/>
+    </Target>
+    <Target Name="cioORA:Clean">
+        <MSBuild Projects="..\ConstIO\cioORA.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="cioORA:Make">
+        <MSBuild Projects="..\ConstIO\cioORA.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="cioXML">
+        <MSBuild Projects="..\ConstIO\cioXML.dproj"/>
+    </Target>
+    <Target Name="cioXML:Clean">
+        <MSBuild Projects="..\ConstIO\cioXML.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="cioXML:Make">
+        <MSBuild Projects="..\ConstIO\cioXML.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SymDBORA">
+        <MSBuild Projects="..\SymDBOra\SymDBORA.dproj"/>
+    </Target>
+    <Target Name="SymDBORA:Clean">
+        <MSBuild Projects="..\SymDBOra\SymDBORA.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SymDBORA:Make">
+        <MSBuild Projects="..\SymDBOra\SymDBORA.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SymTaskOra">
+        <MSBuild Projects="..\SymTaskOra\SymTaskOra.dproj"/>
+    </Target>
+    <Target Name="SymTaskOra:Clean">
+        <MSBuild Projects="..\SymTaskOra\SymTaskOra.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SymTaskOra:Make">
+        <MSBuild Projects="..\SymTaskOra\SymTaskOra.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="stbIntf">
+        <MSBuild Projects="..\UITasksBuilders\stbIntf.dproj"/>
+    </Target>
+    <Target Name="stbIntf:Clean">
+        <MSBuild Projects="..\UITasksBuilders\stbIntf.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="stbIntf:Make">
+        <MSBuild Projects="..\UITasksBuilders\stbIntf.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="stbMngs">
+        <MSBuild Projects="..\UITasksBuilders\stbMngs.dproj"/>
+    </Target>
+    <Target Name="stbMngs:Clean">
+        <MSBuild Projects="..\UITasksBuilders\stbMngs.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="stbMngs:Make">
+        <MSBuild Projects="..\UITasksBuilders\stbMngs.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="stbdxRibbonV">
+        <MSBuild Projects="..\UITasksBuilders\stbdxRibbonV.dproj"/>
+    </Target>
+    <Target Name="stbdxRibbonV:Clean">
+        <MSBuild Projects="..\UITasksBuilders\stbdxRibbonV.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="stbdxRibbonV:Make">
+        <MSBuild Projects="..\UITasksBuilders\stbdxRibbonV.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="stbdxRibbonH">
+        <MSBuild Projects="..\UITasksBuilders\stbdxRibbonH.dproj"/>
+    </Target>
+    <Target Name="stbdxRibbonH:Clean">
+        <MSBuild Projects="..\UITasksBuilders\stbdxRibbonH.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="stbdxRibbonH:Make">
+        <MSBuild Projects="..\UITasksBuilders\stbdxRibbonH.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Symphony_Next">
+        <MSBuild Projects="..\Symphony.Next\Symphony.Next.dproj"/>
+    </Target>
+    <Target Name="Symphony_Next:Clean">
+        <MSBuild Projects="..\Symphony.Next\Symphony.Next.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Symphony_Next:Make">
+        <MSBuild Projects="..\Symphony.Next\Symphony.Next.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SymMng">
+        <MSBuild Projects="SymMng.dproj"/>
+    </Target>
+    <Target Name="SymMng:Clean">
+        <MSBuild Projects="SymMng.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SymMng:Make">
+        <MSBuild Projects="SymMng.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="smplCmdParser;cioIntf;cioORA;cioXML;SymDBORA;SymTaskOra;stbIntf;stbMngs;stbdxRibbonV;stbdxRibbonH;Symphony_Next;SymMng"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="smplCmdParser:Clean;cioIntf:Clean;cioORA:Clean;cioXML:Clean;SymDBORA:Clean;SymTaskOra:Clean;stbIntf:Clean;stbMngs:Clean;stbdxRibbonV:Clean;stbdxRibbonH:Clean;Symphony_Next:Clean;SymMng:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="smplCmdParser:Make;cioIntf:Make;cioORA:Make;cioXML:Make;SymDBORA:Make;SymTaskOra:Make;stbIntf:Make;stbMngs:Make;stbdxRibbonV:Make;stbdxRibbonH:Make;Symphony_Next:Make;SymMng:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

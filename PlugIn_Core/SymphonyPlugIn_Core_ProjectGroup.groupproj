@@ -1,0 +1,156 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A432CE69-3FA9-4C06-B411-07FC3903C2F0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="smplIntf.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplPrmImpl.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplMsgImpl.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplBaseFrame.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplORA.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplMSSQL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplIB.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplActListBuilder.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplmng.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplGridStyle.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplCmdParser.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="smplIntf">
+        <MSBuild Projects="smplIntf.dproj"/>
+    </Target>
+    <Target Name="smplIntf:Clean">
+        <MSBuild Projects="smplIntf.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplIntf:Make">
+        <MSBuild Projects="smplIntf.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplPrmImpl">
+        <MSBuild Projects="smplPrmImpl.dproj"/>
+    </Target>
+    <Target Name="smplPrmImpl:Clean">
+        <MSBuild Projects="smplPrmImpl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplPrmImpl:Make">
+        <MSBuild Projects="smplPrmImpl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplMsgImpl">
+        <MSBuild Projects="smplMsgImpl.dproj"/>
+    </Target>
+    <Target Name="smplMsgImpl:Clean">
+        <MSBuild Projects="smplMsgImpl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplMsgImpl:Make">
+        <MSBuild Projects="smplMsgImpl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplBaseFrame">
+        <MSBuild Projects="smplBaseFrame.dproj"/>
+    </Target>
+    <Target Name="smplBaseFrame:Clean">
+        <MSBuild Projects="smplBaseFrame.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplBaseFrame:Make">
+        <MSBuild Projects="smplBaseFrame.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplORA">
+        <MSBuild Projects="smplORA.dproj"/>
+    </Target>
+    <Target Name="smplORA:Clean">
+        <MSBuild Projects="smplORA.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplORA:Make">
+        <MSBuild Projects="smplORA.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplMSSQL">
+        <MSBuild Projects="smplMSSQL.dproj"/>
+    </Target>
+    <Target Name="smplMSSQL:Clean">
+        <MSBuild Projects="smplMSSQL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplMSSQL:Make">
+        <MSBuild Projects="smplMSSQL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplIB">
+        <MSBuild Projects="smplIB.dproj"/>
+    </Target>
+    <Target Name="smplIB:Clean">
+        <MSBuild Projects="smplIB.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplIB:Make">
+        <MSBuild Projects="smplIB.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplActListBuilder">
+        <MSBuild Projects="smplActListBuilder.dproj"/>
+    </Target>
+    <Target Name="smplActListBuilder:Clean">
+        <MSBuild Projects="smplActListBuilder.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplActListBuilder:Make">
+        <MSBuild Projects="smplActListBuilder.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplmng">
+        <MSBuild Projects="smplmng.dproj"/>
+    </Target>
+    <Target Name="smplmng:Clean">
+        <MSBuild Projects="smplmng.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplmng:Make">
+        <MSBuild Projects="smplmng.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplGridStyle">
+        <MSBuild Projects="smplGridStyle.dproj"/>
+    </Target>
+    <Target Name="smplGridStyle:Clean">
+        <MSBuild Projects="smplGridStyle.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplGridStyle:Make">
+        <MSBuild Projects="smplGridStyle.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplCmdParser">
+        <MSBuild Projects="smplCmdParser.dproj"/>
+    </Target>
+    <Target Name="smplCmdParser:Clean">
+        <MSBuild Projects="smplCmdParser.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplCmdParser:Make">
+        <MSBuild Projects="smplCmdParser.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="smplIntf;smplPrmImpl;smplMsgImpl;smplBaseFrame;smplORA;smplMSSQL;smplIB;smplActListBuilder;smplmng;smplGridStyle;smplCmdParser"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="smplIntf:Clean;smplPrmImpl:Clean;smplMsgImpl:Clean;smplBaseFrame:Clean;smplORA:Clean;smplMSSQL:Clean;smplIB:Clean;smplActListBuilder:Clean;smplmng:Clean;smplGridStyle:Clean;smplCmdParser:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="smplIntf:Make;smplPrmImpl:Make;smplMsgImpl:Make;smplBaseFrame:Make;smplORA:Make;smplMSSQL:Make;smplIB:Make;smplActListBuilder:Make;smplmng:Make;smplGridStyle:Make;smplCmdParser:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

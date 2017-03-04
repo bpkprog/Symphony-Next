@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<USERTASKS>
+		 <USER>
+		 			<USERNAME>ALEKSEEVA</USERNAME>
+		 			<IKODSOTRUDNIK>6</IKODSOTRUDNIK>
+		 			<SHORTFIO>Алексеева Н.Н.</SHORTFIO>
+		 			<IKODDIVISION>23</IKODDIVISION>
+		 			<DIVISION>Склад</DIVISION>
+		 			<POST>Кладовщик</POST>
+		 </USER>	
+		 <TASKS>
+		 			<TASK>
+		 						<ID>1</ID>
+		 						<CAPTION>УМЦ</CAPTION>
+		 						<HINT>Учёт материальных ценностей</HINT>
+		 						<ITASKTYPE>-1</ITASKTYPE>
+		 						<FILENAME />
+		 						<READONLY>FALSE</READONLY>
+		 						<ICONPATH>\\server\symphony\images\sklad.ico</ICONPATH>
+		 						<ICON/>
+		 						<CHILDREN>
+		 									<TASK>
+		 									   <ID>2119</ID>
+		 									   <CAPTION>Приход</CAPTION>
+		 									   <HINT>Регистрация приходных документов</HINT>
+		 									   <ITASKTYPE>0</ITASKTYPE>
+		 									   <FILENAME>default.bpl</FILENAME>
+		 									   <READONLY>FALSE</READONLY>
+		 									   <ICONPATH />
+		 									   <ICON />
+		 									   <CHILDREN />
+		 								</TASK>
+		 								<TASK>
+		 									   <ID>2059</ID>
+		 									   <CAPTION>Расход</CAPTION>
+		 									   <HINT>Регистрация отгрузки МЦ на сторону</HINT>
+		 									   <ITASKTYPE>0</ITASKTYPE>
+		 									   <FILENAME>default.bpl</FILENAME>
+		 									   <READONLY>FALSE</READONLY>
+		 									   <ICONPATH />
+		 									   <ICON />
+		 									   <CHILDREN />
+		 								</TASK>		 			
+		 						</CHILDREN>
+		 			</TASK>
+		 </TASKS>
+</USERTASKS>

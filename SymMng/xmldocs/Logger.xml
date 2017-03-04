@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="Logger" platform="Win32">
+  <class name="TLog" file="Logger.pas" line="10">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="DisposeOf" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="QualifiedClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitScope" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+      <methodref name="GetDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <propertyref name="Disposed" visibility="protected">
+      </propertyref>
+    </ancestor>
+    <members>
+      <field name="FFile" type="Text" visibility="private" size="730" offset="4" file="Logger.pas" line="12" />
+      <field name="FLevel" type="Integer" visibility="private" size="4" offset="736" file="Logger.pas" line="13" />
+      <constructor name="Create" visibility="public" file="Logger.pas" line="15">
+        <parameters>
+          <parameter name="AFileName" type="string" />
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public" file="Logger.pas" line="16">
+        <parameters>
+        </parameters>
+      </destructor>
+      <procedure name="EnterMethod" visibility="public" file="Logger.pas" line="18">
+        <parameters>
+          <parameter name="MethodName" type="string" paramflags="const" />
+          <parameter name="ParamNames" paramflags="const">
+            <array name="ParamNames">
+              <element type="string" />
+            </array>
+          </parameter>
+          <parameter name="ParamValues" paramflags="const">
+            <array name="ParamValues">
+              <element type="string" />
+            </array>
+          </parameter>
+        </parameters>
+      </procedure>
+      <procedure name="ExitMethod" visibility="public" file="Logger.pas" line="19">
+        <parameters>
+          <parameter name="MethodName" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="WriteExceptionInfo" visibility="public" file="Logger.pas" line="20">
+        <parameters>
+          <parameter name="E" type="Exception" />
+        </parameters>
+      </procedure>
+      <procedure name="Write" visibility="public" procflags="overload" file="Logger.pas" line="22">
+        <parameters>
+          <parameter name="Message" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="Write" visibility="public" procflags="overload" file="Logger.pas" line="23">
+        <parameters>
+          <parameter name="Message" type="string" paramflags="const" />
+          <parameter name="Args" paramflags="const">
+            <array name="Args">
+              <element type="TVarRec" />
+            </array>
+          </parameter>
+        </parameters>
+      </procedure>
+    </members>
+  </class>
+  <variable name="Log" type="TLog" file="Logger.pas" line="27" />
+</namespace>

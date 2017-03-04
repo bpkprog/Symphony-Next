@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name=".smplPrmImpl" platform="Win32">
+  <contains name="SymphonyPlugIn.ParamImpl" />
+  <contains name="SysInit" />
+</namespace>

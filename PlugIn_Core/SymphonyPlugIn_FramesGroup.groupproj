@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{39156D18-9F82-4AEB-8FF4-A880C2211162}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="smplBaseFrame.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplORA.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplmng.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplGridStyle.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="smplActListBuilder.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="smplBaseFrame">
+        <MSBuild Projects="smplBaseFrame.dproj"/>
+    </Target>
+    <Target Name="smplBaseFrame:Clean">
+        <MSBuild Projects="smplBaseFrame.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplBaseFrame:Make">
+        <MSBuild Projects="smplBaseFrame.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplORA">
+        <MSBuild Projects="smplORA.dproj"/>
+    </Target>
+    <Target Name="smplORA:Clean">
+        <MSBuild Projects="smplORA.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplORA:Make">
+        <MSBuild Projects="smplORA.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplmng">
+        <MSBuild Projects="smplmng.dproj"/>
+    </Target>
+    <Target Name="smplmng:Clean">
+        <MSBuild Projects="smplmng.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplmng:Make">
+        <MSBuild Projects="smplmng.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplGridStyle">
+        <MSBuild Projects="smplGridStyle.dproj"/>
+    </Target>
+    <Target Name="smplGridStyle:Clean">
+        <MSBuild Projects="smplGridStyle.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplGridStyle:Make">
+        <MSBuild Projects="smplGridStyle.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="smplActListBuilder">
+        <MSBuild Projects="smplActListBuilder.dproj"/>
+    </Target>
+    <Target Name="smplActListBuilder:Clean">
+        <MSBuild Projects="smplActListBuilder.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="smplActListBuilder:Make">
+        <MSBuild Projects="smplActListBuilder.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="smplBaseFrame;smplORA;smplmng;smplGridStyle;smplActListBuilder"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="smplBaseFrame:Clean;smplORA:Clean;smplmng:Clean;smplGridStyle:Clean;smplActListBuilder:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="smplBaseFrame:Make;smplORA:Make;smplmng:Make;smplGridStyle:Make;smplActListBuilder:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

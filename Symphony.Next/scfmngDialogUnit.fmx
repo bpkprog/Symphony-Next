@@ -1,0 +1,251 @@
+object frmSCFDialog: TfrmSCFDialog
+  Left = 0
+  Top = 0
+  ActiveControl = edRootPath
+  BorderStyle = Single
+  Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1079#1072#1087#1091#1089#1082#1072' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1086#1085#1085#1086#1081' '#1089#1080#1089#1090#1077#1084#1099' '#1087#1088#1077#1076#1087#1088#1080#1103#1090#1080#1103
+  ClientHeight = 303
+  ClientWidth = 423
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    AutoSize = True
+    Position.X = 16.000000000000000000
+    Position.Y = 76.000000000000000000
+    Size.Width = 99.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = '&'#1050#1086#1088#1085#1077#1074#1086#1081' '#1082#1072#1090#1072#1083#1086#1075
+  end
+  object Label2: TLabel
+    AutoSize = True
+    Position.X = 148.000000000000000000
+    Position.Y = 20.000000000000000000
+    Size.Width = 130.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = #1054#1087#1077#1088#1072#1094#1080#1086#1085#1085#1072#1103' '#1089#1080#1089#1090#1077#1084#1072
+  end
+  object Label3: TLabel
+    AutoSize = True
+    Position.X = 296.000000000000000000
+    Position.Y = 20.000000000000000000
+    Size.Width = 69.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = #1056#1072#1079#1088#1103#1076#1085#1086#1089#1090#1100
+  end
+  object Label4: TLabel
+    AutoSize = True
+    Position.X = 16.000000000000000000
+    Position.Y = 128.000000000000000000
+    Size.Width = 53.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = #1058#1080#1087' '#1057#1059#1041#1044
+  end
+  object Label5: TLabel
+    AutoSize = True
+    Position.X = 148.000000000000000000
+    Position.Y = 128.000000000000000000
+    Size.Width = 64.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = #1057#1077#1088#1074#1077#1088'/SID'
+  end
+  object Label6: TLabel
+    AutoSize = True
+    Position.X = 295.000000000000000000
+    Position.Y = 128.000000000000000000
+    Size.Width = 69.000000000000000000
+    Size.Height = 16.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.WordWrap = False
+    Text = #1041#1072#1079#1072' '#1076#1072#1085#1085#1099#1093
+  end
+  object edRootPath: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 7
+    Position.X = 16.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 373.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnValidate = edRootPathValidate
+  end
+  object cbOSName: TComboBox
+    Items.Strings = (
+      'WINDOWS'
+      'ANDROID'
+      'IOS'
+      'MACOS'
+      'LINUX')
+    ItemIndex = 0
+    Position.X = 148.000000000000000000
+    Position.Y = 44.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    OnChange = cbOSNameChange
+  end
+  object cbOSBit: TComboBox
+    Items.Strings = (
+      '32'
+      '64')
+    ItemIndex = 0
+    Position.X = 295.000000000000000000
+    Position.Y = 44.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    OnChange = cbOSBitChange
+  end
+  object ceDBType: TComboEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 10
+    ItemHeight = 19.000000000000000000
+    ItemIndex = -1
+    Position.X = 16.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = ceDBTypeChange
+  end
+  object ceServer: TComboEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 11
+    ItemHeight = 19.000000000000000000
+    ItemIndex = -1
+    Position.X = 148.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ceDatabase: TComboEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 12
+    ItemHeight = 19.000000000000000000
+    ItemIndex = -1
+    Position.X = 295.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Button3: TButton
+    ModalResult = 2
+    Position.X = 328.000000000000000000
+    Position.Y = 268.000000000000000000
+    TabOrder = 13
+    Text = #1054#1090#1084#1077#1085#1072
+    OnClick = Button3Click
+  end
+  object Button2: TButton
+    Default = True
+    Position.X = 236.000000000000000000
+    Position.Y = 268.000000000000000000
+    TabOrder = 14
+    Text = 'Ok'
+    OnClick = Button2Click
+  end
+  object Label7: TLabel
+    Position.X = 16.000000000000000000
+    Position.Y = 20.000000000000000000
+    Text = #1042#1077#1088#1089#1080#1103' '#1092#1072#1081#1083#1072
+  end
+  object edVer: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 17
+    Position.X = 16.000000000000000000
+    Position.Y = 44.000000000000000000
+    Size.Width = 101.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Size, FontColor]
+    OnValidating = edVerValidating
+  end
+  object Button4: TButton
+    Position.X = 116.000000000000000000
+    Position.Y = 44.000000000000000000
+    Size.Width = 21.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 19
+    Text = '...'
+    OnClick = Button4Click
+  end
+  object Button1: TButton
+    Position.X = 385.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 24.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 21
+    Text = '...'
+    OnClick = Button1Click
+  end
+  object pmVer: TPopupMenu
+    Left = 328
+    Top = 12
+    object MenuItem1: TMenuItem
+      Text = #1042#1077#1088#1085#1091#1090#1100' '#1085#1072#1095#1072#1083#1100#1085#1086#1077' '#1079#1085#1072#1095#1077#1085#1080#1077
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Text = #1047#1085#1072#1095#1077#1085#1080#1077' '#1087#1086' '#1091#1084#1086#1083#1095#1072#1085#1080#1102
+      OnClick = MenuItem2Click
+    end
+    object MenuItem3: TMenuItem
+      Text = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1087#1086#1089#1083#1077#1076#1085#1102#1102' '#1074#1077#1088#1089#1080#1102
+      OnClick = MenuItem3Click
+    end
+  end
+  object Label8: TLabel
+    Position.X = 16.000000000000000000
+    Position.Y = 180.000000000000000000
+    Text = #1057#1087#1080#1089#1086#1082' '#1072#1074#1090#1086#1079#1072#1075#1088#1091#1079#1082#1080
+  end
+  object edAutorun: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 25
+    Position.X = 16.000000000000000000
+    Position.Y = 200.000000000000000000
+    Size.Width = 369.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = edAutorunChange
+  end
+  object Button5: TButton
+    Position.X = 385.000000000000000000
+    Position.Y = 200.000000000000000000
+    Size.Width = 24.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 20
+    Text = '...'
+  end
+  object cbHideTaskList: TCheckBox
+    Position.X = 16.000000000000000000
+    Position.Y = 232.000000000000000000
+    Size.Width = 397.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 27
+    Text = #1085#1077' '#1089#1086#1079#1076#1072#1074#1072#1090#1100' '#1089#1087#1080#1089#1086#1082' '#1079#1072#1076#1072#1095' '#1087#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1103
+  end
+end

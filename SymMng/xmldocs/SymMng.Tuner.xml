@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymMng.Tuner" platform="Win32">
+  <class name="TCFGGroupList" file="SymMng.Tuner.pas" line="13">
+    <ancestor name="TInterfaceList" namespace="System.Classes">
+      <interfaces>
+        <implements name="IInterfaceListEx" />
+        <implements name="IInterfaceList" />
+      </interfaces>
+      <methodref name="Get" visibility="protected">
+      </methodref>
+      <methodref name="GetCapacity" visibility="protected">
+      </methodref>
+      <methodref name="GetCount" visibility="protected">
+      </methodref>
+      <methodref name="Put" visibility="protected">
+      </methodref>
+      <methodref name="SetCapacity" visibility="protected">
+      </methodref>
+      <methodref name="SetCount" visibility="protected">
+      </methodref>
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor override">
+      </methodref>
+      <methodref name="Clear" visibility="public">
+      </methodref>
+      <methodref name="Delete" visibility="public">
+      </methodref>
+      <methodref name="Exchange" visibility="public">
+      </methodref>
+      <methodref name="Expand" visibility="public">
+      </methodref>
+      <methodref name="First" visibility="public">
+      </methodref>
+      <methodref name="IndexOf" visibility="public">
+      </methodref>
+      <methodref name="IndexOfItem" visibility="public">
+      </methodref>
+      <methodref name="Add" visibility="public">
+      </methodref>
+      <methodref name="Insert" visibility="public">
+      </methodref>
+      <methodref name="Last" visibility="public">
+      </methodref>
+      <methodref name="Remove" visibility="public">
+      </methodref>
+      <methodref name="RemoveItem" visibility="public">
+      </methodref>
+      <methodref name="Lock" visibility="public">
+      </methodref>
+      <methodref name="Unlock" visibility="public">
+      </methodref>
+      <methodref name="GetEnumerator" visibility="public">
+      </methodref>
+      <propertyref name="Capacity" visibility="public">
+      </propertyref>
+      <propertyref name="Count" visibility="public">
+      </propertyref>
+      <propertyref name="Items" visibility="public">
+      </propertyref>
+      <ancestor name="TInterfacedObject" namespace="System">
+        <interfaces>
+          <implements name="IInterface" />
+        </interfaces>
+        <methodref name="GetRefCount" visibility="private" procflags="inline">
+        </methodref>
+        <methodref name="__MarkDestroying" visibility="protected" procflags="static inline">
+        </methodref>
+        <methodref name="QueryInterface" visibility="protected">
+        </methodref>
+        <methodref name="_AddRef" visibility="protected">
+        </methodref>
+        <methodref name="_Release" visibility="protected">
+        </methodref>
+        <methodref name="AfterConstruction" visibility="public" procflags="override">
+        </methodref>
+        <methodref name="BeforeDestruction" visibility="public" procflags="override">
+        </methodref>
+        <methodref name="NewInstance" visibility="public" procflags="class override">
+        </methodref>
+        <propertyref name="RefCount" visibility="public">
+        </propertyref>
+        <ancestor name="TObject" namespace="System">
+          <methodref name="Create" visibility="public" procflags="constructor">
+          </methodref>
+          <methodref name="Free" visibility="public">
+          </methodref>
+          <methodref name="DisposeOf" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="InitInstance" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="CleanupInstance" visibility="public">
+          </methodref>
+          <methodref name="ClassType" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="ClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassNameIs" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassParent" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassInfo" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InstanceSize" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InheritsFrom" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="QualifiedClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="GetInterface" visibility="public">
+          </methodref>
+          <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitScope" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="Equals" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="GetHashCode" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="ToString" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="SafeCallException" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Dispatch" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="NewInstance" visibility="public" procflags="class virtual">
+          </methodref>
+          <methodref name="FreeInstance" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+          </methodref>
+          <methodref name="GetDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <propertyref name="Disposed" visibility="protected">
+          </propertyref>
+        </ancestor>
+      </ancestor>
+    </ancestor>
+  </class>
+  <class name="TSymMngTuner" file="SymMng.Tuner.pas" line="17">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="DisposeOf" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="QualifiedClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitScope" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+      <methodref name="GetDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <propertyref name="Disposed" visibility="protected">
+      </propertyref>
+    </ancestor>
+    <members>
+      <field name="FCFGGroups" type="TCFGGroupList" visibility="private" size="4" offset="4" file="SymMng.Tuner.pas" line="19" />
+      <field name="FIOs" type=":TSymMngTuner.:1" visibility="private" size="8" offset="8" file="SymMng.Tuner.pas" line="20" />
+      <field name="FGetPlugInTunerFrame" type="TPlugInTunerFrameFunc" visibility="private" size="8" offset="16" file="SymMng.Tuner.pas" line="21">
+      </field>
+      <function name="GetPackageName" visibility="private" file="SymMng.Tuner.pas" line="22">
+        <parameters>
+          <parameter name="PkgType" type="string" />
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="InitLocalIO" visibility="private" file="SymMng.Tuner.pas" line="23">
+        <parameters>
+          <parameter name="UserName" type="string" />
+        </parameters>
+      </procedure>
+      <procedure name="InitDBIO" visibility="private" file="SymMng.Tuner.pas" line="24">
+        <parameters>
+          <parameter name="Session" type="TObject" />
+          <parameter name="DBType" type="string" />
+        </parameters>
+      </procedure>
+      <function name="GetAsBoolean" visibility="private" file="SymMng.Tuner.pas" line="25">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="GetAsDateTime" visibility="private" file="SymMng.Tuner.pas" line="26">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="TDateTime" />
+        </parameters>
+      </function>
+      <function name="GetAsFloat" visibility="private" file="SymMng.Tuner.pas" line="27">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Double" />
+        </parameters>
+      </function>
+      <function name="GetAsInteger" visibility="private" file="SymMng.Tuner.pas" line="28">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetAsString" visibility="private" file="SymMng.Tuner.pas" line="29">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetGroupCount" visibility="private" file="SymMng.Tuner.pas" line="30">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetGroups" visibility="private" file="SymMng.Tuner.pas" line="31">
+        <parameters>
+          <parameter name="IndexOrName" type="Variant" />
+          <retval type="ISymphonyPlugInCFGGroup" />
+        </parameters>
+      </function>
+      <function name="GetParamValue" visibility="private" file="SymMng.Tuner.pas" line="32">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <retval type="Variant" />
+        </parameters>
+      </function>
+      <procedure name="SetAsBoolean" visibility="private" file="SymMng.Tuner.pas" line="33">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="Value" type="Boolean" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsDateTime" visibility="private" file="SymMng.Tuner.pas" line="34">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="Value" type="TDateTime" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsFloat" visibility="private" file="SymMng.Tuner.pas" line="35">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="Value" type="Double" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsInteger" visibility="private" file="SymMng.Tuner.pas" line="36">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="Value" type="Integer" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAsString" visibility="private" file="SymMng.Tuner.pas" line="37">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetParamValue" visibility="private" file="SymMng.Tuner.pas" line="38">
+        <parameters>
+          <parameter name="ParamName" type="string" />
+          <parameter name="Value" type="Variant" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetGetPlugInTunerFrame" visibility="private" file="SymMng.Tuner.pas" line="39">
+        <parameters>
+          <parameter name="Value" type="TPlugInTunerFrameFunc" paramflags="const" />
+        </parameters>
+      </procedure>
+      <constructor name="Create" visibility="public" file="SymMng.Tuner.pas" line="41">
+        <parameters>
+          <parameter name="Session" type="TObject" />
+          <parameter name="UserName" type="string" />
+          <parameter name="DBType" type="string" />
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public" file="SymMng.Tuner.pas" line="42">
+        <parameters>
+        </parameters>
+      </destructor>
+      <function name="AddGroup" visibility="public" file="SymMng.Tuner.pas" line="44">
+        <parameters>
+          <parameter name="GroupName" type="string" />
+          <retval type="ISymphonyPlugInCFGGroup" />
+        </parameters>
+      </function>
+      <function name="IndexOf" visibility="public" file="SymMng.Tuner.pas" line="45">
+        <parameters>
+          <parameter name="GroupName" type="string" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="Edit" visibility="public" file="SymMng.Tuner.pas" line="46">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <property name="GroupCount" visibility="public" read="GetGroupCount" type="Integer" file="SymMng.Tuner.pas" line="48" />
+      <property name="Groups[IndexOrName]" visibility="public" read="GetGroups" type="ISymphonyPlugInCFGGroup" file="SymMng.Tuner.pas" line="49" />
+      <property name="AsBoolean[ParamName]" visibility="public" read="GetAsBoolean" write="SetAsBoolean" type="Boolean" file="SymMng.Tuner.pas" line="51" />
+      <property name="AsDateTime[ParamName]" visibility="public" read="GetAsDateTime" write="SetAsDateTime" type="TDateTime" file="SymMng.Tuner.pas" line="52" />
+      <property name="AsFloat[ParamName]" visibility="public" read="GetAsFloat" write="SetAsFloat" type="Double" file="SymMng.Tuner.pas" line="53" />
+      <property name="AsInteger[ParamName]" visibility="public" read="GetAsInteger" write="SetAsInteger" type="Integer" file="SymMng.Tuner.pas" line="54" />
+      <property name="AsString[ParamName]" visibility="public" read="GetAsString" write="SetAsString" type="string" file="SymMng.Tuner.pas" line="55" />
+      <property name="ParamValue[ParamName]" visibility="public" read="GetParamValue" write="SetParamValue" type="Variant" file="SymMng.Tuner.pas" line="56" />
+      <event name="GetPlugInTunerFrame" visibility="public" read="FGetPlugInTunerFrame" write="SetGetPlugInTunerFrame" type="TPlugInTunerFrameFunc" file="SymMng.Tuner.pas" line="58" />
+    </members>
+  </class>
+</namespace>

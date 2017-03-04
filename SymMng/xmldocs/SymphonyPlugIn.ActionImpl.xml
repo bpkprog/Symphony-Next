@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymphonyPlugIn.ActionImpl" platform="Win32">
+  <class name="TSymphonyPlugInAction" file="SymphonyPlugIn.ActionImpl.pas" line="11">
+    <ancestor name="TInterfacedObject" namespace="System">
+      <interfaces>
+        <implements name="IInterface" />
+      </interfaces>
+      <methodref name="GetRefCount" visibility="private" procflags="inline">
+      </methodref>
+      <methodref name="__MarkDestroying" visibility="protected" procflags="static inline">
+      </methodref>
+      <methodref name="QueryInterface" visibility="protected">
+      </methodref>
+      <methodref name="_AddRef" visibility="protected">
+      </methodref>
+      <methodref name="_Release" visibility="protected">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class override">
+      </methodref>
+      <propertyref name="RefCount" visibility="public">
+      </propertyref>
+      <ancestor name="TObject" namespace="System">
+        <methodref name="Create" visibility="public" procflags="constructor">
+        </methodref>
+        <methodref name="Free" visibility="public">
+        </methodref>
+        <methodref name="DisposeOf" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="InitInstance" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="CleanupInstance" visibility="public">
+        </methodref>
+        <methodref name="ClassType" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="ClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassNameIs" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassParent" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassInfo" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="InstanceSize" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="InheritsFrom" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="QualifiedClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="GetInterface" visibility="public">
+        </methodref>
+        <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="UnitName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="UnitScope" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="Equals" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetHashCode" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="ToString" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="SafeCallException" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Dispatch" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="NewInstance" visibility="public" procflags="class virtual">
+        </methodref>
+        <methodref name="FreeInstance" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+        </methodref>
+        <methodref name="GetDisposed" visibility="protected" procflags="inline">
+        </methodref>
+        <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+        </methodref>
+        <propertyref name="Disposed" visibility="protected">
+        </propertyref>
+      </ancestor>
+    </ancestor>
+    <interfaces>
+      <implements name="ISymphonyPlugInAction" />
+    </interfaces>
+    <members>
+      <field name="FParams" type="TInterfaceList" visibility="private" size="4" offset="12" file="SymphonyPlugIn.ActionImpl.pas" line="13" />
+      <field name="FForms" type="TFormList" visibility="private" size="4" offset="16" file="SymphonyPlugIn.ActionImpl.pas" line="14" />
+      <field name="FCaption" type="string" visibility="private" size="4" offset="20" file="SymphonyPlugIn.ActionImpl.pas" line="15" />
+      <field name="FFrameClassName" type="string" visibility="private" size="4" offset="24" file="SymphonyPlugIn.ActionImpl.pas" line="16" />
+      <field name="FMethodName" type="string" visibility="private" size="4" offset="28" file="SymphonyPlugIn.ActionImpl.pas" line="17" />
+      <field name="FIcons" type="TIconList" visibility="private" size="4" offset="32" file="SymphonyPlugIn.ActionImpl.pas" line="18" />
+      <field name="FCommand" type="ISymphonyPlugInCommand" visibility="private" size="4" offset="36" file="SymphonyPlugIn.ActionImpl.pas" line="19" />
+      <field name="FName" type="string" visibility="private" size="4" offset="40" file="SymphonyPlugIn.ActionImpl.pas" line="20" />
+      <field name="FBeginGroup" type="Boolean" visibility="private" size="1" offset="44" file="SymphonyPlugIn.ActionImpl.pas" line="21" />
+      <field name="FBar" type="string" visibility="private" size="4" offset="48" file="SymphonyPlugIn.ActionImpl.pas" line="22" />
+      <field name="FAutoStart" type="Boolean" visibility="private" size="1" offset="52" file="SymphonyPlugIn.ActionImpl.pas" line="23" />
+      <field name="FVisible" type="Boolean" visibility="private" size="1" offset="53" file="SymphonyPlugIn.ActionImpl.pas" line="24" />
+      <field name="FContextName" type="string" visibility="private" size="4" offset="56" file="SymphonyPlugIn.ActionImpl.pas" line="25" />
+      <field name="FTabCaption" type="string" visibility="private" size="4" offset="60" file="SymphonyPlugIn.ActionImpl.pas" line="26" />
+      <field name="FTabIndex" type="Integer" visibility="private" size="4" offset="64" file="SymphonyPlugIn.ActionImpl.pas" line="27" />
+      <field name="FFormCaption" type="string" visibility="private" size="4" offset="68" file="SymphonyPlugIn.ActionImpl.pas" line="28" />
+      <field name="FGetHandleFunc" type="TSymphonyPlugInGetHandleFunc" visibility="private" size="8" offset="72" file="SymphonyPlugIn.ActionImpl.pas" line="30">
+      </field>
+      <field name="FGetOwnerFormFunc" type="TSymphonyPlugInGetOwnerFormFunc" visibility="private" size="8" offset="80" file="SymphonyPlugIn.ActionImpl.pas" line="31">
+      </field>
+      <field name="FGetSessionFunc" type="TSymphonyPlugInGetSessionFunc" visibility="private" size="8" offset="88" file="SymphonyPlugIn.ActionImpl.pas" line="32">
+      </field>
+      <field name="FGetParamFunc" type="TSymphonyPlugInGetParamFunc" visibility="private" size="8" offset="96" file="SymphonyPlugIn.ActionImpl.pas" line="33">
+      </field>
+      <field name="FTunerParams" type="ISymphonyPlugInCFGGroup" visibility="private" size="4" offset="104" file="SymphonyPlugIn.ActionImpl.pas" line="34" />
+      <procedure name="SetAutoStart" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="36">
+        <parameters>
+          <parameter name="Value" type="Boolean" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBar" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="37">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetCaption" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="38">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetFrameClassName" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="39">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetPlugInMethodName" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="40">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetName" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="41">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetVisible" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="42">
+        <parameters>
+          <parameter name="Value" type="Boolean" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeginGroup" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="43">
+        <parameters>
+          <parameter name="Value" type="Boolean" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetContextName" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="44">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetTabCaption" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="45">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetTabIndex" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="46">
+        <parameters>
+          <parameter name="Value" type="Integer" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetFormCaption" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="47">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="OpenFrame" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="49">
+        <parameters>
+          <parameter name="CmdLine" type="string" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="ExecutePluginMethod" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="50">
+        <parameters>
+          <parameter name="CmdLine" type="string" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="GetFormByID" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="51">
+        <parameters>
+          <parameter name="FormID" type="string" />
+          <retval type="TForm" />
+        </parameters>
+      </function>
+      <constructor name="Create" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="53">
+        <parameters>
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="54">
+        <parameters>
+        </parameters>
+      </destructor>
+      <function name="GetBar" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="56">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetCaption" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="57">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetCommand" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="58">
+        <parameters>
+          <retval type="ISymphonyPlugInCommand" />
+        </parameters>
+      </function>
+      <function name="GetFrameClassName" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="59">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetPlugInMethodName" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="60">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetIconCount" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="61">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetIcon" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="62">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <retval type="TBitmap" />
+        </parameters>
+      </function>
+      <function name="GetName" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="63">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetBeginGroup" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="64">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="GetAutoStart" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="65">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="GetVisible" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="66">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="GetContextName" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="67">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetTabCaption" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="68">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetTabIndex" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="69">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetFormCaption" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="70">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetForms" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="71">
+        <parameters>
+          <retval type="TFormList" />
+        </parameters>
+      </function>
+      <procedure name="SetGetHandleFunc" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="73">
+        <parameters>
+          <parameter name="AFunc" type="TSymphonyPlugInGetHandleFunc" />
+        </parameters>
+      </procedure>
+      <procedure name="SetGetOwnerFormFunc" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="74">
+        <parameters>
+          <parameter name="AFunc" type="TSymphonyPlugInGetOwnerFormFunc" />
+        </parameters>
+      </procedure>
+      <procedure name="SetGetSessionFunc" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="75">
+        <parameters>
+          <parameter name="AFunc" type="TSymphonyPlugInGetSessionFunc" />
+        </parameters>
+      </procedure>
+      <procedure name="SetGetParamFunc" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="76">
+        <parameters>
+          <parameter name="AFunc" type="TSymphonyPlugInGetParamFunc" />
+        </parameters>
+      </procedure>
+      <procedure name="SetTunerParams" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="78">
+        <parameters>
+          <parameter name="Value" type="ISymphonyPlugInCFGGroup" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="GetTunerParams" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="79">
+        <parameters>
+          <retval type="ISymphonyPlugInCFGGroup" />
+        </parameters>
+      </function>
+      <procedure name="AddActionIcon" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="81">
+        <parameters>
+          <parameter name="AIcon" type="TBitmap" />
+        </parameters>
+      </procedure>
+      <procedure name="ClearIcons" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="82">
+      </procedure>
+      <function name="Execute" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="83">
+        <parameters>
+          <parameter name="CmdLine" type="string">
+            <value>
+              
+            </value>
+          </parameter>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <procedure name="ShowForms" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="84">
+      </procedure>
+      <function name="IndexOfForm" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="85">
+        <parameters>
+          <parameter name="AForm" type="TForm" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <property name="AutoStart" visibility="public" read="GetAutoStart" write="SetAutoStart" type="Boolean" file="SymphonyPlugIn.ActionImpl.pas" line="87" />
+      <property name="Bar" visibility="public" read="GetBar" write="SetBar" type="string" default="0" file="SymphonyPlugIn.ActionImpl.pas" line="88" />
+      <property name="Caption" visibility="public" read="GetCaption" write="SetCaption" type="string" default="0" file="SymphonyPlugIn.ActionImpl.pas" line="89" />
+      <property name="Command" visibility="public" read="GetCommand" type="ISymphonyPlugInCommand" file="SymphonyPlugIn.ActionImpl.pas" line="90" />
+      <property name="ContextName" visibility="public" read="GetContextName" write="SetContextName" type="string" default="0" file="SymphonyPlugIn.ActionImpl.pas" line="91" />
+      <property name="FormCaption" visibility="public" read="GetFormCaption" write="SetFormCaption" type="string" default="0" file="SymphonyPlugIn.ActionImpl.pas" line="92" />
+      <property name="Forms" visibility="public" read="GetForms" type="TList&lt;Vcl.Forms.TForm&gt;" hoisted="true" file="SymphonyPlugIn.ActionImpl.pas" line="93" />
+      <property name="FrameClassName" visibility="public" read="GetFrameClassName" write="SetFrameClassName" type="string" default="0" file="SymphonyPlugIn.ActionImpl.pas" line="94" />
+      <property name="PlugInMethodName" visibility="public" read="GetPlugInMethodName" write="SetPlugInMethodName" type="string" default="0" file="SymphonyPlugIn.ActionImpl.pas" line="95" />
+      <property name="Icon[Index]" visibility="public" read="GetIcon" type="TBitmap" file="SymphonyPlugIn.ActionImpl.pas" line="96" />
+      <property name="Name" visibility="public" read="GetName" write="SetName" type="string" default="0" file="SymphonyPlugIn.ActionImpl.pas" line="97" />
+      <property name="BeginGroup" visibility="public" read="GetBeginGroup" write="SetBeginGroup" type="Boolean" file="SymphonyPlugIn.ActionImpl.pas" line="98" />
+      <property name="TabCaption" visibility="public" read="GetTabCaption" write="SetTabCaption" type="string" default="0" file="SymphonyPlugIn.ActionImpl.pas" line="99" />
+      <property name="TabIndex" visibility="public" read="GetTabIndex" write="SetTabIndex" type="Integer" file="SymphonyPlugIn.ActionImpl.pas" line="100" />
+      <property name="Visible" visibility="public" read="GetVisible" write="SetVisible" type="Boolean" file="SymphonyPlugIn.ActionImpl.pas" line="101" />
+      <property name="TunerParams" visibility="public" read="GetTunerParams" write="SetTunerParams" type="ISymphonyPlugInCFGGroup" file="SymphonyPlugIn.ActionImpl.pas" line="102" />
+    </members>
+  </class>
+  <class name="TSymphonyPlugInActionList" file="SymphonyPlugIn.ActionImpl.pas" line="110">
+    <ancestor name="TInterfacedObject" namespace="System">
+      <interfaces>
+        <implements name="IInterface" />
+      </interfaces>
+      <methodref name="GetRefCount" visibility="private" procflags="inline">
+      </methodref>
+      <methodref name="__MarkDestroying" visibility="protected" procflags="static inline">
+      </methodref>
+      <methodref name="QueryInterface" visibility="protected">
+      </methodref>
+      <methodref name="_AddRef" visibility="protected">
+      </methodref>
+      <methodref name="_Release" visibility="protected">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class override">
+      </methodref>
+      <propertyref name="RefCount" visibility="public">
+      </propertyref>
+      <ancestor name="TObject" namespace="System">
+        <methodref name="Create" visibility="public" procflags="constructor">
+        </methodref>
+        <methodref name="Free" visibility="public">
+        </methodref>
+        <methodref name="DisposeOf" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="InitInstance" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="CleanupInstance" visibility="public">
+        </methodref>
+        <methodref name="ClassType" visibility="public" procflags="inline">
+        </methodref>
+        <methodref name="ClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassNameIs" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassParent" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="ClassInfo" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="InstanceSize" visibility="public" procflags="class inline">
+        </methodref>
+        <methodref name="InheritsFrom" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodAddress" visibility="public" procflags="class overload">
+        </methodref>
+        <methodref name="MethodName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="QualifiedClassName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="FieldAddress" visibility="public" procflags="overload">
+        </methodref>
+        <methodref name="GetInterface" visibility="public">
+        </methodref>
+        <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="UnitName" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="UnitScope" visibility="public" procflags="class">
+        </methodref>
+        <methodref name="Equals" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetHashCode" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="ToString" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="SafeCallException" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Dispatch" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="NewInstance" visibility="public" procflags="class virtual">
+        </methodref>
+        <methodref name="FreeInstance" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+        </methodref>
+        <methodref name="GetDisposed" visibility="protected" procflags="inline">
+        </methodref>
+        <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+        </methodref>
+        <propertyref name="Disposed" visibility="protected">
+        </propertyref>
+      </ancestor>
+    </ancestor>
+    <interfaces>
+      <implements name="ISymphonyPlugInActionList" />
+    </interfaces>
+    <members>
+      <field name="FActList" type="TInterfaceList" visibility="private" size="4" offset="12" file="SymphonyPlugIn.ActionImpl.pas" line="112" />
+      <field name="FCaption" type="string" visibility="private" size="4" offset="16" file="SymphonyPlugIn.ActionImpl.pas" line="113" />
+      <field name="FGetHandleFunc" type="TSymphonyPlugInGetHandleFunc" visibility="private" size="8" offset="24" file="SymphonyPlugIn.ActionImpl.pas" line="114">
+      </field>
+      <field name="FGetOwnerFormFunc" type="TSymphonyPlugInGetOwnerFormFunc" visibility="private" size="8" offset="32" file="SymphonyPlugIn.ActionImpl.pas" line="115">
+      </field>
+      <field name="FGetSessionFunc" type="TSymphonyPlugInGetSessionFunc" visibility="private" size="8" offset="40" file="SymphonyPlugIn.ActionImpl.pas" line="116">
+      </field>
+      <field name="FGetParamFunc" type="TSymphonyPlugInGetParamFunc" visibility="private" size="8" offset="48" file="SymphonyPlugIn.ActionImpl.pas" line="117">
+      </field>
+      <field name="FTunerParams" type="ISymphonyPlugInCFGGroup" visibility="private" size="4" offset="56" file="SymphonyPlugIn.ActionImpl.pas" line="118" />
+      <procedure name="SetTunerParams" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="119">
+        <parameters>
+          <parameter name="Value" type="ISymphonyPlugInCFGGroup" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="GetTunerParams" visibility="private" file="SymphonyPlugIn.ActionImpl.pas" line="120">
+        <parameters>
+          <retval type="ISymphonyPlugInCFGGroup" />
+        </parameters>
+      </function>
+      <constructor name="Create" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="122">
+        <parameters>
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="123">
+        <parameters>
+        </parameters>
+      </destructor>
+      <function name="AddAction" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="125">
+        <parameters>
+          <retval type="TSymphonyPlugInAction" />
+        </parameters>
+      </function>
+      <function name="GetCaption" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="126">
+        <parameters>
+          <retval type="string" />
+        </parameters>
+      </function>
+      <function name="GetCount" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="127">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="GetBarCount" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="128">
+        <parameters>
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="FindAction" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="129">
+        <parameters>
+          <parameter name="ActionName" type="string" />
+          <retval type="ISymphonyPlugInAction" />
+        </parameters>
+      </function>
+      <function name="GetAction" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="130">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <retval type="ISymphonyPlugInAction" />
+        </parameters>
+      </function>
+      <function name="GetBar" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="131">
+        <parameters>
+          <parameter name="Index" type="Integer" />
+          <retval type="string" />
+        </parameters>
+      </function>
+      <procedure name="SetCaption" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="132">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetGetHandleFunc" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="135">
+        <parameters>
+          <parameter name="AFunc" type="TSymphonyPlugInGetHandleFunc" />
+        </parameters>
+      </procedure>
+      <procedure name="SetGetOwnerFormFunc" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="136">
+        <parameters>
+          <parameter name="AFunc" type="TSymphonyPlugInGetOwnerFormFunc" />
+        </parameters>
+      </procedure>
+      <procedure name="SetGetSessionFunc" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="137">
+        <parameters>
+          <parameter name="AFunc" type="TSymphonyPlugInGetSessionFunc" />
+        </parameters>
+      </procedure>
+      <procedure name="SetGetParamFunc" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="138">
+        <parameters>
+          <parameter name="AFunc" type="TSymphonyPlugInGetParamFunc" />
+        </parameters>
+      </procedure>
+      <function name="ExecAutoRun" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="141">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Execute" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="142">
+        <parameters>
+          <parameter name="CmdLine" type="string" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <procedure name="ShowForms" visibility="public" file="SymphonyPlugIn.ActionImpl.pas" line="143">
+      </procedure>
+      <property name="Caption" visibility="public" read="GetCaption" write="SetCaption" type="string" default="0" file="SymphonyPlugIn.ActionImpl.pas" line="145" />
+      <property name="Count" visibility="public" read="GetCount" type="Integer" file="SymphonyPlugIn.ActionImpl.pas" line="146" />
+      <property name="Action[Index]" visibility="public" read="GetAction" type="ISymphonyPlugInAction" file="SymphonyPlugIn.ActionImpl.pas" line="147" />
+      <property name="BarCount" visibility="public" read="GetBarCount" type="Integer" file="SymphonyPlugIn.ActionImpl.pas" line="148" />
+      <property name="Bar[Index]" visibility="public" read="GetBar" type="string" file="SymphonyPlugIn.ActionImpl.pas" line="149" />
+      <property name="TunerParams" visibility="public" read="GetTunerParams" write="SetTunerParams" type="ISymphonyPlugInCFGGroup" file="SymphonyPlugIn.ActionImpl.pas" line="150" />
+    </members>
+  </class>
+</namespace>

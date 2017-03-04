@@ -1,0 +1,1775 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="sbSymDBContr" platform="Win32">
+  <class name="TSymDataSetClient">
+    <ancestor name="TComponent" namespace="System.Classes">
+      <interfaces>
+        <implements name="IInterfaceComponentReference" />
+        <implements name="IInterface" />
+      </interfaces>
+      <methodref name="GetComObject" visibility="private">
+      </methodref>
+      <methodref name="GetComponent" visibility="private">
+      </methodref>
+      <methodref name="GetComponentCount" visibility="private">
+      </methodref>
+      <methodref name="GetComponentIndex" visibility="private">
+      </methodref>
+      <methodref name="Insert" visibility="private">
+      </methodref>
+      <methodref name="ReadLeft" visibility="private">
+      </methodref>
+      <methodref name="ReadTop" visibility="private">
+      </methodref>
+      <methodref name="Remove" visibility="private">
+      </methodref>
+      <methodref name="RemoveNotification" visibility="private">
+      </methodref>
+      <methodref name="SetComponentIndex" visibility="private">
+      </methodref>
+      <methodref name="SetReference" visibility="private">
+      </methodref>
+      <methodref name="WriteLeft" visibility="private">
+      </methodref>
+      <methodref name="WriteTop" visibility="private">
+      </methodref>
+      <methodref name="IntfGetComponent" visibility="private">
+      </methodref>
+      <methodref name="DoGetDeltaStreams" visibility="private">
+      </methodref>
+      <methodref name="ReadDeltaStream" visibility="private">
+      </methodref>
+      <methodref name="ReadDeltaState" visibility="private">
+      </methodref>
+      <methodref name="FindSortedComponent" visibility="private">
+      </methodref>
+      <methodref name="AddSortedComponent" visibility="private">
+      </methodref>
+      <methodref name="RemoveSortedComponent" visibility="private" procflags="inline">
+      </methodref>
+      <methodref name="Create@" visibility="class private" procflags="class constructor noself">
+      </methodref>
+      <methodref name="AsyncSchedule" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="ChangeName" visibility="protected">
+      </methodref>
+      <methodref name="DefineProperties" visibility="protected" procflags="override">
+      </methodref>
+      <methodref name="GetChildren" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="GetChildOwner" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="GetChildParent" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="GetOwner" visibility="protected" procflags="override">
+      </methodref>
+      <methodref name="Loaded" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="Notification" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="GetDeltaStreams" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="PaletteCreated" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="ReadState" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="CanObserve" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="ObserverAdded" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="GetObservers" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="SetAncestor" visibility="protected">
+      </methodref>
+      <methodref name="SetDesigning" visibility="protected">
+      </methodref>
+      <methodref name="SetInline" visibility="protected">
+      </methodref>
+      <methodref name="SetDesignInstance" visibility="protected">
+      </methodref>
+      <methodref name="SetName" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="SetChildOrder" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="SetParentComponent" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="Updating" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="Updated" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="UpdateRegistry" visibility="protected" procflags="class virtual">
+      </methodref>
+      <methodref name="ValidateRename" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="ValidateContainer" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="ValidateInsert" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="WriteState" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="RemoveFreeNotifications" visibility="protected">
+      </methodref>
+      <methodref name="QueryInterface" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="_AddRef" visibility="protected">
+      </methodref>
+      <methodref name="_Release" visibility="protected">
+      </methodref>
+      <methodref name="GetTypeInfoCount" visibility="protected">
+      </methodref>
+      <methodref name="GetTypeInfo" visibility="protected">
+      </methodref>
+      <methodref name="GetIDsOfNames" visibility="protected">
+      </methodref>
+      <methodref name="Invoke" visibility="protected">
+      </methodref>
+      <eventref name="OnGetDeltaStreams" visibility="protected">
+      </eventref>
+      <methodref name="Create" visibility="public" procflags="constructor virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor override">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="EndInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="EndInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="EndFunctionInvoke" visibility="public">
+      </methodref>
+      <methodref name="DestroyComponents" visibility="public">
+      </methodref>
+      <methodref name="Destroying" visibility="public">
+      </methodref>
+      <methodref name="ExecuteAction" visibility="public" procflags="dynamic">
+      </methodref>
+      <methodref name="FindComponent" visibility="public">
+      </methodref>
+      <methodref name="FreeNotification" visibility="public">
+      </methodref>
+      <methodref name="RemoveFreeNotification" visibility="public">
+      </methodref>
+      <methodref name="FreeOnRelease" visibility="public">
+      </methodref>
+      <methodref name="GetEnumerator" visibility="public">
+      </methodref>
+      <methodref name="GetParentComponent" visibility="public" procflags="dynamic">
+      </methodref>
+      <methodref name="GetNamePath" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="HasParent" visibility="public" procflags="dynamic">
+      </methodref>
+      <methodref name="InsertComponent" visibility="public">
+      </methodref>
+      <methodref name="RemoveComponent" visibility="public">
+      </methodref>
+      <methodref name="SetSubComponent" visibility="public">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="UpdateAction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="IsImplementorOf" visibility="public">
+      </methodref>
+      <methodref name="ReferenceInterface" visibility="public">
+      </methodref>
+      <propertyref name="ComObject" visibility="public">
+      </propertyref>
+      <propertyref name="Components" visibility="public">
+      </propertyref>
+      <propertyref name="ComponentCount" visibility="public">
+      </propertyref>
+      <propertyref name="ComponentIndex" visibility="public">
+      </propertyref>
+      <propertyref name="ComponentState" visibility="public">
+      </propertyref>
+      <propertyref name="ComponentStyle" visibility="public">
+      </propertyref>
+      <propertyref name="DesignInfo" visibility="public">
+      </propertyref>
+      <propertyref name="Owner" visibility="public">
+      </propertyref>
+      <propertyref name="VCLComObject" visibility="public">
+      </propertyref>
+      <propertyref name="Observers" visibility="public">
+      </propertyref>
+      <propertyref name="Name" visibility="published">
+      </propertyref>
+      <propertyref name="Tag" visibility="published">
+      </propertyref>
+      <ancestor name="TPersistent" namespace="System.Classes">
+        <methodref name="AssignError" visibility="private">
+        </methodref>
+        <methodref name="AssignTo" visibility="protected" procflags="virtual">
+        </methodref>
+        <methodref name="DefineProperties" visibility="protected" procflags="virtual">
+        </methodref>
+        <methodref name="GetOwner" visibility="protected" procflags="dynamic">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor override">
+        </methodref>
+        <methodref name="Assign" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetNamePath" visibility="public" procflags="dynamic">
+        </methodref>
+        <ancestor name="TObject" namespace="System">
+          <methodref name="Create" visibility="public" procflags="constructor">
+          </methodref>
+          <methodref name="Free" visibility="public">
+          </methodref>
+          <methodref name="DisposeOf" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="InitInstance" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="CleanupInstance" visibility="public">
+          </methodref>
+          <methodref name="ClassType" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="ClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassNameIs" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassParent" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassInfo" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InstanceSize" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InheritsFrom" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="QualifiedClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="GetInterface" visibility="public">
+          </methodref>
+          <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitScope" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="Equals" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="GetHashCode" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="ToString" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="SafeCallException" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Dispatch" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="NewInstance" visibility="public" procflags="class virtual">
+          </methodref>
+          <methodref name="FreeInstance" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+          </methodref>
+          <methodref name="GetDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <propertyref name="Disposed" visibility="protected">
+          </propertyref>
+        </ancestor>
+      </ancestor>
+    </ancestor>
+    <interfaces>
+      <implements name="ISymphonyBinderSubscribe" />
+    </interfaces>
+    <members>
+      <field name="FSymphonyBinder" type="TSymphonyBinder" visibility="private" size="4" offset="64" />
+      <field name="FDataSet" type="TSymphonyDataSet" visibility="private" size="4" offset="68" />
+      <field name="FExecResult" type="Variant" visibility="private" size="16" offset="72" />
+      <field name="FErrorCode" type="Integer" visibility="private" size="4" offset="88" />
+      <field name="FErrorMessage" type="string" visibility="private" size="4" offset="92" />
+      <field name="FBeforeUpdateExecute" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="96">
+      </field>
+      <field name="FBeforeClose" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="104">
+      </field>
+      <field name="FNewRecord" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="112">
+      </field>
+      <field name="FBeforeDelete" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="120">
+      </field>
+      <field name="FBeforeEdit" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="128">
+      </field>
+      <field name="FCalcFields" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="136">
+      </field>
+      <field name="FAfterRefresh" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="144">
+      </field>
+      <field name="FAfterOpen" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="152">
+      </field>
+      <field name="FBeforeExecute" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="160">
+      </field>
+      <field name="FAfterCancel" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="168">
+      </field>
+      <field name="FBeforeFetch" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="176">
+      </field>
+      <field name="FBeforeInsert" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="184">
+      </field>
+      <field name="FFilterRecord" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="192">
+      </field>
+      <field name="FPostError" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="200">
+      </field>
+      <field name="FAfterPost" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="208">
+      </field>
+      <field name="FUpdateRecord" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="216">
+      </field>
+      <field name="FAfterUpdateExecute" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="224">
+      </field>
+      <field name="FBeforeScroll" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="232">
+      </field>
+      <field name="FAfterClose" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="240">
+      </field>
+      <field name="FUpdateError" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="248">
+      </field>
+      <field name="FDeleteError" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="256">
+      </field>
+      <field name="FAfterDelete" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="264">
+      </field>
+      <field name="FEditError" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="272">
+      </field>
+      <field name="FAfterEdit" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="280">
+      </field>
+      <field name="FAfterExecute" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="288">
+      </field>
+      <field name="FAfterFetch" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="296">
+      </field>
+      <field name="FAfterInsert" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="304">
+      </field>
+      <field name="FBeforeRefresh" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="312">
+      </field>
+      <field name="FBeforeOpen" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="320">
+      </field>
+      <field name="FBeforeCancel" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="328">
+      </field>
+      <field name="FBeforePost" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="336">
+      </field>
+      <field name="FAfterScroll" type="TSymphonyDataSetEvent" visibility="private" size="8" offset="344">
+      </field>
+      <function name="GetCommand" visibility="private" procflags="overload">
+        <parameters>
+          <parameter name="Operation" type="TSDSOperation" />
+          <retval type="TCommand" />
+        </parameters>
+      </function>
+      <function name="GetCommand" visibility="private" procflags="overload">
+        <parameters>
+          <parameter name="Event" type="TSDSEvent" />
+          <parameter name="Operation" type="TSBOperation">
+            <value>
+              cmdDBEventSubscription
+            </value>
+          </parameter>
+          <retval type="TCommand" />
+        </parameters>
+      </function>
+      <procedure name="ExecProc" visibility="private">
+        <parameters>
+          <parameter name="Operation" type="TSDSOperation" />
+        </parameters>
+      </procedure>
+      <function name="ExecFunc" visibility="private">
+        <parameters>
+          <parameter name="Operation" type="TSDSOperation" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <procedure name="RestorySymphonyBinder" visibility="private">
+      </procedure>
+      <procedure name="LinkSymphonyBinder" visibility="private">
+      </procedure>
+      <procedure name="ExecEvent" visibility="private">
+        <parameters>
+          <parameter name="Event" type="TSymphonyDataSetEvent" />
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeCancel" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterCancel" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeClose" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterClose" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeDelete" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterDelete" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeEdit" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterEdit" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeInsert" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterInsert" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeOpen" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterOpen" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforePost" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterPost" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeRefresh" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterRefresh" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeScroll" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterScroll" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoCalcFields" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoNewRecord" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDeleteError" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoEditError" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoPostError" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeUpdateExecute" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterUpdateExecute" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeExecute" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterExecute" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeFetch" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterFetch" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoFilterRecord" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoUpdateError" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoUpdateRecord" visibility="private">
+        <parameters>
+          <parameter name="DataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="SetDataSet" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSet" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetSymphonyBinder" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyBinder" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="GetConnected" visibility="private">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <procedure name="SetConnected" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Boolean" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetErrorCode" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Integer" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetErrorMessage" visibility="private">
+        <parameters>
+          <parameter name="Value" type="string" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetExecResult" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Variant" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAfterCancel" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAfterClose" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAfterDelete" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAfterEdit" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAfterExecute" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAfterFetch" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAfterInsert" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAfterOpen" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAfterPost" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAfterRefresh" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAfterScroll" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetAfterUpdateExecute" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeforeCancel" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeforeClose" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeforeDelete" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeforeEdit" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeforeExecute" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeforeFetch" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeforeInsert" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeforeOpen" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeforePost" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeforeRefresh" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeforeScroll" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetBeforeUpdateExecute" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetCalcFields" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetDeleteError" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetEditError" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetFilterRecord" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetNewRecord" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetPostError" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetUpdateError" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetUpdateRecord" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSetEvent" paramflags="const" />
+        </parameters>
+      </procedure>
+      <constructor name="Create" visibility="public">
+        <parameters>
+          <parameter name="AOwner" type="TComponent" />
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public">
+        <parameters>
+        </parameters>
+      </destructor>
+      <function name="Connect" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Open" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <procedure name="Close" visibility="public">
+      </procedure>
+      <procedure name="Refresh" visibility="public">
+      </procedure>
+      <procedure name="First" visibility="public">
+      </procedure>
+      <procedure name="Prior" visibility="public">
+      </procedure>
+      <procedure name="Next" visibility="public">
+      </procedure>
+      <procedure name="Last" visibility="public">
+      </procedure>
+      <function name="Insert" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Edit" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Delete" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Post" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Cancel" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Locate" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Lookup" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Bof" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Eof" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="GetRecordValues" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="SetRecordValues" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="Select" visibility="public">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="SubscribeEvent" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="ASyncExec" type="Boolean">
+            <value>
+              True
+            </value>
+          </parameter>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="SubscribeEvent" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Event" type="TSDSEvent" />
+          <parameter name="ASyncExec" type="Boolean">
+            <value>
+              True
+            </value>
+          </parameter>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="UnSubscribeEvent" visibility="public" procflags="overload">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <function name="UnSubscribeEvent" visibility="public" procflags="overload">
+        <parameters>
+          <parameter name="Event" type="TSDSEvent" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <procedure name="DoQueryExecCommand" visibility="public">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <parameter name="AResult" type="Integer" paramflags="var" />
+        </parameters>
+      </procedure>
+      <procedure name="DoExecuteCommand" visibility="public">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <parameter name="AResult" type="Integer" paramflags="var" />
+        </parameters>
+      </procedure>
+      <property name="Connected" visibility="public" read="GetConnected" write="SetConnected" type="Boolean" />
+      <property name="ExecResult" visibility="public" read="FExecResult" write="SetExecResult" type="Variant" default="0" />
+      <property name="ErrorCode" visibility="public" read="FErrorCode" write="SetErrorCode" type="Integer" />
+      <property name="ErrorMessage" visibility="public" read="FErrorMessage" write="SetErrorMessage" type="string" default="0" />
+      <property name="DataSet" visibility="published" read="FDataSet" write="SetDataSet" type="TSymphonyDataSet" />
+      <property name="SymphonyBinder" visibility="published" read="FSymphonyBinder" write="SetSymphonyBinder" type="TSymphonyBinder" />
+      <event name="BeforeCancel" visibility="published" read="FBeforeCancel" write="SetBeforeCancel" type="TSymphonyDataSetEvent" />
+      <event name="AfterCancel" visibility="published" read="FAfterCancel" write="SetAfterCancel" type="TSymphonyDataSetEvent" />
+      <event name="BeforeClose" visibility="published" read="FBeforeClose" write="SetBeforeClose" type="TSymphonyDataSetEvent" />
+      <event name="AfterClose" visibility="published" read="FAfterClose" write="SetAfterClose" type="TSymphonyDataSetEvent" />
+      <event name="BeforeDelete" visibility="published" read="FBeforeDelete" write="SetBeforeDelete" type="TSymphonyDataSetEvent" />
+      <event name="AfterDelete" visibility="published" read="FAfterDelete" write="SetAfterDelete" type="TSymphonyDataSetEvent" />
+      <event name="BeforeEdit" visibility="published" read="FBeforeEdit" write="SetBeforeEdit" type="TSymphonyDataSetEvent" />
+      <event name="AfterEdit" visibility="published" read="FAfterEdit" write="SetAfterEdit" type="TSymphonyDataSetEvent" />
+      <event name="BeforeInsert" visibility="published" read="FBeforeInsert" write="SetBeforeInsert" type="TSymphonyDataSetEvent" />
+      <event name="AfterInsert" visibility="published" read="FAfterInsert" write="SetAfterInsert" type="TSymphonyDataSetEvent" />
+      <event name="BeforeOpen" visibility="published" read="FBeforeOpen" write="SetBeforeOpen" type="TSymphonyDataSetEvent" />
+      <event name="AfterOpen" visibility="published" read="FAfterOpen" write="SetAfterOpen" type="TSymphonyDataSetEvent" />
+      <event name="BeforePost" visibility="published" read="FBeforePost" write="SetBeforePost" type="TSymphonyDataSetEvent" />
+      <event name="AfterPost" visibility="published" read="FAfterPost" write="SetAfterPost" type="TSymphonyDataSetEvent" />
+      <event name="BeforeRefresh" visibility="published" read="FBeforeRefresh" write="SetBeforeRefresh" type="TSymphonyDataSetEvent" />
+      <event name="AfterRefresh" visibility="published" read="FAfterRefresh" write="SetAfterRefresh" type="TSymphonyDataSetEvent" />
+      <event name="BeforeScroll" visibility="published" read="FBeforeScroll" write="SetBeforeScroll" type="TSymphonyDataSetEvent" />
+      <event name="AfterScroll" visibility="published" read="FAfterScroll" write="SetAfterScroll" type="TSymphonyDataSetEvent" />
+      <event name="CalcFields" visibility="published" read="FCalcFields" write="SetCalcFields" type="TSymphonyDataSetEvent" />
+      <event name="NewRecord" visibility="published" read="FNewRecord" write="SetNewRecord" type="TSymphonyDataSetEvent" />
+      <event name="DeleteError" visibility="published" read="FDeleteError" write="SetDeleteError" type="TSymphonyDataSetEvent" />
+      <event name="EditError" visibility="published" read="FEditError" write="SetEditError" type="TSymphonyDataSetEvent" />
+      <event name="PostError" visibility="published" read="FPostError" write="SetPostError" type="TSymphonyDataSetEvent" />
+      <event name="BeforeUpdateExecute" visibility="published" read="FBeforeUpdateExecute" write="SetBeforeUpdateExecute" type="TSymphonyDataSetEvent" />
+      <event name="AfterUpdateExecute" visibility="published" read="FAfterUpdateExecute" write="SetAfterUpdateExecute" type="TSymphonyDataSetEvent" />
+      <event name="BeforeExecute" visibility="published" read="FBeforeExecute" write="SetBeforeExecute" type="TSymphonyDataSetEvent" />
+      <event name="AfterExecute" visibility="published" read="FAfterExecute" write="SetAfterExecute" type="TSymphonyDataSetEvent" />
+      <event name="BeforeFetch" visibility="published" read="FBeforeFetch" write="SetBeforeFetch" type="TSymphonyDataSetEvent" />
+      <event name="AfterFetch" visibility="published" read="FAfterFetch" write="SetAfterFetch" type="TSymphonyDataSetEvent" />
+      <event name="FilterRecord" visibility="published" read="FFilterRecord" write="SetFilterRecord" type="TSymphonyDataSetEvent" />
+      <event name="UpdateError" visibility="published" read="FUpdateError" write="SetUpdateError" type="TSymphonyDataSetEvent" />
+      <event name="UpdateRecord" visibility="published" read="FUpdateRecord" write="SetUpdateRecord" type="TSymphonyDataSetEvent" />
+    </members>
+  </class>
+  <class name="TEventSubscriber">
+    <ancestor name="TObject" namespace="System">
+      <methodref name="Create" visibility="public" procflags="constructor">
+      </methodref>
+      <methodref name="Free" visibility="public">
+      </methodref>
+      <methodref name="DisposeOf" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="InitInstance" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="CleanupInstance" visibility="public">
+      </methodref>
+      <methodref name="ClassType" visibility="public" procflags="inline">
+      </methodref>
+      <methodref name="ClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassNameIs" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassParent" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="ClassInfo" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InstanceSize" visibility="public" procflags="class inline">
+      </methodref>
+      <methodref name="InheritsFrom" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodAddress" visibility="public" procflags="class overload">
+      </methodref>
+      <methodref name="MethodName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="QualifiedClassName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="FieldAddress" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="GetInterface" visibility="public">
+      </methodref>
+      <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitName" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="UnitScope" visibility="public" procflags="class">
+      </methodref>
+      <methodref name="Equals" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="GetHashCode" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="ToString" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Dispatch" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="NewInstance" visibility="public" procflags="class virtual">
+      </methodref>
+      <methodref name="FreeInstance" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+      </methodref>
+      <methodref name="GetDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+      </methodref>
+      <propertyref name="Disposed" visibility="protected">
+      </propertyref>
+    </ancestor>
+    <members>
+      <field name="FHandle" type="HWND" visibility="private" size="4" offset="4" />
+      <field name="FEvent" type="TSDSEvent" visibility="private" size="1" offset="8" />
+      <field name="FASyncExec" type="Boolean" visibility="private" size="1" offset="9" />
+      <function name="GetEvent" visibility="private">
+        <parameters>
+          <retval type="TSDSEvent" />
+        </parameters>
+      </function>
+      <function name="GetHandle" visibility="private">
+        <parameters>
+          <retval type="HWND" />
+        </parameters>
+      </function>
+      <procedure name="SetASyncExec" visibility="private">
+        <parameters>
+          <parameter name="Value" type="Boolean" paramflags="const" />
+        </parameters>
+      </procedure>
+      <constructor name="Create" visibility="public">
+        <parameters>
+          <parameter name="AHandle" type="HWND" />
+          <parameter name="AEvent" type="TSDSEvent" />
+          <parameter name="AASyncExec" type="Boolean" />
+        </parameters>
+      </constructor>
+      <function name="Equals" visibility="public" procflags="override">
+        <parameters>
+          <parameter name="Obj" type="TObject" />
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <property name="Handle" visibility="public" read="GetHandle" type="HWND" />
+      <property name="Event" visibility="public" read="GetEvent" type="TSDSEvent" />
+      <property name="ASyncExec" visibility="public" read="FASyncExec" write="SetASyncExec" type="Boolean" />
+    </members>
+  </class>
+  <struct name="TEventLink" size="12">
+    <field name="Event" type="TSDSEvent" visibility="public" size="1" offset="0" />
+    <field name="Method" type="TMethod" visibility="public" size="8" offset="4" />
+    <function name="EventName" visibility="public">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+  </struct>
+  <class name="TSymDataSetServer">
+    <ancestor name="TComponent" namespace="System.Classes">
+      <interfaces>
+        <implements name="IInterfaceComponentReference" />
+        <implements name="IInterface" />
+      </interfaces>
+      <methodref name="GetComObject" visibility="private">
+      </methodref>
+      <methodref name="GetComponent" visibility="private">
+      </methodref>
+      <methodref name="GetComponentCount" visibility="private">
+      </methodref>
+      <methodref name="GetComponentIndex" visibility="private">
+      </methodref>
+      <methodref name="Insert" visibility="private">
+      </methodref>
+      <methodref name="ReadLeft" visibility="private">
+      </methodref>
+      <methodref name="ReadTop" visibility="private">
+      </methodref>
+      <methodref name="Remove" visibility="private">
+      </methodref>
+      <methodref name="RemoveNotification" visibility="private">
+      </methodref>
+      <methodref name="SetComponentIndex" visibility="private">
+      </methodref>
+      <methodref name="SetReference" visibility="private">
+      </methodref>
+      <methodref name="WriteLeft" visibility="private">
+      </methodref>
+      <methodref name="WriteTop" visibility="private">
+      </methodref>
+      <methodref name="IntfGetComponent" visibility="private">
+      </methodref>
+      <methodref name="DoGetDeltaStreams" visibility="private">
+      </methodref>
+      <methodref name="ReadDeltaStream" visibility="private">
+      </methodref>
+      <methodref name="ReadDeltaState" visibility="private">
+      </methodref>
+      <methodref name="FindSortedComponent" visibility="private">
+      </methodref>
+      <methodref name="AddSortedComponent" visibility="private">
+      </methodref>
+      <methodref name="RemoveSortedComponent" visibility="private" procflags="inline">
+      </methodref>
+      <methodref name="Create@" visibility="class private" procflags="class constructor noself">
+      </methodref>
+      <methodref name="AsyncSchedule" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="ChangeName" visibility="protected">
+      </methodref>
+      <methodref name="DefineProperties" visibility="protected" procflags="override">
+      </methodref>
+      <methodref name="GetChildren" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="GetChildOwner" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="GetChildParent" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="GetOwner" visibility="protected" procflags="override">
+      </methodref>
+      <methodref name="Loaded" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="Notification" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="GetDeltaStreams" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="PaletteCreated" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="ReadState" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="CanObserve" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="ObserverAdded" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="GetObservers" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="SetAncestor" visibility="protected">
+      </methodref>
+      <methodref name="SetDesigning" visibility="protected">
+      </methodref>
+      <methodref name="SetInline" visibility="protected">
+      </methodref>
+      <methodref name="SetDesignInstance" visibility="protected">
+      </methodref>
+      <methodref name="SetName" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="SetChildOrder" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="SetParentComponent" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="Updating" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="Updated" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="UpdateRegistry" visibility="protected" procflags="class virtual">
+      </methodref>
+      <methodref name="ValidateRename" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="ValidateContainer" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="ValidateInsert" visibility="protected" procflags="dynamic">
+      </methodref>
+      <methodref name="WriteState" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="RemoveFreeNotifications" visibility="protected">
+      </methodref>
+      <methodref name="QueryInterface" visibility="protected" procflags="virtual">
+      </methodref>
+      <methodref name="_AddRef" visibility="protected">
+      </methodref>
+      <methodref name="_Release" visibility="protected">
+      </methodref>
+      <methodref name="GetTypeInfoCount" visibility="protected">
+      </methodref>
+      <methodref name="GetTypeInfo" visibility="protected">
+      </methodref>
+      <methodref name="GetIDsOfNames" visibility="protected">
+      </methodref>
+      <methodref name="Invoke" visibility="protected">
+      </methodref>
+      <eventref name="OnGetDeltaStreams" visibility="protected">
+      </eventref>
+      <methodref name="Create" visibility="public" procflags="constructor virtual">
+      </methodref>
+      <methodref name="Destroy" visibility="public" procflags="destructor override">
+      </methodref>
+      <methodref name="BeforeDestruction" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="BeginInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="EndInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="EndInvoke" visibility="public" procflags="overload">
+      </methodref>
+      <methodref name="EndFunctionInvoke" visibility="public">
+      </methodref>
+      <methodref name="DestroyComponents" visibility="public">
+      </methodref>
+      <methodref name="Destroying" visibility="public">
+      </methodref>
+      <methodref name="ExecuteAction" visibility="public" procflags="dynamic">
+      </methodref>
+      <methodref name="FindComponent" visibility="public">
+      </methodref>
+      <methodref name="FreeNotification" visibility="public">
+      </methodref>
+      <methodref name="RemoveFreeNotification" visibility="public">
+      </methodref>
+      <methodref name="FreeOnRelease" visibility="public">
+      </methodref>
+      <methodref name="GetEnumerator" visibility="public">
+      </methodref>
+      <methodref name="GetParentComponent" visibility="public" procflags="dynamic">
+      </methodref>
+      <methodref name="GetNamePath" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="HasParent" visibility="public" procflags="dynamic">
+      </methodref>
+      <methodref name="InsertComponent" visibility="public">
+      </methodref>
+      <methodref name="RemoveComponent" visibility="public">
+      </methodref>
+      <methodref name="SetSubComponent" visibility="public">
+      </methodref>
+      <methodref name="SafeCallException" visibility="public" procflags="override">
+      </methodref>
+      <methodref name="UpdateAction" visibility="public" procflags="virtual">
+      </methodref>
+      <methodref name="IsImplementorOf" visibility="public">
+      </methodref>
+      <methodref name="ReferenceInterface" visibility="public">
+      </methodref>
+      <propertyref name="ComObject" visibility="public">
+      </propertyref>
+      <propertyref name="Components" visibility="public">
+      </propertyref>
+      <propertyref name="ComponentCount" visibility="public">
+      </propertyref>
+      <propertyref name="ComponentIndex" visibility="public">
+      </propertyref>
+      <propertyref name="ComponentState" visibility="public">
+      </propertyref>
+      <propertyref name="ComponentStyle" visibility="public">
+      </propertyref>
+      <propertyref name="DesignInfo" visibility="public">
+      </propertyref>
+      <propertyref name="Owner" visibility="public">
+      </propertyref>
+      <propertyref name="VCLComObject" visibility="public">
+      </propertyref>
+      <propertyref name="Observers" visibility="public">
+      </propertyref>
+      <propertyref name="Name" visibility="published">
+      </propertyref>
+      <propertyref name="Tag" visibility="published">
+      </propertyref>
+      <ancestor name="TPersistent" namespace="System.Classes">
+        <methodref name="AssignError" visibility="private">
+        </methodref>
+        <methodref name="AssignTo" visibility="protected" procflags="virtual">
+        </methodref>
+        <methodref name="DefineProperties" visibility="protected" procflags="virtual">
+        </methodref>
+        <methodref name="GetOwner" visibility="protected" procflags="dynamic">
+        </methodref>
+        <methodref name="Destroy" visibility="public" procflags="destructor override">
+        </methodref>
+        <methodref name="Assign" visibility="public" procflags="virtual">
+        </methodref>
+        <methodref name="GetNamePath" visibility="public" procflags="dynamic">
+        </methodref>
+        <ancestor name="TObject" namespace="System">
+          <methodref name="Create" visibility="public" procflags="constructor">
+          </methodref>
+          <methodref name="Free" visibility="public">
+          </methodref>
+          <methodref name="DisposeOf" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="InitInstance" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="CleanupInstance" visibility="public">
+          </methodref>
+          <methodref name="ClassType" visibility="public" procflags="inline">
+          </methodref>
+          <methodref name="ClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassNameIs" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassParent" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="ClassInfo" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InstanceSize" visibility="public" procflags="class inline">
+          </methodref>
+          <methodref name="InheritsFrom" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodAddress" visibility="public" procflags="class overload">
+          </methodref>
+          <methodref name="MethodName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="QualifiedClassName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="FieldAddress" visibility="public" procflags="overload">
+          </methodref>
+          <methodref name="GetInterface" visibility="public">
+          </methodref>
+          <methodref name="GetInterfaceEntry" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="GetInterfaceTable" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitName" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="UnitScope" visibility="public" procflags="class">
+          </methodref>
+          <methodref name="Equals" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="GetHashCode" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="ToString" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="SafeCallException" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="AfterConstruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="BeforeDestruction" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Dispatch" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="DefaultHandler" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="NewInstance" visibility="public" procflags="class virtual">
+          </methodref>
+          <methodref name="FreeInstance" visibility="public" procflags="virtual">
+          </methodref>
+          <methodref name="Destroy" visibility="public" procflags="destructor virtual">
+          </methodref>
+          <methodref name="GetDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <methodref name="CheckDisposed" visibility="protected" procflags="inline">
+          </methodref>
+          <propertyref name="Disposed" visibility="protected">
+          </propertyref>
+        </ancestor>
+      </ancestor>
+    </ancestor>
+    <interfaces>
+      <implements name="ISymphonyBinderSubscribe" />
+    </interfaces>
+    <members>
+      <field name="FSymphonyBinder" type="TSymphonyBinder" visibility="private" size="4" offset="64" />
+      <field name="FSymphonyDataSet" type="TSymphonyDataSet" visibility="private" size="4" offset="68" />
+      <field name="FDataSet" type="TDataSet" visibility="private" size="4" offset="72" />
+      <field name="FSubscribers" type="TObjectList" visibility="private" size="4" offset="76" />
+      <field name="FEvents" visibility="private" size="396" offset="80">
+        <array name="FEvents" visibility="private" low="0" high="32">
+          <element type="TEventLink" />
+        </array>
+      </field>
+      <procedure name="RestorySymphonyBinder" visibility="private">
+      </procedure>
+      <procedure name="LinkSymphonyBinder" visibility="private">
+      </procedure>
+      <procedure name="LinkDataSet" visibility="private">
+      </procedure>
+      <procedure name="RestoryDataSet" visibility="private">
+      </procedure>
+      <procedure name="LinkDataSetForSubscribers" visibility="private">
+      </procedure>
+      <procedure name="LinkDataSetForEvent" visibility="private">
+        <parameters>
+          <parameter name="Event" type="TSDSEvent" />
+        </parameters>
+      </procedure>
+      <function name="DoConnect" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoOpen" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoClose" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoRefresh" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoFirst" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoPrior" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoNext" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoLast" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoBof" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoEof" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoInsert" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoEdit" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoDelete" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoPost" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoCancel" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoLocate" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoLookup" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoGetValues" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoSetValues" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <function name="DoSelect" visibility="private">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="LoadCurrentRecord" visibility="private">
+        <parameters>
+          <parameter name="ADataSet" type="TSymphonyDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDataSetNotifyEvent" visibility="private">
+        <parameters>
+          <parameter name="AEvent" type="TSDSEvent" />
+        </parameters>
+      </procedure>
+      <procedure name="SendEventSubscribers" visibility="private">
+        <parameters>
+          <parameter name="AEvent" type="TSDSEvent" />
+        </parameters>
+      </procedure>
+      <procedure name="SetDataSet" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TDataSet" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetSymphonyBinder" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyBinder" paramflags="const" />
+        </parameters>
+      </procedure>
+      <procedure name="SetSymphonyDataSet" visibility="private">
+        <parameters>
+          <parameter name="Value" type="TSymphonyDataSet" paramflags="const" />
+        </parameters>
+      </procedure>
+      <function name="RegistryEventSubscriber" visibility="private">
+        <parameters>
+          <parameter name="AHandle" type="HWND" />
+          <parameter name="AEvent" type="TSDSEvent" />
+          <parameter name="ASyncExec" type="Boolean" />
+          <retval type="Integer" />
+        </parameters>
+      </function>
+      <procedure name="UnRegistryEventSubscriber" visibility="private">
+        <parameters>
+          <parameter name="AHandle" type="HWND" />
+          <parameter name="AEvent" type="TSDSEvent" />
+        </parameters>
+      </procedure>
+      <constructor name="Create" visibility="public">
+        <parameters>
+          <parameter name="AOwner" type="TComponent" />
+        </parameters>
+      </constructor>
+      <destructor name="Destroy" visibility="public">
+        <parameters>
+        </parameters>
+      </destructor>
+      <procedure name="DoQueryExecCommand" visibility="public">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <parameter name="AResult" type="Integer" paramflags="var" />
+        </parameters>
+      </procedure>
+      <procedure name="DoExecuteCommand" visibility="public">
+        <parameters>
+          <parameter name="ACommand" type="TCommand" />
+          <parameter name="AResult" type="Integer" paramflags="var" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterOpen" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeCancel" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterRefresh" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterCancel" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeClose" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterClose" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeDelete" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterDelete" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeEdit" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterEdit" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeInsert" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterInsert" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeOpen" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforePost" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterPost" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeRefresh" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeScroll" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterScroll" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoCalcFields" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoNewRecord" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoDeleteError" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+          <parameter name="E" type="EDatabaseError" />
+          <parameter name="Action" type="TDataAction" paramflags="var" />
+        </parameters>
+      </procedure>
+      <procedure name="DoEditError" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+          <parameter name="E" type="EDatabaseError" />
+          <parameter name="Action" type="TDataAction" paramflags="var" />
+        </parameters>
+      </procedure>
+      <procedure name="DoPostError" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+          <parameter name="E" type="EDatabaseError" />
+          <parameter name="Action" type="TDataAction" paramflags="var" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeUpdateExecute" visibility="published">
+        <parameters>
+          <parameter name="Sender" type="TDataSet" />
+          <parameter name="StatementTypes" type="TStatementTypes" />
+          <parameter name="Params" type="TDAParams" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterUpdateExecute" visibility="published">
+        <parameters>
+          <parameter name="Sender" type="TDataSet" />
+          <parameter name="StatementTypes" type="TStatementTypes" />
+          <parameter name="Params" type="TDAParams" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeExecute" visibility="published">
+        <parameters>
+          <parameter name="Sender" type="TObject" />
+          <parameter name="SQL" type="string" paramflags="var" />
+          <parameter name="Omit" type="Boolean" paramflags="var" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterExecute" visibility="published">
+        <parameters>
+          <parameter name="Sender" type="TObject" />
+          <parameter name="Result" type="Boolean" />
+        </parameters>
+      </procedure>
+      <procedure name="DoBeforeFetch" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TCustomDADataSet" />
+          <parameter name="Cancel" type="Boolean" paramflags="var" />
+        </parameters>
+      </procedure>
+      <procedure name="DoAfterFetch" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TCustomDADataSet" />
+        </parameters>
+      </procedure>
+      <procedure name="DoFilterRecord" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+          <parameter name="Accept" type="Boolean" paramflags="var" />
+        </parameters>
+      </procedure>
+      <procedure name="DoUpdateError" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+          <parameter name="E" type="EDatabaseError" />
+          <parameter name="UpdateKind" type="TUpdateKind" />
+          <parameter name="UpdateAction" type="TUpdateAction" paramflags="var" />
+        </parameters>
+      </procedure>
+      <procedure name="DoUpdateRecord" visibility="published">
+        <parameters>
+          <parameter name="DataSet" type="TDataSet" />
+          <parameter name="UpdateKind" type="TUpdateKind" />
+          <parameter name="UpdateAction" type="TUpdateAction" paramflags="var" />
+        </parameters>
+      </procedure>
+      <property name="DataSet" visibility="published" read="FDataSet" write="SetDataSet" type="TDataSet" />
+      <property name="SymphonyBinder" visibility="published" read="FSymphonyBinder" write="SetSymphonyBinder" type="TSymphonyBinder" />
+      <property name="SymphonyDataSet" visibility="published" read="FSymphonyDataSet" write="SetSymphonyDataSet" type="TSymphonyDataSet" />
+    </members>
+  </class>
+</namespace>

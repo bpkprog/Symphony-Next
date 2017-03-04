@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="sbReg" platform="Win32">
+  <procedure name="Register" visibility="public">
+  </procedure>
+</namespace>

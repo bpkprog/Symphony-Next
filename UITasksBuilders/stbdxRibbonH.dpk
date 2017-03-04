@@ -1,0 +1,54 @@
+package stbdxRibbonH;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Построение интерфейс пользователя для списка задач с помощью TdxRibbon'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  dxThemeRS24,
+  dxGDIPlusRS24,
+  cxLibraryRS24,
+  dxCoreRS24,
+  xmlrtl,
+  dxComnRS24,
+  dxBarRS24,
+  dxRibbonRS24,
+  IndySystem,
+  IndyProtocols,
+  IndyCore,
+  bpklib,
+  PKIECtrl24,
+  stbIntf,
+  stbMngs;
+
+contains
+  stbdxRibbonH.MainDataModule in 'stbdxRibbonH.MainDataModule.pas' {dmRHMain: TDataModule};
+
+end.

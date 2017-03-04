@@ -1,0 +1,14 @@
+ALTER TABLE SVM.STREETASK
+ ADD (nvcHint  VARCHAR2(256 CHAR))
+/
+
+ALTER TABLE SVM.STREETASK
+ ADD (nvcParams  VARCHAR2(1024 CHAR))
+/
+
+
+COMMENT ON COLUMN SVM.STREETASK.nvcHint IS 'Подсказка к задаче'
+/
+
+COMMENT ON COLUMN SVM.STREETASK.nvcParams IS 'Параметры запуска задачи'
+/

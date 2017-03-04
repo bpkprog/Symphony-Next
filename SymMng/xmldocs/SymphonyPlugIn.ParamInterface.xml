@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name="SymphonyPlugIn.ParamInterface" platform="Win32">
+  <interface name="ISymphonyPlugInNamedIntf" GUID="{8BA5C11F-C827-45C9-9B99-018AD68FB42F}" ancestor="IInterface">
+    <function name="GetName" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetCaption" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <function name="GetDescription" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <procedure name="SetName" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Value" type="string" paramflags="const" />
+      </parameters>
+    </procedure>
+    <procedure name="SetCaption" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Value" type="string" paramflags="const" />
+      </parameters>
+    </procedure>
+    <procedure name="SetDescription" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Value" type="string" paramflags="const" />
+      </parameters>
+    </procedure>
+    <property name="Caption" visibility="public" read="GetCaption" write="SetCaption" type="string" default="0" />
+    <property name="Description" visibility="public" read="GetDescription" write="SetDescription" type="string" default="0" />
+    <property name="Name" visibility="public" read="GetName" write="SetName" type="string" default="0" />
+  </interface>
+  <interface name="ISymphonyPlugInParam" GUID="{3BF57E54-A1D8-4C48-AEF9-D06F2D3D95D6}" ancestor="ISymphonyPlugInNamedIntf">
+    <procedure name="Assign" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Param" type="ISymphonyPlugInParam" />
+      </parameters>
+    </procedure>
+    <function name="GetValue" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Variant" />
+      </parameters>
+    </function>
+    <function name="GetAsInteger" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Integer" />
+      </parameters>
+    </function>
+    <function name="GetAsFloat" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Double" />
+      </parameters>
+    </function>
+    <function name="GetAsDateTime" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="TDateTime" />
+      </parameters>
+    </function>
+    <function name="GetAsBoolean" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <function name="GetAsString" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <procedure name="SetValue" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AValue" type="Variant" paramflags="const" />
+      </parameters>
+    </procedure>
+    <procedure name="SetAsInteger" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AValue" type="Integer" paramflags="const" />
+      </parameters>
+    </procedure>
+    <procedure name="SetAsFloat" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AValue" type="Double" paramflags="const" />
+      </parameters>
+    </procedure>
+    <procedure name="SetAsDateTime" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AValue" type="TDateTime" paramflags="const" />
+      </parameters>
+    </procedure>
+    <procedure name="SetAsBoolean" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AValue" type="Boolean" paramflags="const" />
+      </parameters>
+    </procedure>
+    <procedure name="SetAsString" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="AValue" type="string" paramflags="const" />
+      </parameters>
+    </procedure>
+    <property name="AsInteger" visibility="public" read="GetAsInteger" write="SetAsInteger" type="Integer" />
+    <property name="AsFloat" visibility="public" read="GetAsFloat" write="SetAsFloat" type="Double" default="0" />
+    <property name="AsDateTime" visibility="public" read="GetAsDateTime" write="SetAsDateTime" type="TDateTime" default="0" />
+    <property name="AsBoolean" visibility="public" read="GetAsBoolean" write="SetAsBoolean" type="Boolean" />
+    <property name="AsString" visibility="public" read="GetAsString" write="SetAsString" type="string" default="0" />
+    <property name="Value" visibility="public" read="GetValue" write="SetValue" type="Variant" default="0" />
+  </interface>
+  <interface name="ISymphonyPlugInParamList" GUID="{6DDCAAF4-0EC2-4CE9-8956-1A7D36891D34}" ancestor="ISymphonyPlugInNamedIntf">
+    <procedure name="Assign" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamList" type="ISymphonyPlugInParamList" />
+      </parameters>
+    </procedure>
+    <procedure name="Merge" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamList" type="ISymphonyPlugInParamList" />
+      </parameters>
+    </procedure>
+    <procedure name="ParseParams" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="CmdLine" type="string" />
+      </parameters>
+    </procedure>
+    <function name="IndexOf" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <retval type="Integer" />
+      </parameters>
+    </function>
+    <function name="GetParamCount" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="Integer" />
+      </parameters>
+    </function>
+    <function name="GetParams" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Index" type="Integer" />
+        <retval type="ISymphonyPlugInParam" />
+      </parameters>
+    </function>
+    <function name="GetParamValue" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <retval type="Variant" />
+      </parameters>
+    </function>
+    <function name="GetAsInteger" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <retval type="Integer" />
+      </parameters>
+    </function>
+    <function name="GetAsFloat" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <retval type="Double" />
+      </parameters>
+    </function>
+    <function name="GetAsDateTime" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <retval type="TDateTime" />
+      </parameters>
+    </function>
+    <function name="GetAsBoolean" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <retval type="Boolean" />
+      </parameters>
+    </function>
+    <function name="GetAsString" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <retval type="string" />
+      </parameters>
+    </function>
+    <procedure name="SetParamValue" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <parameter name="Value" type="Variant" />
+      </parameters>
+    </procedure>
+    <procedure name="SetAsInteger" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <parameter name="AValue" type="Integer" paramflags="const" />
+      </parameters>
+    </procedure>
+    <procedure name="SetAsFloat" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <parameter name="AValue" type="Double" paramflags="const" />
+      </parameters>
+    </procedure>
+    <procedure name="SetAsDateTime" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <parameter name="AValue" type="TDateTime" paramflags="const" />
+      </parameters>
+    </procedure>
+    <procedure name="SetAsBoolean" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <parameter name="AValue" type="Boolean" paramflags="const" />
+      </parameters>
+    </procedure>
+    <procedure name="SetAsString" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <parameter name="AValue" type="string" paramflags="const" />
+      </parameters>
+    </procedure>
+    <function name="AddParam" visibility="public" procflags="abstract overload virtual">
+      <parameters>
+        <retval type="ISymphonyPlugInParam" />
+      </parameters>
+    </function>
+    <function name="AddParam" visibility="public" procflags="abstract overload virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <retval type="ISymphonyPlugInParam" />
+      </parameters>
+    </function>
+    <function name="AddParam" visibility="public" procflags="abstract overload virtual">
+      <parameters>
+        <parameter name="ParamName" type="string" />
+        <parameter name="ParamValue" type="Variant" />
+        <retval type="ISymphonyPlugInParam" />
+      </parameters>
+    </function>
+    <property name="ParamCount" visibility="public" read="GetParamCount" type="Integer" />
+    <property name="Params[Index]" visibility="public" read="GetParams" type="ISymphonyPlugInParam" />
+    <property name="ParamValue[ParamName]" visibility="public" read="GetParamValue" write="SetParamValue" type="Variant" />
+    <property name="AsInteger[ParamName]" visibility="public" read="GetAsInteger" write="SetAsInteger" type="Integer" />
+    <property name="AsFloat[ParamName]" visibility="public" read="GetAsFloat" write="SetAsFloat" type="Double" />
+    <property name="AsDateTime[ParamName]" visibility="public" read="GetAsDateTime" write="SetAsDateTime" type="TDateTime" />
+    <property name="AsBoolean[ParamName]" visibility="public" read="GetAsBoolean" write="SetAsBoolean" type="Boolean" />
+    <property name="AsString[ParamName]" visibility="public" read="GetAsString" write="SetAsString" type="string" />
+  </interface>
+  <interface name="ISymphonyPlugInCommand" GUID="{0098401A-7973-433A-B7FD-760966055CA1}" ancestor="ISymphonyPlugInParamList">
+    <procedure name="Assign" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="ACommand" type="ISymphonyPlugInCommand" />
+      </parameters>
+    </procedure>
+    <function name="GetCommand" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="string" />
+      </parameters>
+    </function>
+    <procedure name="SetCommand" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="Value" type="string" />
+      </parameters>
+    </procedure>
+    <property name="Command" visibility="public" read="GetCommand" write="SetCommand" type="string" default="0" />
+  </interface>
+  <interface name="ISymphonyPlugInCFGGroup" GUID="{B17092A4-2770-4902-AC97-EE92B54F08E2}" ancestor="ISymphonyPlugInNamedIntf">
+    <procedure name="Assign" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="CFGGroup" type="ISymphonyPlugInCFGGroup" />
+      </parameters>
+    </procedure>
+    <procedure name="Merge" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <parameter name="CFGGroup" type="ISymphonyPlugInCFGGroup" />
+      </parameters>
+    </procedure>
+    <function name="GetCommonParams" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="ISymphonyPlugInParamList" />
+      </parameters>
+    </function>
+    <function name="GetPersonalParams" visibility="public" procflags="abstract virtual">
+      <parameters>
+        <retval type="ISymphonyPlugInParamList" />
+      </parameters>
+    </function>
+    <property name="CommonParams" visibility="public" read="GetCommonParams" type="ISymphonyPlugInParamList" />
+    <property name="PersonalParams" visibility="public" read="GetPersonalParams" type="ISymphonyPlugInParamList" />
+  </interface>
+</namespace>
