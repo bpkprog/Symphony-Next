@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F9956639-66B7-4907-92CB-8BB8E29AF6D3}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DBSetting.Intf.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DBSetting.ImplORA.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DBSetting_Intf">
+        <MSBuild Projects="DBSetting.Intf.dproj"/>
+    </Target>
+    <Target Name="DBSetting_Intf:Clean">
+        <MSBuild Projects="DBSetting.Intf.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DBSetting_Intf:Make">
+        <MSBuild Projects="DBSetting.Intf.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DBSetting_ImplORA">
+        <MSBuild Projects="DBSetting.ImplORA.dproj"/>
+    </Target>
+    <Target Name="DBSetting_ImplORA:Clean">
+        <MSBuild Projects="DBSetting.ImplORA.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DBSetting_ImplORA:Make">
+        <MSBuild Projects="DBSetting.ImplORA.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DBSetting_Intf;DBSetting_ImplORA"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DBSetting_Intf:Clean;DBSetting_ImplORA:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DBSetting_Intf:Make;DBSetting_ImplORA:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
