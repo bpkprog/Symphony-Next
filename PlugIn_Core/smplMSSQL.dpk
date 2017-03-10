@@ -26,6 +26,7 @@ package smplMSSQL;
 {$DEFINE DEBUG}
 {$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'Базовый фрейм под плагин MS SQL'}
+{$RUNONLY}
 {$IMPLICITBUILD ON}
 
 requires
@@ -40,6 +41,6 @@ requires
   smplBaseFrame;
 
 contains
-  SymphonyPlugIn.MSSQLBaseFrame ;
+  SymphonyPlugIn.MSSQLBaseFrame in 'SymphonyPlugIn.MSSQLBaseFrame.pas' {SymphonyPlugInBaseFrame1: TFrame};
 
 end.

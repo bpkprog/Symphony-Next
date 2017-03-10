@@ -1,4 +1,4 @@
-package smplBaseFrame;
+package s7exec;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
@@ -25,7 +25,7 @@ package smplBaseFrame;
 {$IMAGEBASE $400000}
 {$DEFINE DEBUG}
 {$ENDIF IMPLICITBUILDING}
-{$DESCRIPTION 'Базовый фрейм для построения плагина к Симфонии'}
+{$DESCRIPTION 'Запуск Симфонии 7 с выбранной задачей'}
 {$RUNONLY}
 {$IMPLICITBUILD ON}
 
@@ -33,15 +33,15 @@ requires
   rtl,
   vcl,
   bpklib,
+  dac240,
+  odac240,
   smplIntf,
   smplPrmImpl,
-  smplMsgImpl,
-  bpklog;
+  smplBaseFrame,
+  smplActListBuilder,
+  smplMsgImpl;
 
 contains
-  SymphonyPlugIn.BaseFrame,
-  SymphonyPlugIn.StateStorage,
-  SymphonyPlugIn.TunerFrame,
-  SymphonyPlugIn.ActionImpl;
+  s7exec.MainDM in 's7exec.MainDM.pas' {dms7eMain: TDataModule};
 
 end.

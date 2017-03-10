@@ -327,18 +327,12 @@
   </class>
   <class name="TfrmSymMngTuner" file="SymMng.TunerFrame.pas" line="40">
     <ancestor name="TfrmSymphonyPlugInTuner" namespace="SymphonyPlugIn.TunerFrame">
-      <methodref name="GetCaption" visibility="public" procflags="abstract virtual">
-      </methodref>
-      <methodref name="GetDescription" visibility="public" procflags="abstract virtual">
-      </methodref>
-      <methodref name="Load" visibility="public" procflags="abstract virtual">
-      </methodref>
-      <methodref name="Save" visibility="public" procflags="abstract virtual">
-      </methodref>
-      <propertyref name="Caption" visibility="public">
-      </propertyref>
-      <propertyref name="Description" visibility="public">
-      </propertyref>
+      <methodref name="GetCaption" visibility="public" procflags="abstract virtual" />
+      <methodref name="GetDescription" visibility="public" procflags="abstract virtual" />
+      <methodref name="Load" visibility="public" procflags="abstract virtual" />
+      <methodref name="Save" visibility="public" procflags="abstract virtual" />
+      <propertyref name="Caption" visibility="public" />
+      <propertyref name="Description" visibility="public" />
       <ancestor name="TFrame" namespace="Vcl.Forms">
         <propertyref name="Align" visibility="published">
         </propertyref>

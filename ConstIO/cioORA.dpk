@@ -34,7 +34,10 @@ requires
   cioIntf,
   smplIntf,
   dac240,
-  odac240;
+  odac240,
+  xmlrtl,
+  bpklib,
+  smplPrmImpl;
 
 contains
   cioORA.MainUnit in 'cioORA.MainUnit.pas';

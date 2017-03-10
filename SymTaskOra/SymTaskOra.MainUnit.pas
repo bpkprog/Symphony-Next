@@ -15,6 +15,9 @@ uses System.SysUtils, System.Classes, XML.XMLDoc, XMLValUtil, DB, Ora, IdCoderMI
 Var
   OldSymphony: String ;
 
+Const
+  S7StartPlugIn = 's7exec' ;
+
 function GetParentTask(TaskList: IXMLNode; ParentID: Integer): IXMLNode ;
 var
   i: Integer;
@@ -60,7 +63,7 @@ end;
 
 procedure LoadTask(ParentNode: IXMLNode; Query, QueryIco: TOraQuery) ;
 Var
-  Node, ICOList, ICO, ICOBody: IXMLNode ;
+  Node, ParamNode, ICOList, ICO, ICOBody: IXMLNode ;
   Enc: TIdEncoderMIME ;
   ms: TMemoryStream ;
   fl: TBlobField ;
@@ -71,9 +74,10 @@ begin
   Node.ChildValues['CAPTION']   := Query.FieldValues['nvcnaimtask'] ;
   Node.ChildValues['HINT']      := Query.FieldValues['nvchint'] ;
   Node.ChildValues['ITASKTYPE'] := Query.FieldValues['itasktype'] ;
-  Node.ChildValues['FILENAME']  := AsStr(Query.FieldValues['nvcfilename'], OldSymphony) ;
-  Node.ChildValues['PARAMS']    := Query.FieldValues['nvcparams'] ;
+  Node.ChildValues['FILENAME']  := AsStr(Query.FieldValues['nvcfilename'], S7StartPlugIn) ;
   Node.ChildValues['READONLY']  := Query.FieldValues['i_read_only'] ;
+  ParamNode := Node.AddChild('PARAMS') ;
+  ParamNode.ChildValues['TASK_PARAMS'] := Query.FieldValues['nvcparams'] ;
 
   IcoList := Node.AddChild('ICONS') ;
   Enc     := TIdEncoderMIME.Create(nil) ;
@@ -125,7 +129,8 @@ begin
                    ' union all ' +
                    'select tt.ikodtreetask, tt.ikodparentnode, tt.nvcnaimtask, tt.itasktype, tt.nvcfilename, tt.nvchint, tt.nvcparams, tsk.i_read_only ' +
                    'from svm.streetask tt join tsk on tsk.ikodtreetask = tt.ikodparentnode ) ' +
-                   'select * from tsk order by ikodparentnode nulls first, itasktype, ikodtreetask' ;
+                   'select ikodtreetask, ikodparentnode, nvcnaimtask, itasktype, nvcfilename, nvchint, ' +
+                   '(case when nvcparams is null then ''ikodtreetask='' || to_char(ikodtreetask) else nvcparams end) nvcparams, i_read_only from tsk order by ikodparentnode nulls first, itasktype, ikodtreetask' ;
 
     ds.DataSet    := Qr ;
 

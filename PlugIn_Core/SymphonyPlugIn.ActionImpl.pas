@@ -154,7 +154,7 @@ implementation
 
 uses System.SysUtils, System.StrUtils, System.Types, System.Variants,
      WinAPI.Windows, WinAPI.Messages, VCL.Controls, XMLValUtil,
-     SymphonyPlugIn.ParamImpl, SymphonyPlugIn.BaseFrame ;
+     SymphonyPlugIn.ParamImpl, SymphonyPlugIn.BaseFrame, Logger ;
 
 { TSymphonyPlugInAction }
 {$REGION 'TSymphonyPlugInAction'}
@@ -197,13 +197,25 @@ end;
 
 function TSymphonyPlugInAction.Execute(CmdLine: String): Boolean;
 begin
-  Result  := False ;
-  if PlugInMethodName <> EmptyStr then
+  Log.EnterMethod('TSymphonyPlugInAction.Execute', ['CmdLine'], [CmdLine]);
+  Try
+  Try
+    Result  := False ;
+    if PlugInMethodName <> EmptyStr then
                                           Result := ExecutePluginMethod(CmdLine)
-  else if FrameClassName <> EmptyStr then
+    else if FrameClassName <> EmptyStr then
                                           Result := OpenFrame(CmdLine)
-  else
-    raise Exception.Create('Для акции не определен ни метод, ни класс фрейма');
+    else
+      raise Exception.Create('Для акции не определен ни метод, ни класс фрейма');
+  Except On E: Exception do
+    begin
+      Log.WriteExceptionInfo(E);
+      raise ;
+    end;
+  End;
+  Finally
+    Log.ExitMethod('TSymphonyPlugInAction.Execute');
+  End;
 end;
 
 function TSymphonyPlugInAction.ExecutePluginMethod(CmdLine: String): Boolean;
@@ -216,28 +228,41 @@ begin
   // Определяем через указатели на методы
   // Handle пакета плагина, сессию соединения с БД и дополнтельгые параметры
   // Если все собрано и функция в пакете определена, то запускаем её
-  Result  := False ;
+  Log.EnterMethod('TSymphonyPlugInAction.ExecutePluginMethod', ['CmdLine'], [CmdLine]);
+  Try
+    Result  := False ;
 
-  if Assigned(FGetHandleFunc) then Handle := FGetHandleFunc(Self)
-  else raise Exception.Create('Не определен метод определения Handle библиотеки') ;
+    if Assigned(FGetHandleFunc) then Handle := FGetHandleFunc(Self)
+    else raise Exception.Create('Не определен метод определения Handle библиотеки') ;
 
-  if Handle = 0  then
-                     Exit ;
+    if Handle = 0  then
+    begin
+      Log.Write('Плагин не загружен: Handle = 0');
+      Exit ;
+    end;
 
-  if Assigned(FGetSessionFunc) then Session := FGetSessionFunc(Self)
-  else raise Exception.Create('Не определен метод определения сессии базы данных') ;
+    if Assigned(FGetSessionFunc) then Session := FGetSessionFunc(Self)
+    else raise Exception.Create('Не определен метод определения сессии базы данных') ;
 
-  Data    := TSymphonyPlugInCommand.Create ;
-  if Assigned(FGetParamFunc) then
+    Data    := TSymphonyPlugInCommand.Create ;
+    if Assigned(FGetParamFunc) then
                                   Data.Assign(FGetParamFunc(Self))
                              else
                                   Data.Assign(Command) ;
-  Data.ParseParams(CmdLine);
+    Data.ParseParams(CmdLine);
 
-  fn  := GetProcAddress(Handle, PChar(PlugInMethodName)) ;
-  if not Assigned(fn) then
-                          Exit ;
-  Result  := fn(Session, Data) ;
+    fn  := GetProcAddress(Handle, PChar(PlugInMethodName)) ;
+    if not Assigned(fn) then
+    begin
+      Log.Write('Функция акции %s в плагине не найдена. Уходим.', [PlugInMethodName]);
+      Exit ;
+    end;
+
+    Log.Write('Выполняем функцию плагина %s',  [PlugInMethodName]);
+    Result  := fn(Session, Data) ;
+  Finally
+    Log.ExitMethod('TSymphonyPlugInAction.ExecutePluginMethod');
+  End;
 end;
 
 function TSymphonyPlugInAction.GetAutoStart: Boolean;
@@ -569,10 +594,21 @@ function TSymphonyPlugInActionList.ExecAutoRun: Boolean ;
 var
   i: Integer;
 begin
-  Result  := True ;
-  for i := 0 to Count - 1 do
-    if Action[i].AutoStart then
-                   Result := Result and Action[i].Execute ;
+  Log.EnterMethod('TSymphonyPlugInActionList.ExecAutoRun', [], []);
+  Try
+    Result  := True ;
+    for i := 0 to Count - 1 do
+    begin
+      Log.Write('i = %d?  Акция: %s  AutoStart = %s', [i, Action[i].Name, BoolToStr(Action[i].AutoStart)]);
+      if Action[i].AutoStart then
+      begin
+        Log.Write('Старт акции %s из списка автозагрузки', [Action[i].Name]);
+        Result := Result and Action[i].Execute ;
+      end;
+    end;
+  Finally
+    Log.ExitMethod('TSymphonyPlugInActionList.ExecAutoRun');
+  End;
 end;
 
 function TSymphonyPlugInActionList.Execute(CmdLine: String): Boolean;

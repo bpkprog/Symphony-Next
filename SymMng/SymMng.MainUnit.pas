@@ -364,6 +364,7 @@ begin
 
   Log.Write('Загружаем список задач');
   TreeTaskNode  := LoadTreeTask ;
+//  Log.Write(TreeTaskNode.XML) ;
   Log.Write('Передаем данные в настройщик системы');
   InitTuner(TreeTaskNode.ChildNodes.Nodes['USER'].ChildValues['USERNAME'], SymMngEnviroment.DBType) ;
 
@@ -680,7 +681,7 @@ begin
   PlugInName  := AsStr(Task.ChildValues['FILENAME']) ;
   TaskType    := AsInt(Task.ChildValues['ITASKTYPE']) ;
   Log.Write('Плагин: %s, тип задачи: %d', [PlugInName, TaskType]);
-  if TaskType = 3 then
+  if TaskType in [0, 3] then
   begin
     Log.Write('Тип задачи 3, ищем плагин в списке загруженных или загружаем его заново');
     PlugInIndex := PlugInMng.LoadPlugIn(PlugInName) ;

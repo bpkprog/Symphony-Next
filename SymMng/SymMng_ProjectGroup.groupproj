@@ -39,6 +39,9 @@
         <Projects Include="SymMng.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="..\s7exec\s7exec.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -155,14 +158,23 @@
     <Target Name="SymMng:Make">
         <MSBuild Projects="SymMng.dproj" Targets="Make"/>
     </Target>
+    <Target Name="s7exec">
+        <MSBuild Projects="..\s7exec\s7exec.dproj"/>
+    </Target>
+    <Target Name="s7exec:Clean">
+        <MSBuild Projects="..\s7exec\s7exec.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="s7exec:Make">
+        <MSBuild Projects="..\s7exec\s7exec.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="smplCmdParser;cioIntf;cioORA;cioXML;SymDBORA;SymTaskOra;stbIntf;stbMngs;stbdxRibbonV;stbdxRibbonH;Symphony_Next;SymMng"/>
+        <CallTarget Targets="smplCmdParser;cioIntf;cioORA;cioXML;SymDBORA;SymTaskOra;stbIntf;stbMngs;stbdxRibbonV;stbdxRibbonH;Symphony_Next;SymMng;s7exec"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="smplCmdParser:Clean;cioIntf:Clean;cioORA:Clean;cioXML:Clean;SymDBORA:Clean;SymTaskOra:Clean;stbIntf:Clean;stbMngs:Clean;stbdxRibbonV:Clean;stbdxRibbonH:Clean;Symphony_Next:Clean;SymMng:Clean"/>
+        <CallTarget Targets="smplCmdParser:Clean;cioIntf:Clean;cioORA:Clean;cioXML:Clean;SymDBORA:Clean;SymTaskOra:Clean;stbIntf:Clean;stbMngs:Clean;stbdxRibbonV:Clean;stbdxRibbonH:Clean;Symphony_Next:Clean;SymMng:Clean;s7exec:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="smplCmdParser:Make;cioIntf:Make;cioORA:Make;cioXML:Make;SymDBORA:Make;SymTaskOra:Make;stbIntf:Make;stbMngs:Make;stbdxRibbonV:Make;stbdxRibbonH:Make;Symphony_Next:Make;SymMng:Make"/>
+        <CallTarget Targets="smplCmdParser:Make;cioIntf:Make;cioORA:Make;cioXML:Make;SymDBORA:Make;SymTaskOra:Make;stbIntf:Make;stbMngs:Make;stbdxRibbonV:Make;stbdxRibbonH:Make;Symphony_Next:Make;SymMng:Make;s7exec:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name=".smplBaseFrame" platform="Win32">
+  <contains name="SymphonyPlugIn.ParamImpl" />
   <contains name="SymphonyPlugIn.ActionImpl" />
   <contains name="SymphonyPlugIn.TunerFrame" />
   <contains name="SymphonyPlugIn.StateStorage" />

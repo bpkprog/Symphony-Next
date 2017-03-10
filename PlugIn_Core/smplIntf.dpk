@@ -25,6 +25,7 @@ package smplIntf;
 {$IMAGEBASE $400000}
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
+{$RUNONLY}
 {$IMPLICITBUILD ON}
 
 requires
@@ -33,10 +34,10 @@ requires
 
 contains
   SymphonyPlugIn.ActionInterface,
-  SymphonyPlugIn.ParamInterface,
-  SymphonyPlugIn.MessageInterface,
-  SymphonyPlugIn.PackageInterface,
-  SymphonyPlugIn.UsageTaskStatInterface;
+  SymphonyPlugIn.ParamInterface ,
+  SymphonyPlugIn.MessageInterface ,
+  SymphonyPlugIn.PackageInterface ,
+  SymphonyPlugIn.UsageTaskStatInterface ;
 
 end.
 

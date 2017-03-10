@@ -35,6 +35,6 @@ requires
   smplPrmImpl;
 
 contains
-  smplCmdParser.MainUnit in 'smplCmdParser.MainUnit.pas';
+  smplCmdParser.MainUnit;
 
 end.
