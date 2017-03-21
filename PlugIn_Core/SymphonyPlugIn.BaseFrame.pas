@@ -56,6 +56,7 @@ type
     procedure ExportToExcel(Params: TObject = nil) ; virtual ;
     function  GetID: String ; virtual ;
     procedure SetID(const Value: String) ; virtual ;
+    function  CreateSymphonyMessage: ISymphonyPlugInMessage ;
   public
     { Public declarations }
     constructor Create(AOwner: TComponent); override;
@@ -108,7 +109,8 @@ implementation
 
 {$R *.dfm}
 
-uses System.StrUtils, WinAPI.Windows, Generics.Collections, SpecFoldersObj ;
+uses System.StrUtils, WinAPI.Windows, Generics.Collections, SpecFoldersObj,
+     SymphonyPlugIn.MessageImpl ;
 
 Type
   TPluginFrameList = class(TList<TSymphonyPlugInBaseFrame>)
@@ -226,6 +228,11 @@ begin
   SetSession(ASession);
   SetData(AData);
   FrameList.Add(Self) ;
+end;
+
+function TSymphonyPlugInBaseFrame.CreateSymphonyMessage: ISymphonyPlugInMessage;
+begin
+  Result  := TSymphonyPlugInMessage.Create ;
 end;
 
 constructor TSymphonyPlugInBaseFrame.CreatePlugIn(AOwner: TComponent; ASession, AData: TObject);

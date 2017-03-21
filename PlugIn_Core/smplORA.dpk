@@ -37,6 +37,6 @@ requires
   dac240;
 
 contains
-  SymphonyPlugIn.ORABaseFrame in 'SymphonyPlugIn.ORABaseFrame.pas' {SymphonyPlugInORABaseFrame: TFrame};
+  SymphonyPlugIn.ORABaseFrame;
 
 end.
