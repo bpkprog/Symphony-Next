@@ -36,13 +36,13 @@
         <Projects Include="..\Symphony.Next\Symphony.Next.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="SymMng.dproj">
-            <Dependencies/>
-        </Projects>
         <Projects Include="..\s7exec\s7exec.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="..\PlugIn_Core\smplmng.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SymMng.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -152,15 +152,6 @@
     <Target Name="Symphony_Next:Make">
         <MSBuild Projects="..\Symphony.Next\Symphony.Next.dproj" Targets="Make"/>
     </Target>
-    <Target Name="SymMng">
-        <MSBuild Projects="SymMng.dproj"/>
-    </Target>
-    <Target Name="SymMng:Clean">
-        <MSBuild Projects="SymMng.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="SymMng:Make">
-        <MSBuild Projects="SymMng.dproj" Targets="Make"/>
-    </Target>
     <Target Name="s7exec">
         <MSBuild Projects="..\s7exec\s7exec.dproj"/>
     </Target>
@@ -179,14 +170,23 @@
     <Target Name="smplmng:Make">
         <MSBuild Projects="..\PlugIn_Core\smplmng.dproj" Targets="Make"/>
     </Target>
+    <Target Name="SymMng">
+        <MSBuild Projects="SymMng.dproj"/>
+    </Target>
+    <Target Name="SymMng:Clean">
+        <MSBuild Projects="SymMng.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SymMng:Make">
+        <MSBuild Projects="SymMng.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="smplCmdParser;cioIntf;cioORA;cioXML;SymDBORA;SymTaskOra;stbIntf;stbMngs;stbdxRibbonV;stbdxRibbonH;Symphony_Next;SymMng;s7exec;smplmng"/>
+        <CallTarget Targets="smplCmdParser;cioIntf;cioORA;cioXML;SymDBORA;SymTaskOra;stbIntf;stbMngs;stbdxRibbonV;stbdxRibbonH;Symphony_Next;s7exec;smplmng;SymMng"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="smplCmdParser:Clean;cioIntf:Clean;cioORA:Clean;cioXML:Clean;SymDBORA:Clean;SymTaskOra:Clean;stbIntf:Clean;stbMngs:Clean;stbdxRibbonV:Clean;stbdxRibbonH:Clean;Symphony_Next:Clean;SymMng:Clean;s7exec:Clean;smplmng:Clean"/>
+        <CallTarget Targets="smplCmdParser:Clean;cioIntf:Clean;cioORA:Clean;cioXML:Clean;SymDBORA:Clean;SymTaskOra:Clean;stbIntf:Clean;stbMngs:Clean;stbdxRibbonV:Clean;stbdxRibbonH:Clean;Symphony_Next:Clean;s7exec:Clean;smplmng:Clean;SymMng:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="smplCmdParser:Make;cioIntf:Make;cioORA:Make;cioXML:Make;SymDBORA:Make;SymTaskOra:Make;stbIntf:Make;stbMngs:Make;stbdxRibbonV:Make;stbdxRibbonH:Make;Symphony_Next:Make;SymMng:Make;s7exec:Make;smplmng:Make"/>
+        <CallTarget Targets="smplCmdParser:Make;cioIntf:Make;cioORA:Make;cioXML:Make;SymDBORA:Make;SymTaskOra:Make;stbIntf:Make;stbMngs:Make;stbdxRibbonV:Make;stbdxRibbonH:Make;Symphony_Next:Make;s7exec:Make;smplmng:Make;SymMng:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
