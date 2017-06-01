@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <namespace name="SymphonyPlugIn.PlugInManager" platform="Win32">
-  <class name="TPlugInManager">
+  <class name="TPlugInManager" file="SymphonyPlugIn.PlugInManager.pas" line="19">
     <ancestor name="TComponent" namespace="System.Classes">
       <interfaces>
         <implements name="IInterfaceComponentReference" />
@@ -306,122 +306,122 @@
       </ancestor>
     </ancestor>
     <members>
-      <field name="FPlgList" type="TPlugInList" visibility="private" size="4" offset="64" />
-      <field name="FGarbageCollector" type="TTimer" visibility="private" size="4" offset="68" />
-      <field name="FOnGetParams" type="TSymphonyPlugInGetParamFunc" visibility="private" size="8" offset="72">
+      <field name="FPlgList" type="TPlugInList" visibility="private" size="4" offset="64" file="SymphonyPlugIn.PlugInManager.pas" line="22" />
+      <field name="FGarbageCollector" type="TTimer" visibility="private" size="4" offset="68" file="SymphonyPlugIn.PlugInManager.pas" line="23" />
+      <field name="FOnGetParams" type="TSymphonyPlugInGetParamFunc" visibility="private" size="8" offset="72" file="SymphonyPlugIn.PlugInManager.pas" line="24">
       </field>
-      <field name="FOnGetOwnerForm" type="TSymphonyPlugInGetOwnerFormFunc" visibility="private" size="8" offset="80">
+      <field name="FOnGetOwnerForm" type="TSymphonyPlugInGetOwnerFormFunc" visibility="private" size="8" offset="80" file="SymphonyPlugIn.PlugInManager.pas" line="25">
       </field>
-      <field name="FOnGetSession" type="TGetSessionForPlugInFunc" visibility="private" size="8" offset="88">
+      <field name="FOnGetSession" type="TGetSessionForPlugInFunc" visibility="private" size="8" offset="88" file="SymphonyPlugIn.PlugInManager.pas" line="26">
       </field>
-      <field name="FOnClosePlugIn" type="TPlugInEvent" visibility="private" size="8" offset="96">
+      <field name="FOnClosePlugIn" type="TPlugInEvent" visibility="private" size="8" offset="96" file="SymphonyPlugIn.PlugInManager.pas" line="27">
       </field>
-      <field name="FTunerParams" type="ISymphonyPlugInCFGGroup" visibility="private" size="4" offset="104" />
-      <field name="FOnGetTunerParam" type="TGetTunerParamsFunc" visibility="private" size="8" offset="112">
+      <field name="FTunerParams" type="ISymphonyPlugInCFGGroup" visibility="private" size="4" offset="104" file="SymphonyPlugIn.PlugInManager.pas" line="28" />
+      <field name="FOnGetTunerParam" type="TGetTunerParamsFunc" visibility="private" size="8" offset="112" file="SymphonyPlugIn.PlugInManager.pas" line="29">
       </field>
-      <function name="GetPlugIn" visibility="private">
+      <function name="GetPlugIn" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="31">
         <parameters>
           <parameter name="Index" type="Integer" />
           <retval type="TPlugIn" />
         </parameters>
       </function>
-      <function name="GetPlugInCount" visibility="private">
+      <function name="GetPlugInCount" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="32">
         <parameters>
           <retval type="Integer" />
         </parameters>
       </function>
-      <procedure name="SetOnGetOwnerForm" visibility="private">
+      <procedure name="SetOnGetOwnerForm" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="33">
         <parameters>
           <parameter name="Value" type="TSymphonyPlugInGetOwnerFormFunc" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetOnGetParams" visibility="private">
+      <procedure name="SetOnGetParams" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="34">
         <parameters>
           <parameter name="Value" type="TSymphonyPlugInGetParamFunc" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetOnGetSession" visibility="private">
+      <procedure name="SetOnGetSession" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="35">
         <parameters>
           <parameter name="Value" type="TGetSessionForPlugInFunc" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetOnLoadActions" visibility="private">
+      <procedure name="SetOnLoadActions" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="36">
         <parameters>
           <parameter name="Value" type="TPlugInEvent" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetOnClosePlugIn" visibility="private">
+      <procedure name="SetOnClosePlugIn" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="37">
         <parameters>
           <parameter name="Value" type="TPlugInEvent" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="GarbageCollectorExecute" visibility="private">
+      <procedure name="GarbageCollectorExecute" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="38">
         <parameters>
           <parameter name="Source" type="TObject" />
         </parameters>
       </procedure>
-      <procedure name="SetOnGetTunerParam" visibility="private">
+      <procedure name="SetOnGetTunerParam" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="39">
         <parameters>
           <parameter name="Value" type="TGetTunerParamsFunc" paramflags="const" />
         </parameters>
       </procedure>
-      <field name="FOnLoadActions" type="TPlugInEvent" visibility="protected" size="8" offset="120">
+      <field name="FOnLoadActions" type="TPlugInEvent" visibility="protected" size="8" offset="120" file="SymphonyPlugIn.PlugInManager.pas" line="41">
       </field>
-      <procedure name="DoOnClosePlugIn" visibility="protected">
+      <procedure name="DoOnClosePlugIn" visibility="protected" file="SymphonyPlugIn.PlugInManager.pas" line="43">
         <parameters>
           <parameter name="APlugIn" type="TPlugIn" />
         </parameters>
       </procedure>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="46">
         <parameters>
           <parameter name="AOwner" type="TComponent" />
         </parameters>
       </constructor>
-      <destructor name="Destroy" visibility="public">
+      <destructor name="Destroy" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="47">
         <parameters>
         </parameters>
       </destructor>
-      <function name="LoadPlugIn" visibility="public">
+      <function name="LoadPlugIn" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="49">
         <parameters>
           <parameter name="PlugInName" type="string" />
           <retval type="Integer" />
         </parameters>
       </function>
-      <function name="IndexOf" visibility="public">
+      <function name="IndexOf" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="50">
         <parameters>
           <parameter name="PlugInName" type="string" />
           <retval type="Integer" />
         </parameters>
       </function>
-      <function name="FindPlugInByAction" visibility="public">
+      <function name="FindPlugInByAction" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="51">
         <parameters>
           <parameter name="Action" type="ISymphonyPlugInAction" />
           <retval type="TPlugIn" />
         </parameters>
       </function>
-      <procedure name="CloseForm" visibility="public">
+      <procedure name="CloseForm" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="52">
         <parameters>
           <parameter name="Form" type="TForm" />
         </parameters>
       </procedure>
-      <procedure name="ClosePlugIn" visibility="public">
+      <procedure name="ClosePlugIn" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="53">
         <parameters>
           <parameter name="APlugIn" type="TPlugIn" />
         </parameters>
       </procedure>
-      <procedure name="StartGarbageCollector" visibility="public">
+      <procedure name="StartGarbageCollector" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="54">
       </procedure>
-      <property name="PlugInCount" visibility="public" read="GetPlugInCount" type="Integer" />
-      <property name="PlugIn[Index]" visibility="public" read="GetPlugIn" type="TPlugIn" />
-      <event name="OnGetOwnerForm" visibility="published" read="FOnGetOwnerForm" write="SetOnGetOwnerForm" type="TForm" />
-      <event name="OnGetSession" visibility="published" read="FOnGetSession" write="SetOnGetSession" type="TGetSessionForPlugInFunc" />
-      <event name="OnGetParams" visibility="published" read="FOnGetParams" write="SetOnGetParams" type="ISymphonyPlugInCommand" />
-      <event name="OnClosePlugIn" visibility="published" read="FOnClosePlugIn" write="SetOnClosePlugIn" type="TPlugInEvent" />
-      <event name="OnLoadActions" visibility="published" read="FOnLoadActions" write="SetOnLoadActions" type="TPlugInEvent" />
-      <event name="OnGetTunerParam" visibility="published" read="FOnGetTunerParam" write="SetOnGetTunerParam" type="ISymphonyPlugInCFGGroup" />
+      <property name="PlugInCount" visibility="public" read="GetPlugInCount" type="Integer" file="SymphonyPlugIn.PlugInManager.pas" line="56" />
+      <property name="PlugIn[Index]" visibility="public" read="GetPlugIn" type="TPlugIn" file="SymphonyPlugIn.PlugInManager.pas" line="57" />
+      <event name="OnGetOwnerForm" visibility="published" read="FOnGetOwnerForm" write="SetOnGetOwnerForm" type="TForm" file="SymphonyPlugIn.PlugInManager.pas" line="59" />
+      <event name="OnGetSession" visibility="published" read="FOnGetSession" write="SetOnGetSession" type="TGetSessionForPlugInFunc" file="SymphonyPlugIn.PlugInManager.pas" line="60" />
+      <event name="OnGetParams" visibility="published" read="FOnGetParams" write="SetOnGetParams" type="ISymphonyPlugInCommand" file="SymphonyPlugIn.PlugInManager.pas" line="61" />
+      <event name="OnClosePlugIn" visibility="published" read="FOnClosePlugIn" write="SetOnClosePlugIn" type="TPlugInEvent" file="SymphonyPlugIn.PlugInManager.pas" line="62" />
+      <event name="OnLoadActions" visibility="published" read="FOnLoadActions" write="SetOnLoadActions" type="TPlugInEvent" file="SymphonyPlugIn.PlugInManager.pas" line="63" />
+      <event name="OnGetTunerParam" visibility="published" read="FOnGetTunerParam" write="SetOnGetTunerParam" type="ISymphonyPlugInCFGGroup" file="SymphonyPlugIn.PlugInManager.pas" line="64" />
     </members>
   </class>
-  <class name="TPlugIn">
+  <class name="TPlugIn" file="SymphonyPlugIn.PlugInManager.pas" line="67">
     <ancestor name="TObject" namespace="System">
       <methodref name="Create" visibility="public" procflags="constructor">
       </methodref>
@@ -499,153 +499,153 @@
       </propertyref>
     </ancestor>
     <members>
-      <field name="FManager" type="TPlugInManager" visibility="private" size="4" offset="4" />
-      <field name="FActions" type="ISymphonyPlugInActionList" visibility="private" size="4" offset="8" />
-      <field name="FName" type="string" visibility="private" size="4" offset="12" />
-      <field name="FHandle" type="NativeUInt" visibility="private" size="4" offset="16" />
-      <field name="FCaption" type="string" visibility="private" size="4" offset="20" />
-      <field name="FStopped" type="Boolean" visibility="private" size="1" offset="24" />
-      <field name="FOnGetParams" type="TSymphonyPlugInGetParamFunc" visibility="private" size="8" offset="32">
+      <field name="FManager" type="TPlugInManager" visibility="private" size="4" offset="4" file="SymphonyPlugIn.PlugInManager.pas" line="69" />
+      <field name="FActions" type="ISymphonyPlugInActionList" visibility="private" size="4" offset="8" file="SymphonyPlugIn.PlugInManager.pas" line="70" />
+      <field name="FName" type="string" visibility="private" size="4" offset="12" file="SymphonyPlugIn.PlugInManager.pas" line="71" />
+      <field name="FHandle" type="NativeUInt" visibility="private" size="4" offset="16" file="SymphonyPlugIn.PlugInManager.pas" line="72" />
+      <field name="FCaption" type="string" visibility="private" size="4" offset="20" file="SymphonyPlugIn.PlugInManager.pas" line="73" />
+      <field name="FStopped" type="Boolean" visibility="private" size="1" offset="24" file="SymphonyPlugIn.PlugInManager.pas" line="74" />
+      <field name="FOnGetParams" type="TSymphonyPlugInGetParamFunc" visibility="private" size="8" offset="32" file="SymphonyPlugIn.PlugInManager.pas" line="75">
       </field>
-      <field name="FOnGetSessonParam" type="TPlugInGetSessonParam" visibility="private" size="8" offset="40">
+      <field name="FOnGetSessonParam" type="TPlugInGetSessonParam" visibility="private" size="8" offset="40" file="SymphonyPlugIn.PlugInManager.pas" line="76">
       </field>
-      <field name="FTunerParams" type="ISymphonyPlugInCFGGroup" visibility="private" size="4" offset="48" />
-      <procedure name="SetCaption" visibility="private">
+      <field name="FTunerParams" type="ISymphonyPlugInCFGGroup" visibility="private" size="4" offset="48" file="SymphonyPlugIn.PlugInManager.pas" line="77" />
+      <procedure name="SetCaption" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="78">
         <parameters>
           <parameter name="Value" type="string" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetHandle" visibility="private">
+      <procedure name="SetHandle" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="79">
         <parameters>
           <parameter name="Value" type="NativeUInt" paramflags="const" />
         </parameters>
       </procedure>
-      <procedure name="SetName" visibility="private">
+      <procedure name="SetName" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="80">
         <parameters>
           <parameter name="Value" type="string" paramflags="const" />
         </parameters>
       </procedure>
-      <function name="GetHandle" visibility="private">
+      <function name="GetHandle" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="81">
         <parameters>
           <retval type="NativeUInt" />
         </parameters>
       </function>
-      <function name="GetPlugInHandle" visibility="private">
+      <function name="GetPlugInHandle" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="82">
         <parameters>
           <parameter name="Source" type="ISymphonyPlugInAction" />
           <retval type="NativeUInt" />
         </parameters>
       </function>
-      <procedure name="SetOnGetParams" visibility="private">
+      <procedure name="SetOnGetParams" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="83">
         <parameters>
           <parameter name="Value" type="TSymphonyPlugInGetParamFunc" paramflags="const" />
         </parameters>
       </procedure>
-      <function name="GetSessionForPlugIn" visibility="private">
+      <function name="GetSessionForPlugIn" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="84">
         <parameters>
           <parameter name="Source" type="ISymphonyPlugInAction" />
           <retval type="TObject" />
         </parameters>
       </function>
-      <procedure name="SetOnGetSessonParam" visibility="private">
+      <procedure name="SetOnGetSessonParam" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="85">
         <parameters>
           <parameter name="Value" type="TPlugInGetSessonParam" paramflags="const" />
         </parameters>
       </procedure>
-      <function name="GetAction" visibility="private">
+      <function name="GetAction" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="86">
         <parameters>
           <parameter name="Index" type="Integer" />
           <retval type="ISymphonyPlugInAction" />
         </parameters>
       </function>
-      <function name="GetActionCount" visibility="private">
+      <function name="GetActionCount" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="87">
         <parameters>
           <retval type="Integer" />
         </parameters>
       </function>
-      <function name="GetFormCount" visibility="private">
+      <function name="GetFormCount" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="88">
         <parameters>
           <retval type="Integer" />
         </parameters>
       </function>
-      <procedure name="UnLoad" visibility="private">
+      <procedure name="UnLoad" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="89">
       </procedure>
-      <function name="GetPackageIntf" visibility="private">
+      <function name="GetPackageIntf" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="90">
         <parameters>
           <retval type="IPlugInPackage" />
         </parameters>
       </function>
-      <procedure name="SetTunerParams" visibility="private">
+      <procedure name="SetTunerParams" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="91">
         <parameters>
           <parameter name="Value" type="ISymphonyPlugInCFGGroup" paramflags="const" />
         </parameters>
       </procedure>
-      <function name="GetTunerParams" visibility="private">
+      <function name="GetTunerParams" visibility="private" file="SymphonyPlugIn.PlugInManager.pas" line="92">
         <parameters>
           <retval type="ISymphonyPlugInCFGGroup" />
         </parameters>
       </function>
-      <constructor name="Create" visibility="public">
+      <constructor name="Create" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="94">
         <parameters>
           <parameter name="AManager" type="TPlugInManager" />
         </parameters>
       </constructor>
-      <destructor name="Destroy" visibility="public">
+      <destructor name="Destroy" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="95">
         <parameters>
         </parameters>
       </destructor>
-      <function name="GetFullPlugInName" visibility="public" procflags="class">
+      <function name="GetFullPlugInName" visibility="public" procflags="class" file="SymphonyPlugIn.PlugInManager.pas" line="97">
         <parameters>
           <parameter name="ShortPlugInName" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetShortPlugInName" visibility="public" procflags="class">
+      <function name="GetShortPlugInName" visibility="public" procflags="class" file="SymphonyPlugIn.PlugInManager.pas" line="98">
         <parameters>
           <parameter name="FullPlugInName" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="Load" visibility="public">
+      <function name="Load" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="99">
         <parameters>
           <parameter name="PlugInName" type="string" />
           <retval type="Boolean" />
         </parameters>
       </function>
-      <function name="ExecAutoRun" visibility="public">
+      <function name="ExecAutoRun" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="100">
         <parameters>
           <retval type="Boolean" />
         </parameters>
       </function>
-      <function name="Execute" visibility="public">
+      <function name="Execute" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="101">
         <parameters>
           <parameter name="CmdLine" type="string" />
           <retval type="Boolean" />
         </parameters>
       </function>
-      <procedure name="ShowForms" visibility="public">
+      <procedure name="ShowForms" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="102">
       </procedure>
-      <procedure name="CloseForm" visibility="public">
+      <procedure name="CloseForm" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="103">
         <parameters>
           <parameter name="Form" type="TForm" />
         </parameters>
       </procedure>
-      <procedure name="Stop" visibility="public">
+      <procedure name="Stop" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="104">
       </procedure>
-      <property name="Actions" visibility="public" read="FActions" type="ISymphonyPlugInActionList" />
-      <property name="Action[Index]" visibility="public" read="GetAction" type="ISymphonyPlugInAction" />
-      <property name="ActionCount" visibility="public" read="GetActionCount" type="Integer" />
-      <property name="Caption" visibility="public" read="FCaption" write="SetCaption" type="string" default="0" />
-      <property name="FormCount" visibility="public" read="GetFormCount" type="Integer" />
-      <property name="Handle" visibility="public" read="GetHandle" write="SetHandle" type="NativeUInt" />
-      <property name="Name" visibility="public" read="FName" write="SetName" type="string" default="0" />
-      <property name="PackageIntf" visibility="public" read="GetPackageIntf" type="IPlugInPackage" />
-      <property name="Stopped" visibility="public" read="FStopped" type="Boolean" />
-      <property name="TunerParams" visibility="public" read="GetTunerParams" write="SetTunerParams" type="ISymphonyPlugInCFGGroup" />
-      <event name="OnGetParams" visibility="public" read="FOnGetParams" write="SetOnGetParams" type="ISymphonyPlugInCommand" />
-      <event name="OnGetSessonParam" visibility="public" read="FOnGetSessonParam" write="SetOnGetSessonParam" type="TPlugInGetSessonParam" />
+      <property name="Actions" visibility="public" read="FActions" type="ISymphonyPlugInActionList" file="SymphonyPlugIn.PlugInManager.pas" line="106" />
+      <property name="Action[Index]" visibility="public" read="GetAction" type="ISymphonyPlugInAction" file="SymphonyPlugIn.PlugInManager.pas" line="107" />
+      <property name="ActionCount" visibility="public" read="GetActionCount" type="Integer" file="SymphonyPlugIn.PlugInManager.pas" line="108" />
+      <property name="Caption" visibility="public" read="FCaption" write="SetCaption" type="string" default="0" file="SymphonyPlugIn.PlugInManager.pas" line="109" />
+      <property name="FormCount" visibility="public" read="GetFormCount" type="Integer" file="SymphonyPlugIn.PlugInManager.pas" line="110" />
+      <property name="Handle" visibility="public" read="GetHandle" write="SetHandle" type="NativeUInt" file="SymphonyPlugIn.PlugInManager.pas" line="111" />
+      <property name="Name" visibility="public" read="FName" write="SetName" type="string" default="0" file="SymphonyPlugIn.PlugInManager.pas" line="112" />
+      <property name="PackageIntf" visibility="public" read="GetPackageIntf" type="IPlugInPackage" file="SymphonyPlugIn.PlugInManager.pas" line="113" />
+      <property name="Stopped" visibility="public" read="FStopped" type="Boolean" file="SymphonyPlugIn.PlugInManager.pas" line="114" />
+      <property name="TunerParams" visibility="public" read="GetTunerParams" write="SetTunerParams" type="ISymphonyPlugInCFGGroup" file="SymphonyPlugIn.PlugInManager.pas" line="115" />
+      <event name="OnGetParams" visibility="public" read="FOnGetParams" write="SetOnGetParams" type="ISymphonyPlugInCommand" file="SymphonyPlugIn.PlugInManager.pas" line="116" />
+      <event name="OnGetSessonParam" visibility="public" read="FOnGetSessonParam" write="SetOnGetSessonParam" type="TPlugInGetSessonParam" file="SymphonyPlugIn.PlugInManager.pas" line="117" />
     </members>
   </class>
-  <procedure name="Register" visibility="public">
+  <procedure name="Register" visibility="public" file="SymphonyPlugIn.PlugInManager.pas" line="130">
   </procedure>
 </namespace>

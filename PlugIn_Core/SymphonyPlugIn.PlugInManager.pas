@@ -12,8 +12,8 @@ Type
   TPlugInList = TObjectList<TPlugIn> ;
   TPlugInPackageInterface = function: IPlugInPackage ;
   TPlugInEvent = procedure (APlugIn: TPlugIn) of object ;
-  TPlugInGetSessonParam = procedure (var ServerName: String; var DatabaseName: String) of object ;
-  TGetSessionForPlugInFunc = procedure (PlugInName, DBType, ServerName, DatabaseName: String; var Session: TObject) of object ;
+  TPlugInGetSessonParam = procedure (var ServerName: String; var DatabaseName: String; var UserName: String ; var Password: String) of object ;
+  TGetSessionForPlugInFunc = procedure (PlugInName, DBType, ServerName, DatabaseName, UserName, Password: String; var Session: TObject) of object ;
   TGetTunerParamsFunc = function (APlugIn: TPlugIn): ISymphonyPlugInCFGGroup of object;
 
   TPlugInManager = class(TComponent)
@@ -422,7 +422,7 @@ end;
 // Метод должен запросить у главной формы (через указатель на метод) сессию базы данных
 function TPlugIn.GetSessionForPlugIn(Source: ISymphonyPlugInAction): TObject;
 Var
-  DBType, ServerName, DBName: String ;
+  DBType, ServerName, DBName, UserName, Password: String ;
   Fn: TPlugInPackageInterface ;
 begin
   if not Assigned(FManager.FOnGetSession) then
@@ -439,9 +439,9 @@ begin
   // Получаем имя сервера и базы данных от задачи, если плагин прикреплен к задаче
   ServerName  := EmptyStr ; DBName  := EmptyStr ;
   if Assigned(FOnGetSessonParam) then
-                                      FOnGetSessonParam(ServerName, DBName) ;
+                                      FOnGetSessonParam(ServerName, DBName, UserName, Password) ;
 
-  FManager.FOnGetSession(Name, DBType, ServerName, DBName, Result) ;
+  FManager.FOnGetSession(Name, DBType, ServerName, DBName, UserName, Password, Result) ;
 end;
 
 class function TPlugIn.GetFullPlugInName(ShortPlugInName: String): String;

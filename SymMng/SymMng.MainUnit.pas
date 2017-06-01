@@ -27,7 +27,7 @@ type
     dxTabbedMDIManager1: TdxTabbedMDIManager;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
-    procedure PlugInMngGetSession(PlugInName, DBType, ServerName, DatabaseName: string; var Session: TObject);
+    procedure PlugInMngGetSession(PlugInName, DBType, ServerName, DatabaseName, UserName, Password: string; var Session: TObject);
     function  PlugInMngGetOwnerForm(Source: ISymphonyPlugInAction): TForm;
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
@@ -736,14 +736,13 @@ begin
   PostMessage(Handle, WM_MERGEUI, Result.Handle, 0) ;
 end;
 
-procedure TfrmSymMngMain.PlugInMngGetSession(PlugInName, DBType, ServerName, DatabaseName: string; var Session: TObject);
+procedure TfrmSymMngMain.PlugInMngGetSession(PlugInName, DBType, ServerName, DatabaseName, UserName, Password: string; var Session: TObject);
 begin
   if (DBType = EmptyStr) or (ServerName = EmptyStr) then
     Session := FConnectionManager.BaseConnection.Session
   else
     Session := FConnectionManager.GetConnection(PlugInName, DBType, ServerName,
-                                                DatabaseName, SymMngEnviroment.UserName,
-                                                SymMngEnviroment.Password).Session ;
+                                                DatabaseName, UserName, Password).Session ;
 end;
 
 function TfrmSymMngMain.PlugInMngGetTunerParam(APlugIn: TPlugIn): ISymphonyPlugInCFGGroup;

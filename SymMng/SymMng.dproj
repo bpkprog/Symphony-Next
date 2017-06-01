@@ -104,7 +104,12 @@
         <DCC_RemoteDebug>true</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+<<<<<<< HEAD
         <Debugger_RunParams>-dbt:SMMK /s:localhost /db:d:\DB\se_develop.fdb /e:smmk.pre_production /u:sysdba /p:masterkey /log</Debugger_RunParams>
+=======
+        <Debugger_DebugSourcePath>D:\Baza\Program\AddIns for Search\SearchViewer2\;$(Debugger_DebugSourcePath)</Debugger_DebugSourcePath>
+        <Debugger_RunParams>-dbt:ORA -s:ORCL</Debugger_RunParams>
+>>>>>>> 22bf27153e706c174662bb7267e5945a3ef03212
         <DCC_XmlOutput>xmldocs</DCC_XmlOutput>
         <DCC_OutputXMLDocumentation>true</DCC_OutputXMLDocumentation>
         <Icon_MainIcon>SymMng_Icon.ico</Icon_MainIcon>

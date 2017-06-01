@@ -170,6 +170,8 @@
         <parameters>
           <parameter name="ServerName" type="string" paramflags="var" />
           <parameter name="DatabaseName" type="string" paramflags="var" />
+          <parameter name="UserName" type="string" paramflags="var" />
+          <parameter name="Password" type="string" paramflags="var" />
         </parameters>
       </procedure>
       <constructor name="Create" visibility="public" file="SymMng.SymphonyTask.pas" line="39">

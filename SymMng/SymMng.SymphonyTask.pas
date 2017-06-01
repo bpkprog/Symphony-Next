@@ -34,7 +34,7 @@ Type
     procedure SetReadOnly(const Value: Integer);
     procedure SetXML(const Value: IXMLNode);
     function  GetPlugInParam(Source: ISymphonyPlugInAction): ISymphonyPlugInCommand ;
-    procedure GetSessonParam(var ServerName: String; var DatabaseName: String) ;
+    procedure GetSessonParam(var ServerName: String; var DatabaseName: String; var UserName: String ; var Password: String) ;
   public
     constructor Create ; overload ;
     constructor Create(ATask: IXMLNode) ; overload ;
@@ -78,7 +78,8 @@ Type
 
 implementation
 
-uses System.SysUtils, XML.XMLDoc, XMLValUtil, SymphonyPlugIn.ParamImpl ;
+uses System.StrUtils, System.SysUtils, System.Types,
+     XML.XMLDoc, XMLValUtil, SymphonyPlugIn.ParamImpl ;
 
 { TSymphonyTask }
 {$REGION 'TSymphonyTask'}
@@ -139,9 +140,34 @@ begin
   Result  := AsInt(FXML.ChildValues['READONLY']) ;
 end;
 
-procedure TSymphonyTask.GetSessonParam(var ServerName, DatabaseName: String);
+procedure TSymphonyTask.GetSessonParam(var ServerName, DatabaseName, Username, Password: String);
+Var
+  Buffer: String ;
+  i: Integer ;
+  Prms, Prm: TStringDynArray ;
+  Node: IXMLNode ;
 begin
   {Тут надо извлечь имя базы данных и сервера и отдать его вызывающей стороне}
+  Node        := FXML.ChildNodes.Nodes['PARAMS'] ;
+  Node        := Node.ChildNodes.Nodes['TASK_PARAMS'] ;
+  Buffer      := AsStr(Node.NodeValue) ;
+  if Buffer = EmptyStr then
+                            Exit ;
+  Prms  := SplitString(Buffer, ';') ;
+  for i := Low(Prms) to High(Prms) do
+  begin
+    Prm     := SplitString(Prms[i], '=') ;
+    Prm[0]  := AnsiUppercase(Prm[0]) ;
+
+    if (Prm[0] = 'SERVER') and (prm[1] <> EmptyStr) then
+                              ServerName  := Prm[1] ;
+    if (Prm[0] = 'DATABASE') and (prm[1] <> EmptyStr) then
+                              DatabaseName  := Prm[1] ;
+    if (Prm[0] = 'USERNAME') and (prm[1] <> EmptyStr) then
+                              UserName  := Prm[1] ;
+    if (Prm[0] = 'PASSWORD') and (prm[1] <> EmptyStr) then
+                              Password  := Prm[1] ;
+  end;
 end;
 
 procedure TSymphonyTask.SetCaption(const Value: String);

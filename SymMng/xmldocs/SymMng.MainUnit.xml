@@ -2430,6 +2430,8 @@
           <parameter name="DBType" type="string" />
           <parameter name="ServerName" type="string" />
           <parameter name="DatabaseName" type="string" />
+          <parameter name="UserName" type="string" />
+          <parameter name="Password" type="string" />
           <parameter name="Session" type="TObject" paramflags="var" />
         </parameters>
       </procedure>
