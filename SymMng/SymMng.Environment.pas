@@ -28,6 +28,7 @@ Type
     FHideMainForm: Boolean ;
     FAutoClose: Boolean ;
     FShowHelp: Boolean ;
+    FWriteLog: Boolean;
 
     function  GetValidDBType: Boolean;
     function  GetCommandLine: String;
@@ -35,6 +36,7 @@ Type
     procedure Parse ;
     function  GetParamName(CmdLine: String): String ;
     function  GetParamValue(CmdLine: String): String ;
+    function  GetWriteLog: Boolean;
   public
     constructor Create ;
     destructor  Destroy ; override ;
@@ -52,6 +54,7 @@ Type
     property ValidDBType: Boolean read GetValidDBType ;
     property CommandLine: String read GetCommandLine ;
     property Help: String read GetHelp ;
+    property WriteLog: Boolean read GetWriteLog ;
   end;
 
 Var
@@ -74,6 +77,7 @@ begin
   FHideMainForm := False ;
   FAutoClose    := False ;
   FShowHelp     := False ;
+  FWriteLog     := False ;
 
   Parse ;
 end;
@@ -102,9 +106,10 @@ begin
               '-db:DATABASE - имя базы данных. Для Oracle не обязательный параметр.' + #13 +
               '-u:USERNAME - имя пользователя' + #13 +
               '-p:PASSWORD - пароль пользователя' + #13 +
-              '-ht - скрыть список задач' + #13 +
-              '-hw - скрыть главное окно приложения' + #13 +
-              '-ac - после выполнения всех плагинов закрыть приложение' + #13 +
+              '-ht  - скрыть список задач' + #13 +
+              '-hw  - скрыть главное окно приложения' + #13 +
+              '-log - записывать лог выполнения приложения и плагинов' + #13 +
+              '-ac  - после выполнения всех плагинов закрыть приложение' + #13 +
               '-e:AUTORUN - при старте выполнить список AUTORUN.' + #13 + #13 +
               'Структура списка AUTORUN:  AutoRunItem,[AutoRunItem]' + #13 +
               'Структура AutoRunItem:  PlugInName?PlugInParam' + #13 +
@@ -152,6 +157,11 @@ begin
   Result    := FileExists(FileName) ;
 end;
 
+function TSymMngEnviroment.GetWriteLog: Boolean;
+begin
+  Result  := FWriteLog ;
+end;
+
 procedure TSymMngEnviroment.Parse;
 Var
   i, j: Integer ;
@@ -179,6 +189,8 @@ begin
                             FTaskUI := False
     else if PrmName = 'hw' then
                             FHideMainForm := True
+    else if PrmName = 'log' then
+                            FWriteLog := True
     else if PrmName = 'ac' then
                             FAutoClose := True
     else if PrmName = '?' then

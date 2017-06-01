@@ -39,9 +39,9 @@ requires
   bpklog;
 
 contains
-  SymphonyPlugIn.BaseFrame,
-  SymphonyPlugIn.StateStorage,
-  SymphonyPlugIn.TunerFrame,
-  SymphonyPlugIn.ActionImpl;
+  SymphonyPlugIn.BaseFrame in 'SymphonyPlugIn.BaseFrame.pas' {SymphonyPlugInBaseFrame: TFrame},
+  SymphonyPlugIn.StateStorage in 'SymphonyPlugIn.StateStorage.pas',
+  SymphonyPlugIn.TunerFrame in 'SymphonyPlugIn.TunerFrame.pas' {frmSymphonyPlugInTuner: TFrame},
+  SymphonyPlugIn.ActionImpl in 'SymphonyPlugIn.ActionImpl.pas';
 
 end.

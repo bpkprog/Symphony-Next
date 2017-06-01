@@ -39,6 +39,6 @@ requires
   smplIntf;
 
 contains
-  SymphonyPlugIn.IBBaseFrame in 'SymphonyPlugIn.IBBaseFrame.pas' {SymphonyPlugInIBBaseFrame: TFrame};
+  SymphonyPlugIn.IBBaseFrame;
 
 end.

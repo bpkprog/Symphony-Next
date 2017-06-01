@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<namespace name=".frxTee24" platform="Win32">
+  <contains name="frxChartRTTI" />
+  <contains name="frxChartHelpers" />
+  <contains name="frxChartEditor" />
+  <contains name="frxChart" />
+  <contains name="SysInit" />
+</namespace>

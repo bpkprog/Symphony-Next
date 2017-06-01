@@ -428,6 +428,7 @@ begin
     if form <> nil then
     begin
 //      form  := Forms.Items[0] ;
+      Result  := True ;
       form.Show ;
       form.BringToFront ;
       Exit ;
@@ -464,6 +465,7 @@ begin
   // Форму с фреймом показываем
   form.Show ;
   form.BringToFront ;
+  Result  := True ;
 end;
 
 procedure TSymphonyPlugInAction.SetAutoStart(const Value: Boolean);
@@ -593,17 +595,19 @@ end;
 function TSymphonyPlugInActionList.ExecAutoRun: Boolean ;
 var
   i: Integer;
+  act: ISymphonyPlugInAction ;
 begin
   Log.EnterMethod('TSymphonyPlugInActionList.ExecAutoRun', [], []);
   Try
     Result  := True ;
     for i := 0 to Count - 1 do
     begin
-      Log.Write('i = %d?  Акция: %s  AutoStart = %s', [i, Action[i].Name, BoolToStr(Action[i].AutoStart)]);
-      if Action[i].AutoStart then
+      act   := Action[i] ;
+      Log.Write('i = %d,  Акция: %s  AutoStart = %s', [i, act.Name, BoolToStr(act.AutoStart)]);
+      if act.AutoStart then
       begin
-        Log.Write('Старт акции %s из списка автозагрузки', [Action[i].Name]);
-        Result := Result and Action[i].Execute ;
+        Log.Write('Старт акции %s из списка автозагрузки', [act.Name]);
+        Result := Result and act.Execute ;
       end;
     end;
   Finally

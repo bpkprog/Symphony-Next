@@ -88,57 +88,64 @@
       <field name="FHideMainForm" type="Boolean" visibility="private" size="1" offset="29" file="SymMng.Environment.pas" line="28" />
       <field name="FAutoClose" type="Boolean" visibility="private" size="1" offset="30" file="SymMng.Environment.pas" line="29" />
       <field name="FShowHelp" type="Boolean" visibility="private" size="1" offset="31" file="SymMng.Environment.pas" line="30" />
-      <function name="GetValidDBType" visibility="private" file="SymMng.Environment.pas" line="32">
+      <field name="FWriteLog" type="Boolean" visibility="private" size="1" offset="32" file="SymMng.Environment.pas" line="31" />
+      <function name="GetValidDBType" visibility="private" file="SymMng.Environment.pas" line="33">
         <parameters>
           <retval type="Boolean" />
         </parameters>
       </function>
-      <function name="GetCommandLine" visibility="private" file="SymMng.Environment.pas" line="33">
+      <function name="GetCommandLine" visibility="private" file="SymMng.Environment.pas" line="34">
         <parameters>
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetHelp" visibility="private" file="SymMng.Environment.pas" line="34">
+      <function name="GetHelp" visibility="private" file="SymMng.Environment.pas" line="35">
         <parameters>
           <retval type="string" />
         </parameters>
       </function>
-      <procedure name="Parse" visibility="private" file="SymMng.Environment.pas" line="35">
+      <procedure name="Parse" visibility="private" file="SymMng.Environment.pas" line="36">
       </procedure>
-      <function name="GetParamName" visibility="private" file="SymMng.Environment.pas" line="36">
+      <function name="GetParamName" visibility="private" file="SymMng.Environment.pas" line="37">
         <parameters>
           <parameter name="CmdLine" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <function name="GetParamValue" visibility="private" file="SymMng.Environment.pas" line="37">
+      <function name="GetParamValue" visibility="private" file="SymMng.Environment.pas" line="38">
         <parameters>
           <parameter name="CmdLine" type="string" />
           <retval type="string" />
         </parameters>
       </function>
-      <constructor name="Create" visibility="public" file="SymMng.Environment.pas" line="39">
+      <function name="GetWriteLog" visibility="private" file="SymMng.Environment.pas" line="39">
+        <parameters>
+          <retval type="Boolean" />
+        </parameters>
+      </function>
+      <constructor name="Create" visibility="public" file="SymMng.Environment.pas" line="41">
         <parameters>
         </parameters>
       </constructor>
-      <destructor name="Destroy" visibility="public" file="SymMng.Environment.pas" line="40">
+      <destructor name="Destroy" visibility="public" file="SymMng.Environment.pas" line="42">
         <parameters>
         </parameters>
       </destructor>
-      <property name="DBType" visibility="public" read="FDBType" type="string" default="0" file="SymMng.Environment.pas" line="42" />
-      <property name="Server" visibility="public" read="FServer" type="string" default="0" file="SymMng.Environment.pas" line="43" />
-      <property name="Database" visibility="public" read="FDatabase" type="string" default="0" file="SymMng.Environment.pas" line="44" />
-      <property name="TaskUI" visibility="public" read="FTaskUI" type="Boolean" file="SymMng.Environment.pas" line="45" />
-      <property name="HideMainForm" visibility="public" read="FHideMainForm" type="Boolean" file="SymMng.Environment.pas" line="46" />
-      <property name="AutoClose" visibility="public" read="FAutoClose" type="Boolean" file="SymMng.Environment.pas" line="47" />
-      <property name="UserName" visibility="public" read="FUserName" type="string" default="0" file="SymMng.Environment.pas" line="48" />
-      <property name="Password" visibility="public" read="FPassword" type="string" default="0" file="SymMng.Environment.pas" line="49" />
-      <property name="ShowHelp" visibility="public" read="FShowHelp" type="Boolean" file="SymMng.Environment.pas" line="50" />
-      <property name="AutoRunCmd" visibility="public" read="FAutoRunCmd" type="string" default="0" file="SymMng.Environment.pas" line="51" />
-      <property name="ValidDBType" visibility="public" read="GetValidDBType" type="Boolean" file="SymMng.Environment.pas" line="52" />
-      <property name="CommandLine" visibility="public" read="GetCommandLine" type="string" default="0" file="SymMng.Environment.pas" line="53" />
-      <property name="Help" visibility="public" read="GetHelp" type="string" default="0" file="SymMng.Environment.pas" line="54" />
+      <property name="DBType" visibility="public" read="FDBType" type="string" default="0" file="SymMng.Environment.pas" line="44" />
+      <property name="Server" visibility="public" read="FServer" type="string" default="0" file="SymMng.Environment.pas" line="45" />
+      <property name="Database" visibility="public" read="FDatabase" type="string" default="0" file="SymMng.Environment.pas" line="46" />
+      <property name="TaskUI" visibility="public" read="FTaskUI" type="Boolean" file="SymMng.Environment.pas" line="47" />
+      <property name="HideMainForm" visibility="public" read="FHideMainForm" type="Boolean" file="SymMng.Environment.pas" line="48" />
+      <property name="AutoClose" visibility="public" read="FAutoClose" type="Boolean" file="SymMng.Environment.pas" line="49" />
+      <property name="UserName" visibility="public" read="FUserName" type="string" default="0" file="SymMng.Environment.pas" line="50" />
+      <property name="Password" visibility="public" read="FPassword" type="string" default="0" file="SymMng.Environment.pas" line="51" />
+      <property name="ShowHelp" visibility="public" read="FShowHelp" type="Boolean" file="SymMng.Environment.pas" line="52" />
+      <property name="AutoRunCmd" visibility="public" read="FAutoRunCmd" type="string" default="0" file="SymMng.Environment.pas" line="53" />
+      <property name="ValidDBType" visibility="public" read="GetValidDBType" type="Boolean" file="SymMng.Environment.pas" line="54" />
+      <property name="CommandLine" visibility="public" read="GetCommandLine" type="string" default="0" file="SymMng.Environment.pas" line="55" />
+      <property name="Help" visibility="public" read="GetHelp" type="string" default="0" file="SymMng.Environment.pas" line="56" />
+      <property name="WriteLog" visibility="public" read="GetWriteLog" type="Boolean" file="SymMng.Environment.pas" line="57" />
     </members>
   </class>
-  <variable name="SymMngEnviroment" type="TSymMngEnviroment" file="SymMng.Environment.pas" line="58" />
+  <variable name="SymMngEnviroment" type="TSymMngEnviroment" file="SymMng.Environment.pas" line="61" />
 </namespace>

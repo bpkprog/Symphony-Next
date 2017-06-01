@@ -26,7 +26,7 @@ uses
 
 begin
   Log := TLog.Create(SpecFolders.AppDataPath + 'SymMng.log');
-//  Log.Active  := True ;
+  Log.Active  := SymMngEnviroment.WriteLog ;
   Log.Write('Запуск программы');
 
   if SymMngEnviroment.ShowHelp then

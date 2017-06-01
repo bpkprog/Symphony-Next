@@ -31,9 +31,10 @@ requires
   rtl,
   vcl,
   smplIntf,
-  smplBaseFrame;
+  smplBaseFrame,
+  bpklib;
 
 contains
-  SymphonyPlugIn.ActionListBuilder;
+  SymphonyPlugIn.ActionListBuilder ;
 
 end.

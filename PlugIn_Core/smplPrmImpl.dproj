@@ -140,14 +140,6 @@
                 </Source>
                 <Excluded_Packages>
                     <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplIntf.bpl">(untitled)</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplmng.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplmng.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplGridStyle.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplGridStyle.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplBaseFrame.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplBaseFrame.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplORA.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplORA.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplMSSQL.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplMSSQL.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplIB.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplIB.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplActListBuilder.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplActListBuilder.bpl not found</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplSMMK.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\18.0\Bpl\smplSMMK.bpl not found</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k240.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp240.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>

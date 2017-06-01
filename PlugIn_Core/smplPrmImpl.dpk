@@ -36,6 +36,6 @@ requires
   bpklib;
 
 contains
-  SymphonyPlugIn.ParamImpl;
+  SymphonyPlugIn.ParamImpl in 'SymphonyPlugIn.ParamImpl.pas';
 
 end.

@@ -33,11 +33,11 @@ requires
   vcl;
 
 contains
-  SymphonyPlugIn.ActionInterface,
-  SymphonyPlugIn.ParamInterface ,
-  SymphonyPlugIn.MessageInterface ,
-  SymphonyPlugIn.PackageInterface ,
-  SymphonyPlugIn.UsageTaskStatInterface ;
+  SymphonyPlugIn.ActionInterface in 'SymphonyPlugIn.ActionInterface.pas',
+  SymphonyPlugIn.ParamInterface in 'SymphonyPlugIn.ParamInterface.pas',
+  SymphonyPlugIn.MessageInterface in 'SymphonyPlugIn.MessageInterface.pas',
+  SymphonyPlugIn.PackageInterface in 'SymphonyPlugIn.PackageInterface.pas',
+  SymphonyPlugIn.UsageTaskStatInterface in 'SymphonyPlugIn.UsageTaskStatInterface.pas';
 
 end.
 
